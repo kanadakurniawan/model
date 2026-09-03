@@ -58,6 +58,13 @@ const serializable = models.map(serializeForClient);
         <option value="context">Context terbesar</option>
         <option value="name">Nama A-Z</option>
       </select>
+      <select id="task" class="rounded-md border border-border bg-card px-2 py-1.5 text-sm focus:border-accent focus:outline-none">
+        <option value="all">Task: Semua</option>
+        <option value="coding">Task: Coding</option>
+        <option value="vision">Task: Vision</option>
+        <option value="reasoning">Task: Reasoning</option>
+        <option value="chat">Task: Chat</option>
+      </select>
       <label class="flex items-center gap-1.5 rounded-md border border-border bg-card px-2 py-1.5 text-sm">
         <input id="f-vision" type="checkbox" class="accent-emerald-500" /> Vision
       </label>
@@ -84,6 +91,7 @@ const serializable = models.map(serializeForClient);
       const count = document.getElementById('count');
       const q = document.getElementById('q');
       const sort = document.getElementById('sort');
+      const task = document.getElementById('task');
       const fVision = document.getElementById('f-vision');
       const fTools = document.getElementById('f-tools');
       const scopeBtns = document.querySelectorAll('.scope-btn');
@@ -119,11 +127,16 @@ const serializable = models.map(serializeForClient);
 
       function apply() {
         const term = (q.value || '').trim().toLowerCase();
+        const tk = task.value;
         let list = data.filter(function (p) {
           if (scope === 'free' && !p.isFree) return false;
           if (term && !(p.name.toLowerCase().includes(term) || p.id.toLowerCase().includes(term))) return false;
           if (fVision.checked && !p.vision) return false;
           if (fTools.checked && !p.tools) return false;
+          if (tk === 'coding' && !(p.tools || (p.aaCoding != null && p.aaCoding > 20))) return false;
+          if (tk === 'vision' && !p.vision) return false;
+          if (tk === 'reasoning' && !(p.aaAgentic != null && p.aaAgentic > 20)) return false;
+          if (tk === 'chat' && !p.isFree && !p.tools && (p.aaIntelligence == null || p.aaIntelligence < 20)) return false;
           return true;
         });
 
@@ -230,7 +243,7 @@ const serializable = models.map(serializeForClient);
           apply();
         });
       });
-      [q, sort, fVision, fTools].forEach(function (el) {
+      [q, sort, task, fVision, fTools].forEach(function (el) {
         el.addEventListener('input', apply);
         el.addEventListener('change', apply);
       });
