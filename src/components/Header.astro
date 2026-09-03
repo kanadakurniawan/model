@@ -1,10 +1,9 @@
 ---
 const path = Astro.url.pathname;
-const isActive = (href: string) => path === href || (href !== '/' && path.startsWith(href));
 ---
 
 <header class="border-b border-border">
-  <div class="mx-auto flex max-w-6xl items-center gap-3 px-4 py-4 sm:px-6">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:px-6">
     <a href="/" class="flex items-center gap-2 font-semibold tracking-tight">
       <span class="relative inline-flex h-9 w-9 items-center justify-center rounded-full p-[2px] bg-gradient-to-br from-emerald-400 via-cyan-400 to-blue-500">
         <img
@@ -19,5 +18,10 @@ const isActive = (href: string) => path === href || (href !== '/' && path.starts
       </span>
       <span>model.kanadakurniwan</span>
     </a>
+    <a
+      href="https://kanadakurniawan.com"
+      rel="noopener"
+      class="rounded-md border border-border px-3 py-1.5 text-sm text-muted transition hover:bg-card hover:text-foreground"
+    >Beranda ↗</a>
   </div>
 </header>
