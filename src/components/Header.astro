@@ -4,7 +4,7 @@ const isActive = (href: string) => path === href || (href !== '/' && path.starts
 ---
 
 <header class="border-b border-border">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+  <div class="mx-auto flex max-w-6xl items-center gap-3 px-4 py-4 sm:px-6">
     <a href="/" class="flex items-center gap-2 font-semibold tracking-tight">
       <span class="relative inline-flex h-9 w-9 items-center justify-center rounded-full p-[2px] bg-gradient-to-br from-emerald-400 via-cyan-400 to-blue-500">
         <img
@@ -19,28 +19,5 @@ const isActive = (href: string) => path === href || (href !== '/' && path.starts
       </span>
       <span>model.kanadakurniwan</span>
     </a>
-    <nav class="flex items-center gap-1 text-sm">
-      <a
-        href="/"
-        class={`rounded-md px-3 py-1.5 hover:bg-card ${isActive('/') ? 'text-foreground' : 'text-muted'}`}
-      >Semua</a>
-      <a
-        href="/free"
-        class={`rounded-md px-3 py-1.5 hover:bg-card ${isActive('/free') ? 'text-foreground' : 'text-muted'}`}
-      >Gratis</a>
-      <a
-        href="/cheapest"
-        class={`rounded-md px-3 py-1.5 hover:bg-card ${isActive('/cheapest') ? 'text-foreground' : 'text-muted'}`}
-      >Termurah</a>
-      <a
-        href="/rankings"
-        class={`rounded-md px-3 py-1.5 hover:bg-card ${isActive('/rankings') ? 'text-foreground' : 'text-muted'}`}
-      >Rankings</a>
-      <a
-        href="https://openrouter.ai/models"
-        rel="noopener"
-        class="ml-2 rounded-md border border-border px-3 py-1.5 text-muted hover:bg-card"
-      >OpenRouter ↗</a>
-    </nav>
   </div>
 </header>
