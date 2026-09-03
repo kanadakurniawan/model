@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import ModelCard from '../components/ModelCard.astro';
+import modelsData from '../data/models.json';
+import type { Model } from '../types';
+
+const models = [...(modelsData.models as Model[])]
+  .filter((m) => !m.isFree)
+  .sort((a, b) => {
+    const aa = (Number(a.pricing.prompt) + Number(a.pricing.completion)) / 2;
+    const bb = (Number(b.pricing.prompt) + Number(b.pricing.completion)) / 2;
+    return aa - bb;
+  })
+  .slice(0, 60);
+---
+
+<Base title="Model AI Termurah - model.kanadakurniwan">
+  <section class="mb-6">
+    <h1 class="text-2xl font-semibold tracking-tight sm:text-3xl">Model <span class="text-accent">termurah</span></h1>
+    <p class="mt-2 text-sm text-muted">Diurutkan dari harga rata-rata input + output per token (model gratis disaring).</p>
+  </section>
+  <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+    {models.map((m, i) => <ModelCard model={m} rank={i + 1} />)}
+  </div>
+</Base>

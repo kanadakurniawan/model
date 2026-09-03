@@ -1,0 +1,24 @@
+{
+  "name": "model.kanadakurniwan.com",
+  "type": "module",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "fetch": "node scripts/fetch-models.mjs",
+    "start": "astro dev"
+  },
+  "dependencies": {
+    "astro": "^7.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  },
+  "description": "Daftar model AI: cari yang terbaik dan termurah"
+}

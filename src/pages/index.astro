@@ -1,0 +1,189 @@
+---
+import Base from '../layouts/Base.astro';
+import ModelCard from '../components/ModelCard.astro';
+import modelsData from '../data/models.json';
+import type { Model } from '../types';
+
+const models = modelsData.models as Model[];
+const fetchedAt = new Date(modelsData.fetchedAt).toLocaleString('id-ID', {
+  dateStyle: 'long',
+  timeStyle: 'short',
+});
+const freeCount = models.filter((m) => m.isFree).length;
+
+const serializable = models.map((m) => ({
+  id: m.id,
+  slug: m.slug,
+  name: m.name,
+  isFree: m.isFree,
+  prompt: Number(m.pricing.prompt) || 0,
+  completion: Number(m.pricing.completion) || 0,
+  context: m.context_length || 0,
+  vision: m.modality.input.includes('image'),
+  tools: m.supported_parameters?.includes('tools') ?? false,
+  created: m.created,
+  provider: m.id.split('/')[0] ?? '',
+}));
+---
+
+<Base title="Daftar Model AI - Cari Terbaik & Termurah">
+  <section class="mb-6">
+    <h1 class="text-2xl font-semibold tracking-tight sm:text-3xl">
+      Cari model AI yang <span class="text-accent">terbaik</span> & <span class="text-accent">termurah</span>
+    </h1>
+    <p class="mt-2 max-w-2xl text-sm text-muted">
+      {models.length} model dari OpenRouter, {freeCount} di antaranya gratis.
+      Diperbarui {fetchedAt}.
+    </p>
+  </section>
+
+  <section
+    id="filters"
+    class="sticky top-0 z-10 -mx-4 mb-6 border-b border-border bg-background/90 px-4 py-3 backdrop-blur sm:-mx-6 sm:px-6"
+  >
+    <div class="flex flex-wrap items-center gap-2">
+      <input
+        id="q"
+        type="search"
+        placeholder="Cari model…"
+        class="w-full rounded-md border border-border bg-card px-3 py-1.5 text-sm placeholder:text-muted focus:border-accent focus:outline-none sm:w-64"
+      />
+      <select id="sort" class="rounded-md border border-border bg-card px-2 py-1.5 text-sm focus:border-accent focus:outline-none">
+        <option value="best-value">Rasio harga-kemampuan</option>
+        <option value="cheapest">Harga termurah</option>
+        <option value="newest">Terbaru</option>
+        <option value="context">Context terbesar</option>
+        <option value="name">Nama A-Z</option>
+      </select>
+      <label class="flex items-center gap-1.5 rounded-md border border-border bg-card px-2 py-1.5 text-sm">
+        <input id="f-free" type="checkbox" class="accent-emerald-500" /> Gratis
+      </label>
+      <label class="flex items-center gap-1.5 rounded-md border border-border bg-card px-2 py-1.5 text-sm">
+        <input id="f-vision" type="checkbox" class="accent-emerald-500" /> Vision
+      </label>
+      <label class="flex items-center gap-1.5 rounded-md border border-border bg-card px-2 py-1.5 text-sm">
+        <input id="f-tools" type="checkbox" class="accent-emerald-500" /> Tools
+      </label>
+      <span id="count" class="ml-auto text-xs text-muted"></span>
+    </div>
+  </section>
+
+  <div id="grid" class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+    {serializable.map((m, i) => {
+      const fullModel = models.find((x) => x.id === m.id)!;
+      return <ModelCard model={fullModel} rank={i + 1} />;
+    })}
+  </div>
+
+  <div id="empty" class="hidden rounded-xl border border-dashed border-border p-8 text-center text-sm text-muted">
+    Tidak ada model yang cocok.
+  </div>
+
+  <script type="application/json" id="models-data" set:html={JSON.stringify(serializable)}></script>
+
+  <script is:inline>
+    (function () {
+      const data = JSON.parse(document.getElementById('models-data').textContent);
+      const grid = document.getElementById('grid');
+      const empty = document.getElementById('empty');
+      const count = document.getElementById('count');
+      const q = document.getElementById('q');
+      const sort = document.getElementById('sort');
+      const fFree = document.getElementById('f-free');
+      const fVision = document.getElementById('f-vision');
+      const fTools = document.getElementById('f-tools');
+
+      function avg(p) {
+        return (p.prompt + p.completion) / 2;
+      }
+
+      function bestValueScore(p) {
+        const a = avg(p) || 0.000001;
+        const ctxScore = Math.log10(Math.max(p.context, 1));
+        const freeBonus = p.isFree ? 100 : 0;
+        return freeBonus + ctxScore / (a * 1000 + 0.01);
+      }
+
+      function apply() {
+        const term = (q.value || '').trim().toLowerCase();
+        let list = data.filter(function (p) {
+          if (term && !(p.name.toLowerCase().includes(term) || p.id.toLowerCase().includes(term))) return false;
+          if (fFree.checked && !p.isFree) return false;
+          if (fVision.checked && !p.vision) return false;
+          if (fTools.checked && !p.tools) return false;
+          return true;
+        });
+
+        const s = sort.value;
+        list.sort(function (a, b) {
+          if (s === 'cheapest') {
+            if (a.isFree !== b.isFree) return a.isFree ? -1 : 1;
+            return avg(a) - avg(b);
+          }
+          if (s === 'newest') return b.created - a.created;
+          if (s === 'context') return b.context - a.context;
+          if (s === 'name') return a.name.localeCompare(b.name);
+          return bestValueScore(b) - bestValueScore(a);
+        });
+
+        const html = list
+          .map(function (p, i) {
+            const rank = i + 1;
+            const prompt = (p.prompt * 1e6);
+            const completion = (p.completion * 1e6);
+            const fmt = function (n) {
+              if (!isFinite(n) || n === 0) return '0';
+              if (n < 0.01) return n.toFixed(4);
+              if (n < 1) return n.toFixed(3);
+              return n.toFixed(2);
+            };
+            const tag = p.isFree
+              ? '<span class="rounded-full bg-accent/15 px-2 py-0.5 text-xs font-medium text-accent">GRATIS</span>'
+              : '<span class="rounded-full border border-border px-2 py-0.5 text-xs text-muted">Berbayar</span>';
+            const tags = [];
+            if (p.vision) tags.push('<span class="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted">vision</span>');
+            if (p.tools) tags.push('<span class="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted">tools</span>');
+            return (
+              '<article class="group rounded-xl border border-border bg-card p-4 transition hover:border-accent/50">' +
+                '<div class="flex items-start justify-between gap-3">' +
+                  '<div class="min-w-0">' +
+                    '<div class="flex items-center gap-2">' +
+                      '<span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-background text-xs font-mono text-muted">' + rank + '</span>' +
+                      '<a href="/model/' + p.slug + '" class="truncate font-medium hover:text-accent" title="' + p.id + '">' + escape(p.name) + '</a>' +
+                    '</div>' +
+                    '<div class="mt-1 truncate text-xs text-muted" title="' + p.id + '">' + p.id + '</div>' +
+                  '</div>' +
+                  '<div class="flex shrink-0 flex-col items-end gap-1">' + tag +
+                    '<span class="text-[10px] uppercase tracking-wide text-muted">' + p.provider + '</span>' +
+                  '</div>' +
+                '</div>' +
+                '<div class="mt-4 grid grid-cols-2 gap-3 text-xs sm:grid-cols-3">' +
+                  '<div><div class="text-muted">Input / 1M</div><div class="font-mono">$' + fmt(prompt) + '</div></div>' +
+                  '<div><div class="text-muted">Output / 1M</div><div class="font-mono">$' + fmt(completion) + '</div></div>' +
+                  '<div><div class="text-muted">Context</div><div class="font-mono">' + p.context.toLocaleString('id-ID') + '</div></div>' +
+                '</div>' +
+                (tags.length ? '<div class="mt-3 flex flex-wrap gap-1.5">' + tags.join('') + '</div>' : '') +
+              '</article>'
+            );
+          })
+          .join('');
+
+        grid.innerHTML = html;
+        empty.classList.toggle('hidden', list.length > 0);
+        count.textContent = list.length + ' model';
+      }
+
+      function escape(s) {
+        return String(s).replace(/[&<>"']/g, function (c) {
+          return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c];
+        });
+      }
+
+      [q, sort, fFree, fVision, fTools].forEach(function (el) {
+        el.addEventListener('input', apply);
+        el.addEventListener('change', apply);
+      });
+      apply();
+    })();
+  </script>
+</Base>

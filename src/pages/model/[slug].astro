@@ -1,0 +1,100 @@
+---
+import Base from '../../layouts/Base.astro';
+import modelsData from '../../data/models.json';
+import type { Model } from '../../types';
+
+export function getStaticPaths() {
+  const models = (modelsData as { models: Model[] }).models;
+  return models.map((m) => ({ params: { slug: m.slug }, props: { model: m } }));
+}
+
+const { model } = Astro.props as { model: Model };
+const provider = model.id.split('/')[0] ?? 'unknown';
+const promptUSDPerM = (Number(model.pricing.prompt) || 0) * 1_000_000;
+const completionUSDPerM = (Number(model.pricing.completion) || 0) * 1_000_000;
+
+function fmt(n: number): string {
+  if (!isFinite(n) || n === 0) return '0';
+  if (n < 0.01) return n.toFixed(6);
+  if (n < 1) return n.toFixed(4);
+  return n.toFixed(2);
+}
+
+const created = model.created
+  ? new Date(model.created * 1000).toLocaleDateString('id-ID', { dateStyle: 'long' })
+  : '-';
+---
+
+<Base title={`${model.name} - model.kanadakurniwan`} description={model.description ?? model.name}>
+  <nav class="mb-4 text-sm text-muted">
+    <a href="/" class="hover:text-accent">← Semua model</a>
+  </nav>
+
+  <header class="mb-6">
+    <div class="flex items-center gap-2">
+      <span class="rounded-md border border-border bg-card px-2 py-0.5 text-xs uppercase tracking-wide text-muted">{provider}</span>
+      {model.isFree ? (
+        <span class="rounded-full bg-accent/15 px-2 py-0.5 text-xs font-medium text-accent">GRATIS</span>
+      ) : (
+        <span class="rounded-full border border-border px-2 py-0.5 text-xs text-muted">Berbayar</span>
+      )}
+    </div>
+    <h1 class="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">{model.name}</h1>
+    <p class="mt-1 text-sm text-muted">{model.id}</p>
+    {model.description && <p class="mt-3 max-w-2xl text-sm text-muted">{model.description}</p>}
+  </header>
+
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="rounded-xl border border-border bg-card p-4">
+      <div class="text-xs text-muted">Harga input / 1M token</div>
+      <div class="mt-1 font-mono text-lg">${fmt(promptUSDPerM)}</div>
+    </div>
+    <div class="rounded-xl border border-border bg-card p-4">
+      <div class="text-xs text-muted">Harga output / 1M token</div>
+      <div class="mt-1 font-mono text-lg">${fmt(completionUSDPerM)}</div>
+    </div>
+    <div class="rounded-xl border border-border bg-card p-4">
+      <div class="text-xs text-muted">Context length</div>
+      <div class="mt-1 font-mono text-lg">{(model.context_length || 0).toLocaleString('id-ID')}</div>
+    </div>
+  </div>
+
+  <section class="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-2">
+    <div class="rounded-xl border border-border bg-card p-4">
+      <h2 class="text-sm font-medium">Modalitas</h2>
+      <dl class="mt-3 grid grid-cols-2 gap-2 text-xs">
+        <dt class="text-muted">Input</dt><dd>{model.modality.input.join(', ') || '-'}</dd>
+        <dt class="text-muted">Output</dt><dd>{model.modality.output.join(', ') || '-'}</dd>
+      </dl>
+    </div>
+    <div class="rounded-xl border border-border bg-card p-4">
+      <h2 class="text-sm font-medium">Parameter yang didukung</h2>
+      <div class="mt-3 flex flex-wrap gap-1.5">
+        {(model.supported_parameters ?? []).map((p) => (
+          <span class="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted">{p}</span>
+        ))}
+        {(!model.supported_parameters || model.supported_parameters.length === 0) && (
+          <span class="text-xs text-muted">-</span>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-6 rounded-xl border border-border bg-card p-4">
+    <h2 class="text-sm font-medium">Rilis</h2>
+    <p class="mt-2 text-sm text-muted">{created}</p>
+  </section>
+
+  <div class="mt-8 flex flex-wrap gap-2">
+    <a
+      href={`https://openrouter.ai/models/${encodeURIComponent(model.id)}`}
+      rel="noopener"
+      class="rounded-md bg-accent px-4 py-2 text-sm font-medium text-accent-fg hover:opacity-90"
+    >Buka di OpenRouter ↗</a>
+    <button
+      type="button"
+      class="rounded-md border border-border px-4 py-2 text-sm text-muted hover:bg-card"
+      onclick={`navigator.clipboard.writeText(${JSON.stringify(model.id)})`}
+    >Salin ID</button>
+  </div>
+</Base>
