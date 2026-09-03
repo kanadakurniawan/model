@@ -1,0 +1,106 @@
+---
+import Base from '../layouts/Base.astro';
+import ModelCard from '../components/ModelCard.astro';
+import modelsData from '../data/models.json';
+import { rankModels, type RankKey } from '../lib/ranks';
+import type { Model } from '../types';
+
+const models = modelsData.models as Model[];
+
+const tabs: { key: RankKey; label: string; sub: string; filter?: (m: Model) => boolean }[] = [
+  { key: 'top',         label: 'Top Models',         sub: 'Gabaran ELO + AA Intelligence + Context + Capability' },
+  { key: 'weekly',      label: 'Weekly Usage',       sub: 'Recency × kemampuan ÷ harga (proxy popularitas)' },
+  { key: 'leaderboard', label: 'LLM Leaderboard',    sub: 'Artificial Analysis Intelligence Index' },
+  { key: 'coding',      label: 'Top by Task · Coding',  sub: 'AA Coding Index', filter: (m) => (m.supported_parameters?.includes('tools') ?? false) || m.modality.input.includes('text') },
+  { key: 'vision',      label: 'Top by Task · Vision',  sub: 'Dukungan input gambar + skor', filter: (m) => m.modality.input.includes('image') },
+  { key: 'reasoning',   label: 'Top by Task · Reasoning', sub: 'AA Agentic Index', filter: (m) => true! },
+  { key: 'chat',        label: 'Top by Task · Chat',     sub: 'Inteligensi + tools + json', filter: (m) => m.modality.input.includes('text') },
+];
+
+const ranked = tabs.map((t) => ({
+  key: t.key,
+  label: t.label,
+  sub: t.sub,
+  list: rankModels(models, t.key, t.filter).slice(0, 60),
+}));
+
+const dataJSON = JSON.stringify(
+  ranked.map((t) => ({
+    key: t.key,
+    list: t.list.map((e) => ({
+      slug: e.model.slug,
+      name: e.model.name,
+      id: e.model.id,
+      provider: e.model.id.split('/')[0],
+      isFree: e.model.isFree,
+      rank: e.rank,
+      score: e.score,
+      aa: e.model.rank.aaIntelligence,
+      elo: e.model.rank.arenaElo,
+      context: e.model.context_length,
+    })),
+  }))
+);
+---
+
+<Base title="Rankings Model AI - model.kanadakurniwan">
+  <section class="mb-6">
+    <h1 class="text-2xl font-semibold tracking-tight sm:text-3xl">Rankings</h1>
+    <p class="mt-2 max-w-2xl text-sm text-muted">
+      4 ranking utama + 4 ranking per-tugas. Skor dihitung dari
+      <a class="text-accent hover:underline" href="https://artificialanalysis.ai" rel="noopener">Artificial Analysis</a>
+      dan Design Arena yang sudah ter-embed di data OpenRouter.
+    </p>
+  </section>
+
+  <div role="tablist" class="mb-4 flex flex-wrap gap-2 border-b border-border">
+    {tabs.map((t, i) => (
+      <button
+        role="tab"
+        data-tab={t.key}
+        class={`tab-btn rounded-t-md px-3 py-2 text-sm hover:bg-card ${i === 0 ? 'tab-on' : 'text-muted'}`}
+      >{t.label}</button>
+    ))}
+  </div>
+
+  {ranked.map((t, i) => (
+    <section data-panel={t.key} class={i === 0 ? '' : 'hidden'}>
+      <p class="mb-3 text-sm text-muted">{t.sub} · {t.list.length} model</p>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {t.list.map((e) => (
+          <ModelCard model={e.model} rank={e.rank} showRank rankLabel="Rank" rankValue={e.rank} />
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <script type="application/json" id="rankings-data" set:html={dataJSON}></script>
+
+  <script is:inline>
+    (function () {
+      const btns = document.querySelectorAll('.tab-btn');
+      const panels = document.querySelectorAll('[data-panel]');
+      function show(key) {
+        btns.forEach((b) => {
+          b.classList.toggle('tab-on', b.getAttribute('data-tab') === key);
+          b.classList.toggle('text-muted', b.getAttribute('data-tab') !== key);
+        });
+        panels.forEach((p) => {
+          p.classList.toggle('hidden', p.getAttribute('data-panel') !== key);
+        });
+      }
+      btns.forEach((b) => {
+        b.addEventListener('click', () => show(b.getAttribute('data-tab')));
+      });
+    })();
+  </script>
+
+  <style is:global>
+    .tab-on {
+      background: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-bottom-color: transparent;
+      color: var(--color-foreground);
+    }
+  </style>
+</Base>

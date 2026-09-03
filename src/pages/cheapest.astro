@@ -4,22 +4,53 @@ import ModelCard from '../components/ModelCard.astro';
 import modelsData from '../data/models.json';
 import type { Model } from '../types';
 
-const models = [...(modelsData.models as Model[])]
-  .filter((m) => !m.isFree)
-  .sort((a, b) => {
-    const aa = (Number(a.pricing.prompt) + Number(a.pricing.completion)) / 2;
-    const bb = (Number(b.pricing.prompt) + Number(b.pricing.completion)) / 2;
-    return aa - bb;
+interface ScoredModel {
+  model: Model;
+  avgPrice: number;
+  topRank: number;
+}
+
+const models = modelsData.models as Model[];
+const all = models.filter((m) => !m.isFree);
+
+const withScore = all
+  .map((m, i) => {
+    const avgPrice = (Number(m.pricing.prompt) + Number(m.pricing.completion)) / 2;
+    return { model: m, avgPrice, originalIndex: i };
   })
+  .sort((a, b) => a.avgPrice - b.avgPrice)
   .slice(0, 60);
+
+const sortedByTop = [...models].sort(
+  (a, b) => (b.rank.scores.top ?? 0) - (a.rank.scores.top ?? 0)
+);
+const topRankMap = new Map(sortedByTop.map((m, i) => [m.id, i + 1]));
+
+const items: ScoredModel[] = withScore.map((x) => ({
+  model: x.model,
+  avgPrice: x.avgPrice,
+  topRank: topRankMap.get(x.model.id) ?? 0,
+}));
 ---
 
 <Base title="Model AI Termurah - model.kanadakurniwan">
   <section class="mb-6">
     <h1 class="text-2xl font-semibold tracking-tight sm:text-3xl">Model <span class="text-accent">termurah</span></h1>
-    <p class="mt-2 text-sm text-muted">Diurutkan dari harga rata-rata input + output per token (model gratis disaring).</p>
+    <p class="mt-2 max-w-2xl text-sm text-muted">
+      60 model berbayar dengan harga rata-rata input + output per token paling rendah.
+      Kolom <span class="text-foreground">Top Rank</span> menampilkan posisi di Top Models
+      untuk perbandingan harga vs kemampuan.
+    </p>
   </section>
   <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-    {models.map((m, i) => <ModelCard model={m} rank={i + 1} />)}
+    {items.map((it, idx) => (
+      <ModelCard
+        model={it.model}
+        rank={idx + 1}
+        showRank
+        rankLabel="Harga"
+        rankValue={`#${idx + 1}`}
+      />
+    ))}
   </div>
 </Base>

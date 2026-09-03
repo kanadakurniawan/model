@@ -1,35 +1,34 @@
 ---
 import type { Model } from '../types';
+import { fmtPrice, priceUSDPerM } from '../lib/ranks';
 
 interface Props {
   model: Model;
   rank?: number;
+  showRank?: boolean;
+  rankLabel?: string;
+  rankValue?: number | null;
 }
 
-const { model, rank } = Astro.props;
+const { model, rank, showRank = false, rankLabel, rankValue } = Astro.props;
 
 const provider = model.id.split('/')[0] ?? 'unknown';
-const promptUSDPerM = (Number(model.pricing.prompt) || 0) * 1_000_000;
-const completionUSDPerM = (Number(model.pricing.completion) || 0) * 1_000_000;
-
-function fmtPrice(n: number): string {
-  if (!isFinite(n) || n === 0) return '0';
-  if (n < 0.01) return n.toFixed(4);
-  if (n < 1) return n.toFixed(3);
-  return n.toFixed(2);
-}
+const { prompt: promptUSDPerM, completion: completionUSDPerM } = priceUSDPerM(model.pricing);
 
 const hasVision = model.modality.input.includes('image');
 const hasTools = model.supported_parameters?.includes('tools') ?? false;
 const hasJson = model.supported_parameters?.includes('response_format') ?? false;
+const hasReasoning = model.supported_parameters?.includes('reasoning') ?? false;
+const hasAudio = model.modality.input.includes('audio');
+const hasImageOut = model.modality.output.includes('image');
 ---
 
 <article class="group rounded-xl border border-border bg-card p-4 transition hover:border-accent/50">
   <div class="flex items-start justify-between gap-3">
-    <div class="min-w-0">
+    <div class="min-w-0 flex-1">
       <div class="flex items-center gap-2">
         {rank !== undefined && (
-          <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-background text-xs font-mono text-muted">
+          <span class="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-background text-xs font-mono text-muted">
             {rank}
           </span>
         )}
@@ -41,7 +40,19 @@ const hasJson = model.supported_parameters?.includes('response_format') ?? false
           {model.name}
         </a>
       </div>
-      <div class="mt-1 truncate text-xs text-muted" title={model.id}>{model.id}</div>
+      <button
+        type="button"
+        class="kodename mt-1 flex w-full max-w-full items-center gap-1 rounded font-mono text-[11px] text-muted transition hover:text-accent"
+        data-copy={model.id}
+        title="Klik untuk menyalin"
+      >
+        <span class="truncate">{model.id}</span>
+        <svg class="h-3 w-3 shrink-0 opacity-0 transition group-hover:opacity-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="9" y="9" width="13" height="13" rx="2"/>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+        <span class="copy-hint hidden text-[10px] text-accent">tersalin ✓</span>
+      </button>
     </div>
     <div class="flex shrink-0 flex-col items-end gap-1">
       {model.isFree ? (
@@ -52,6 +63,25 @@ const hasJson = model.supported_parameters?.includes('response_format') ?? false
       <span class="text-[10px] uppercase tracking-wide text-muted">{provider}</span>
     </div>
   </div>
+
+  {showRank && (
+    <div class="mt-3 flex items-center gap-3 rounded-md border border-border/60 bg-background/50 px-2 py-1.5 text-xs">
+      <div>
+        <div class="text-[10px] uppercase tracking-wide text-muted">{rankLabel ?? 'Ranking'}</div>
+        <div class="font-mono text-sm font-semibold text-accent">
+          {rankValue !== undefined && rankValue !== null ? `#${rankValue}` : '—'}
+        </div>
+      </div>
+      <div class="ml-auto flex gap-3 text-[10px] text-muted">
+        {model.rank.aaIntelligence != null && (
+          <span>AI <span class="font-mono text-foreground/80">{model.rank.aaIntelligence}</span></span>
+        )}
+        {model.rank.arenaElo != null && (
+          <span>Elo <span class="font-mono text-foreground/80">{Math.round(model.rank.arenaElo)}</span></span>
+        )}
+      </div>
+    </div>
+  )}
 
   <div class="mt-4 grid grid-cols-2 gap-3 text-xs sm:grid-cols-3">
     <div>
@@ -72,7 +102,33 @@ const hasJson = model.supported_parameters?.includes('response_format') ?? false
     {hasVision && <span class="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted">vision</span>}
     {hasTools && <span class="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted">tools</span>}
     {hasJson && <span class="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted">json</span>}
-    {model.modality.input.includes('audio') && <span class="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted">audio</span>}
-    {model.modality.output.includes('image') && <span class="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted">image-out</span>}
+    {hasReasoning && <span class="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted">reasoning</span>}
+    {hasAudio && <span class="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted">audio</span>}
+    {hasImageOut && <span class="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted">image-out</span>}
   </div>
 </article>
+
+<script is:inline>
+  (function () {
+    function attach() {
+      document.querySelectorAll('.kodename').forEach(function (el) {
+        if (el.dataset.bound) return;
+        el.dataset.bound = '1';
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          const text = el.getAttribute('data-copy');
+          if (!text) return;
+          navigator.clipboard?.writeText(text).then(function () {
+            const hint = el.querySelector('.copy-hint');
+            if (hint) {
+              hint.classList.remove('hidden');
+              setTimeout(function () { hint.classList.add('hidden'); }, 1200);
+            }
+          });
+        });
+      });
+    }
+    attach();
+    document.addEventListener('astro:page-load', attach);
+  })();
+</script>

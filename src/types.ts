@@ -9,9 +9,49 @@ export interface ModelPricing {
   input_cache_write?: string;
 }
 
+export interface DesignArenaEntry {
+  arena: string;
+  category: string;
+  elo: number;
+  win_rate?: number;
+  rank: number;
+}
+
+export interface ArtificialAnalysis {
+  intelligence_index?: number;
+  coding_index?: number;
+  agentic_index?: number;
+}
+
+export interface Benchmarks {
+  design_arena?: DesignArenaEntry[];
+  artificial_analysis?: ArtificialAnalysis;
+}
+
+export interface Rank {
+  arenaElo: number | null;
+  arenaBestRank: number | null;
+  arenaBestCategory: string | null;
+  arenaBestRankValue: number | null;
+  aaIntelligence: number | null;
+  aaCoding: number | null;
+  aaAgentic: number | null;
+  scores: {
+    top: number;
+    weekly: number;
+    leaderboard: number;
+    coding: number;
+    vision: number;
+    reasoning: number;
+    chat: number;
+  };
+}
+
 export interface Model {
   id: string;
   slug: string;
+  canonical_slug?: string | null;
+  hugging_face_id?: string | null;
   name: string;
   description?: string;
   created: number;
@@ -29,6 +69,9 @@ export interface Model {
     output_modalities?: Modality[];
   };
   supported_parameters?: string[];
+  benchmarks?: Benchmarks;
+  knowledge_cutoff?: string | null;
+  rank: Rank;
   raw: Record<string, unknown>;
 }
 

@@ -80,9 +80,63 @@ const created = model.created
     </div>
   </section>
 
-  <section class="mt-6 rounded-xl border border-border bg-card p-4">
-    <h2 class="text-sm font-medium">Rilis</h2>
-    <p class="mt-2 text-sm text-muted">{created}</p>
+  <section class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <div class="rounded-xl border border-border bg-card p-4">
+      <h2 class="text-sm font-medium">Artificial Analysis</h2>
+      <dl class="mt-3 grid grid-cols-3 gap-2 text-xs">
+        <div>
+          <dt class="text-muted">Intelligence</dt>
+          <dd class="font-mono text-lg">{model.rank.aaIntelligence ?? '—'}</dd>
+        </div>
+        <div>
+          <dt class="text-muted">Coding</dt>
+          <dd class="font-mono text-lg">{model.rank.aaCoding ?? '—'}</dd>
+        </div>
+        <div>
+          <dt class="text-muted">Agentic</dt>
+          <dd class="font-mono text-lg">{model.rank.aaAgentic ?? '—'}</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="rounded-xl border border-border bg-card p-4">
+      <h2 class="text-sm font-medium">Design Arena</h2>
+      {model.rank.arenaElo != null ? (
+        <div class="mt-3 grid grid-cols-2 gap-2 text-xs">
+          <div>
+            <dt class="text-muted">Rata-rata Elo</dt>
+            <dd class="font-mono text-lg">{Math.round(model.rank.arenaElo)}</dd>
+          </div>
+          <div>
+            <dt class="text-muted">Best Rank</dt>
+            <dd class="font-mono text-lg">
+              #{model.rank.arenaBestRankValue ?? '—'}
+              <span class="text-xs text-muted">({model.rank.arenaBestCategory ?? '—'})</span>
+            </dd>
+          </div>
+        </div>
+      ) : (
+        <p class="mt-3 text-sm text-muted">Tidak tersedia</p>
+      )}
+    </div>
+  </section>
+
+  <section class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="rounded-xl border border-border bg-card p-4">
+      <div class="text-xs text-muted">Top Models</div>
+      <div class="mt-1 font-mono text-lg text-accent">{Math.round(model.rank.scores.top)}</div>
+    </div>
+    <div class="rounded-xl border border-border bg-card p-4">
+      <div class="text-xs text-muted">Weekly Usage</div>
+      <div class="mt-1 font-mono text-lg text-accent">{Math.round(model.rank.scores.weekly)}</div>
+    </div>
+    <div class="rounded-xl border border-border bg-card p-4">
+      <div class="text-xs text-muted">LLM Leaderboard</div>
+      <div class="mt-1 font-mono text-lg text-accent">{Math.round(model.rank.scores.leaderboard)}</div>
+    </div>
+    <div class="rounded-xl border border-border bg-card p-4">
+      <div class="text-xs text-muted">Rilis</div>
+      <div class="mt-1 text-sm font-medium">{created}</div>
+    </div>
   </section>
 
   <div class="mt-8 flex flex-wrap gap-2">
@@ -93,8 +147,27 @@ const created = model.created
     >Buka di OpenRouter ↗</a>
     <button
       type="button"
-      class="rounded-md border border-border px-4 py-2 text-sm text-muted hover:bg-card"
-      onclick={`navigator.clipboard.writeText(${JSON.stringify(model.id)})`}
+      class="rounded-md border border-border px-4 py-2 text-sm text-muted hover:bg-card kodename"
+      data-copy={model.id}
+      onclick="this.dispatchEvent(new MouseEvent('click'))"
     >Salin ID</button>
   </div>
 </Base>
+
+<script is:inline>
+  (function () {
+    function attach() {
+      document.querySelectorAll('.kodename').forEach(function (el) {
+        if (el.dataset.bound) return;
+        el.dataset.bound = '1';
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          const text = el.getAttribute('data-copy');
+          if (!text) return;
+          navigator.clipboard?.writeText(text);
+        });
+      });
+    }
+    attach();
+  })();
+</script>
