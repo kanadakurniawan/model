@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-03T15:47:23.622Z",
+  "fetchedAt": "2026-09-03T20:30:41.718Z",
   "source": "https://openrouter.ai/api/v1/models",
   "models": [
     {
@@ -221,7 +221,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.103,
-          "weekly": 71.041,
+          "weekly": 70.806,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -387,7 +387,7 @@
         "aaAgentic": 50,
         "scores": {
           "top": 792.213,
-          "weekly": 94.782,
+          "weekly": 93.431,
           "leaderboard": 310.72,
           "coding": 76.3,
           "vision": 0,
@@ -571,7 +571,7 @@
         "aaAgentic": 50,
         "scores": {
           "top": 792.213,
-          "weekly": 96.287,
+          "weekly": 94.936,
           "leaderboard": 310.72,
           "coding": 76.3,
           "vision": 0,
@@ -776,7 +776,7 @@
         "aaAgentic": 61.3,
         "scores": {
           "top": 823.69,
-          "weekly": 87.247,
+          "weekly": 86.538,
           "leaderboard": 326.87,
           "coding": 81.6,
           "vision": 0,
@@ -1005,7 +1005,7 @@
         "aaAgentic": 61.3,
         "scores": {
           "top": 823.69,
-          "weekly": 88.752,
+          "weekly": 88.043,
           "leaderboard": 326.87,
           "coding": 81.6,
           "vision": 0,
@@ -1186,7 +1186,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 51.075,
-          "weekly": 70.823,
+          "weekly": 70.379,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -1336,7 +1336,7 @@
         "aaAgentic": 9.2,
         "scores": {
           "top": 55.468,
-          "weekly": 77.984,
+          "weekly": 77.546,
           "leaderboard": 15.96,
           "coding": 22.4,
           "vision": 0,
@@ -1489,7 +1489,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.103,
-          "weekly": 59.916,
+          "weekly": 59.776,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -1560,6 +1560,145 @@
       }
     },
     {
+      "id": "inclusionai/ling-3.0-flash-fin",
+      "slug": "inclusionai-ling-3-0-flash-fin",
+      "canonical_slug": "inclusionai/ling-3.0-flash-fin-20260827",
+      "hugging_face_id": null,
+      "name": "Ling 3.0 Flash Fin",
+      "description": "Ling 3.0 Flash Fin is a finance-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for real-world investment...",
+      "created": 1787846290,
+      "context_length": 262144,
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "prompt": "0.00000006",
+        "completion": "0.00000018",
+        "input_cache_read": "0.000000012"
+      },
+      "isFree": false,
+      "topProvider": {
+        "context_length": 262144,
+        "max_completion_tokens": 235929,
+        "is_moderated": false
+      },
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "knowledge_cutoff": null,
+      "rank": {
+        "arenaElo": null,
+        "arenaBestRank": null,
+        "arenaBestCategory": null,
+        "arenaBestRankValue": null,
+        "aaIntelligence": null,
+        "aaCoding": null,
+        "aaAgentic": null,
+        "scores": {
+          "top": 51.093,
+          "weekly": 65.104,
+          "leaderboard": 0,
+          "coding": 0,
+          "vision": 0,
+          "reasoning": 0,
+          "chat": 15
+        }
+      },
+      "raw": {
+        "id": "inclusionai/ling-3.0-flash-fin",
+        "canonical_slug": "inclusionai/ling-3.0-flash-fin-20260827",
+        "hugging_face_id": null,
+        "name": "Ling 3.0 Flash Fin",
+        "created": 1787846290,
+        "description": "Ling 3.0 Flash Fin is a finance-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for real-world investment...",
+        "context_length": 262144,
+        "architecture": {
+          "modality": "text->text",
+          "input_modalities": [
+            "text"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "Other",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.00000006",
+          "completion": "0.00000018",
+          "input_cache_read": "0.000000012"
+        },
+        "top_provider": {
+          "context_length": 262144,
+          "max_completion_tokens": 235929,
+          "is_moderated": false
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ],
+        "default_parameters": {},
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/inclusionai/ling-3.0-flash-fin-20260827/endpoints"
+        },
+        "reasoning": {
+          "mandatory": false,
+          "default_enabled": true
+        }
+      }
+    },
+    {
       "id": "inclusionai/ling-3.0-flash-fin:free",
       "slug": "inclusionai-ling-3-0-flash-fin-free",
       "canonical_slug": "inclusionai/ling-3.0-flash-fin-20260827",
@@ -1625,7 +1764,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 43.093,
-          "weekly": 49.623,
+          "weekly": 49.5,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -1712,14 +1851,14 @@
         ]
       },
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.00000025",
-        "input_cache_read": "0.000000015"
+        "prompt": "0.00000007125",
+        "completion": "0.0000002375",
+        "input_cache_read": "0.00000001425"
       },
       "isFree": false,
       "topProvider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "architecture": {
@@ -1768,7 +1907,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.588,
-          "weekly": 64.364,
+          "weekly": 64.361,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -1802,13 +1941,13 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.000000075",
-          "completion": "0.00000025",
-          "input_cache_read": "0.000000015"
+          "prompt": "0.00000007125",
+          "completion": "0.0000002375",
+          "input_cache_read": "0.00000001425"
         },
         "top_provider": {
           "context_length": 1048576,
-          "max_completion_tokens": 943718,
+          "max_completion_tokens": 131072,
           "is_moderated": false
         },
         "per_request_limits": null,
@@ -1929,7 +2068,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54,
-          "weekly": 62.669,
+          "weekly": 62.565,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -2086,7 +2225,7 @@
         "aaAgentic": 58.2,
         "scores": {
           "top": 71.838,
-          "weekly": 86.948,
+          "weekly": 86.848,
           "leaderboard": 47.4,
           "coding": 71.5,
           "vision": 0,
@@ -2261,7 +2400,7 @@
         "aaAgentic": 58.2,
         "scores": {
           "top": 71.353,
-          "weekly": 85.443,
+          "weekly": 85.343,
           "leaderboard": 47.4,
           "coding": 71.5,
           "vision": 0,
@@ -2423,7 +2562,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.103,
-          "weekly": 62.385,
+          "weekly": 62.335,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -2574,7 +2713,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.103,
-          "weekly": 59.976,
+          "weekly": 59.928,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -2790,7 +2929,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 19.567,
-          "weekly": 44.759,
+          "weekly": 44.716,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -2899,7 +3038,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 27.567,
-          "weekly": 49.646,
+          "weekly": 49.603,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -2971,9 +3110,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.000001134",
-        "completion": "0.000003564",
-        "input_cache_read": "0.0000001863"
+        "prompt": "0.000001148",
+        "completion": "0.000003608",
+        "input_cache_read": "0.0000001886"
       },
       "isFree": false,
       "topProvider": {
@@ -3026,7 +3165,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.588,
-          "weekly": 55.924,
+          "weekly": 55.858,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -3058,9 +3197,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.000001134",
-          "completion": "0.000003564",
-          "input_cache_read": "0.0000001863"
+          "prompt": "0.000001148",
+          "completion": "0.000003608",
+          "input_cache_read": "0.0000001886"
         },
         "top_provider": {
           "context_length": 1048576,
@@ -3170,7 +3309,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 27.567,
-          "weekly": 49.443,
+          "weekly": 49.403,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -3305,7 +3444,7 @@
         "aaAgentic": 59.1,
         "scores": {
           "top": 72.438,
-          "weekly": 79.121,
+          "weekly": 79.084,
           "leaderboard": 49.13,
           "coding": 74.8,
           "vision": 0,
@@ -3416,10 +3555,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.000000425",
-        "completion": "0.00000255",
-        "input_cache_read": "0.000000085",
-        "input_cache_write": "0.00000053125"
+        "prompt": "0.00000042",
+        "completion": "0.000003",
+        "input_cache_read": "0.000000085"
       },
       "isFree": false,
       "topProvider": {
@@ -3481,7 +3619,7 @@
         "aaAgentic": 50.9,
         "scores": {
           "top": 69.6,
-          "weekly": 76.908,
+          "weekly": 76.58,
           "leaderboard": 43.21,
           "coding": 68.1,
           "vision": 0,
@@ -3511,10 +3649,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.000000425",
-          "completion": "0.00000255",
-          "input_cache_read": "0.000000085",
-          "input_cache_write": "0.00000053125"
+          "prompt": "0.00000042",
+          "completion": "0.000003",
+          "input_cache_read": "0.000000085"
         },
         "top_provider": {
           "context_length": 1000000,
@@ -3637,7 +3774,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 52.546,
-          "weekly": 51.907,
+          "weekly": 51.882,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -3857,7 +3994,7 @@
         "aaAgentic": 45.1,
         "scores": {
           "top": 781.903,
-          "weekly": 77.488,
+          "weekly": 77.464,
           "leaderboard": 305.355,
           "coding": 76.1,
           "vision": 0,
@@ -4181,7 +4318,7 @@
         "aaAgentic": 45.1,
         "scores": {
           "top": 781.903,
-          "weekly": 78.993,
+          "weekly": 78.969,
           "leaderboard": 305.355,
           "coding": 76.1,
           "vision": 0,
@@ -4412,7 +4549,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 51.093,
-          "weekly": 55.847,
+          "weekly": 55.825,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -4556,7 +4693,7 @@
         "aaAgentic": 57.1,
         "scores": {
           "top": 71.413,
-          "weekly": 76.797,
+          "weekly": 76.774,
           "leaderboard": 47.58,
           "coding": 71.9,
           "vision": 0,
@@ -4726,7 +4863,7 @@
         "aaAgentic": 57.1,
         "scores": {
           "top": 71.332,
-          "weekly": 76.797,
+          "weekly": 76.774,
           "leaderboard": 47.58,
           "coding": 71.9,
           "vision": 0,
@@ -4883,7 +5020,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 51.093,
-          "weekly": 55.51,
+          "weekly": 55.488,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -5041,7 +5178,7 @@
         "aaAgentic": 49.6,
         "scores": {
           "top": 70.063,
-          "weekly": 77.401,
+          "weekly": 77.379,
           "leaderboard": 44.12,
           "coding": 68.8,
           "vision": 0,
@@ -5207,7 +5344,7 @@
         "aaAgentic": 49.6,
         "scores": {
           "top": 70.063,
-          "weekly": 75.896,
+          "weekly": 75.873,
           "leaderboard": 44.12,
           "coding": 68.8,
           "vision": 0,
@@ -5470,7 +5607,7 @@
         "aaAgentic": 58.7,
         "scores": {
           "top": 781.915,
-          "weekly": 78.073,
+          "weekly": 78.051,
           "leaderboard": 308.91,
           "coding": 76.8,
           "vision": 0,
@@ -5733,7 +5870,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 48.082,
-          "weekly": 51.623,
+          "weekly": 51.602,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -5886,7 +6023,7 @@
         "aaAgentic": 13.8,
         "scores": {
           "top": 58.173,
-          "weekly": 70.31,
+          "weekly": 70.289,
           "leaderboard": 19.2,
           "coding": 26.8,
           "vision": 0,
@@ -6032,7 +6169,7 @@
         "aaAgentic": 13.8,
         "scores": {
           "top": 53.08,
-          "weekly": 55.041,
+          "weekly": 55.02,
           "leaderboard": 19.2,
           "coding": 26.8,
           "vision": 0,
@@ -6161,7 +6298,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 43.093,
-          "weekly": 48.581,
+          "weekly": 48.561,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -6343,7 +6480,7 @@
         "aaAgentic": 33.6,
         "scores": {
           "top": 702.345,
-          "weekly": 78.768,
+          "weekly": 78.749,
           "leaderboard": 266.123,
           "coding": 52.7,
           "vision": 0,
@@ -6531,7 +6668,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 49.588,
-          "weekly": 57.2,
+          "weekly": 57.181,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -6686,7 +6823,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 49.588,
-          "weekly": 56.595,
+          "weekly": 56.576,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -6945,7 +7082,7 @@
         "aaAgentic": 49.3,
         "scores": {
           "top": 773.493,
-          "weekly": 76.61,
+          "weekly": 76.595,
           "leaderboard": 302.38,
           "coding": 72.2,
           "vision": 0,
@@ -7275,7 +7412,7 @@
         "aaAgentic": 58.4,
         "scores": {
           "top": 796.88,
-          "weekly": 76.127,
+          "weekly": 76.114,
           "leaderboard": 311.65,
           "coding": 71.8,
           "vision": 0,
@@ -7502,7 +7639,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.588,
-          "weekly": 60.697,
+          "weekly": 60.685,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -7719,7 +7856,7 @@
         "aaAgentic": 48.4,
         "scores": {
           "top": 751.42,
-          "weekly": 80.993,
+          "weekly": 80.981,
           "leaderboard": 290.913,
           "coding": 69.1,
           "vision": 0,
@@ -7985,7 +8122,7 @@
         "aaAgentic": 48.4,
         "scores": {
           "top": 750.936,
-          "weekly": 79.823,
+          "weekly": 79.811,
           "leaderboard": 290.913,
           "coding": 69.1,
           "vision": 0,
@@ -8201,7 +8338,7 @@
         "aaAgentic": 31.9,
         "scores": {
           "top": 58.463,
-          "weekly": 66.587,
+          "weekly": 66.576,
           "leaderboard": 34.13,
           "coding": 52.9,
           "vision": 0,
@@ -8379,7 +8516,7 @@
         "aaAgentic": 31.9,
         "scores": {
           "top": 56.958,
-          "weekly": 66.522,
+          "weekly": 66.511,
           "leaderboard": 34.13,
           "coding": 52.9,
           "vision": 0,
@@ -8549,7 +8686,7 @@
         "aaAgentic": 31.9,
         "scores": {
           "top": 58.463,
-          "weekly": 61.169,
+          "weekly": 61.158,
           "leaderboard": 34.13,
           "coding": 52.9,
           "vision": 0,
@@ -8707,7 +8844,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54,
-          "weekly": 61.014,
+          "weekly": 61.004,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -8967,7 +9104,7 @@
         "aaAgentic": 59.2,
         "scores": {
           "top": 810.142,
-          "weekly": 74.733,
+          "weekly": 74.725,
           "leaderboard": 320.047,
           "coding": 78,
           "vision": 0,
@@ -9311,7 +9448,7 @@
         "aaAgentic": 59.2,
         "scores": {
           "top": 810.142,
-          "weekly": 76.239,
+          "weekly": 76.23,
           "leaderboard": 320.047,
           "coding": 78,
           "vision": 0,
@@ -9565,7 +9702,7 @@
         "aaAgentic": 29.3,
         "scores": {
           "top": 62.433,
-          "weekly": 77.329,
+          "weekly": 77.32,
           "leaderboard": 31.52,
           "coding": 50.6,
           "vision": 0,
@@ -9702,7 +9839,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 46.103,
-          "weekly": 53.592,
+          "weekly": 53.584,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -9818,7 +9955,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 43.093,
-          "weekly": 44.244,
+          "weekly": 44.235,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -10056,7 +10193,7 @@
         "aaAgentic": 40.5,
         "scores": {
           "top": 760.147,
-          "weekly": 74.12,
+          "weekly": 74.112,
           "leaderboard": 294.154,
           "coding": 69.2,
           "vision": 0,
@@ -10430,7 +10567,7 @@
         "aaAgentic": 40.5,
         "scores": {
           "top": 760.147,
-          "weekly": 75.625,
+          "weekly": 75.617,
           "leaderboard": 294.154,
           "coding": 69.2,
           "vision": 0,
@@ -10705,7 +10842,7 @@
         "aaAgentic": 27.2,
         "scores": {
           "top": 65.323,
-          "weekly": 69.47,
+          "weekly": 69.462,
           "leaderboard": 31.11,
           "coding": 49.3,
           "vision": 0,
@@ -10880,7 +11017,7 @@
         "aaAgentic": 27.2,
         "scores": {
           "top": 65.323,
-          "weekly": 70.975,
+          "weekly": 70.967,
           "leaderboard": 31.11,
           "coding": 49.3,
           "vision": 0,
@@ -11049,7 +11186,7 @@
         "aaAgentic": 22,
         "scores": {
           "top": 56.303,
-          "weekly": 63.422,
+          "weekly": 63.415,
           "leaderboard": 28.33,
           "coding": 45.3,
           "vision": 0,
@@ -11264,7 +11401,7 @@
         "aaAgentic": 34.1,
         "scores": {
           "top": 717.512,
-          "weekly": 70.006,
+          "weekly": 69.998,
           "leaderboard": 271.445,
           "coding": 52.1,
           "vision": 0,
@@ -11553,7 +11690,7 @@
         "aaAgentic": 34.1,
         "scores": {
           "top": 708.007,
-          "weekly": 64.006,
+          "weekly": 63.998,
           "leaderboard": 271.445,
           "coding": 52.1,
           "vision": 0,
@@ -11835,7 +11972,7 @@
         "aaAgentic": 34.1,
         "scores": {
           "top": 709.512,
-          "weekly": 61.017,
+          "weekly": 61.01,
           "leaderboard": 271.445,
           "coding": 52.1,
           "vision": 0,
@@ -12064,7 +12201,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 55.505,
-          "weekly": 50.091,
+          "weekly": 50.084,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -12337,7 +12474,7 @@
         "aaAgentic": 54.3,
         "scores": {
           "top": 804.136,
-          "weekly": 74.16,
+          "weekly": 74.153,
           "leaderboard": 315.637,
           "coding": 76.2,
           "vision": 0,
@@ -12726,7 +12863,7 @@
         "aaAgentic": 54.3,
         "scores": {
           "top": 804.136,
-          "weekly": 74.16,
+          "weekly": 74.153,
           "leaderboard": 315.637,
           "coding": 76.2,
           "vision": 0,
@@ -13117,7 +13254,7 @@
         "aaAgentic": 39.7,
         "scores": {
           "top": 756.222,
-          "weekly": 74.135,
+          "weekly": 74.128,
           "leaderboard": 293.882,
           "coding": 71.3,
           "vision": 0,
@@ -13382,7 +13519,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 43.093,
-          "weekly": 47.527,
+          "weekly": 47.522,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -13519,7 +13656,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.106,
-          "weekly": 55.596,
+          "weekly": 55.59,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -13675,7 +13812,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.106,
-          "weekly": 57.101,
+          "weekly": 57.095,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -13838,7 +13975,7 @@
         "aaAgentic": 46.9,
         "scores": {
           "top": 69.796,
-          "weekly": 76.516,
+          "weekly": 76.51,
           "leaderboard": 43.75,
           "coding": 71.4,
           "vision": 0,
@@ -14010,7 +14147,7 @@
         "aaAgentic": 46.9,
         "scores": {
           "top": 69.796,
-          "weekly": 78.021,
+          "weekly": 78.015,
           "leaderboard": 43.75,
           "coding": 71.4,
           "vision": 0,
@@ -14173,7 +14310,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.106,
-          "weekly": 50.596,
+          "weekly": 50.59,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -14329,7 +14466,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.106,
-          "weekly": 52.101,
+          "weekly": 52.095,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -14492,7 +14629,7 @@
         "aaAgentic": 50.2,
         "scores": {
           "top": 71.086,
-          "weekly": 73.236,
+          "weekly": 73.23,
           "leaderboard": 47.29,
           "coding": 76.7,
           "vision": 0,
@@ -14664,7 +14801,7 @@
         "aaAgentic": 50.2,
         "scores": {
           "top": 71.086,
-          "weekly": 74.741,
+          "weekly": 74.735,
           "leaderboard": 47.29,
           "coding": 76.7,
           "vision": 0,
@@ -14827,7 +14964,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.106,
-          "weekly": 50.93,
+          "weekly": 50.925,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -14984,7 +15121,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.106,
-          "weekly": 52.436,
+          "weekly": 52.43,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -15149,7 +15286,7 @@
         "aaAgentic": 57.8,
         "scores": {
           "top": 72.376,
-          "weekly": 75.29,
+          "weekly": 75.285,
           "leaderboard": 50.37,
           "coding": 77.4,
           "vision": 0,
@@ -15322,7 +15459,7 @@
         "aaAgentic": 57.8,
         "scores": {
           "top": 72.376,
-          "weekly": 76.796,
+          "weekly": 76.79,
           "leaderboard": 50.37,
           "coding": 77.4,
           "vision": 0,
@@ -15610,7 +15747,7 @@
         "aaAgentic": 48.9,
         "scores": {
           "top": 768.697,
-          "weekly": 74.109,
+          "weekly": 74.103,
           "leaderboard": 300.65,
           "coding": 72.4,
           "vision": 0,
@@ -15884,7 +16021,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 52.495,
-          "weekly": 51.787,
+          "weekly": 51.782,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -16034,7 +16171,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 49.588,
-          "weekly": 54.667,
+          "weekly": 54.662,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -16154,7 +16291,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 49.588,
-          "weekly": 51.507,
+          "weekly": 51.502,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -16232,9 +16369,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033"
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625"
       },
       "isFree": false,
       "topProvider": {
@@ -16331,7 +16468,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 702.843,
-          "weekly": 57.149,
+          "weekly": 58.165,
           "leaderboard": 237,
           "coding": 0,
           "vision": 0,
@@ -16359,9 +16496,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.000000132",
-          "completion": "0.000000528",
-          "input_cache_read": "0.000000033",
+          "prompt": "0.0000000825",
+          "completion": "0.00000033",
+          "input_cache_read": "0.000000020625",
           "overrides": [
             {
               "utc_start": 0,
@@ -16536,7 +16673,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 43.093,
-          "weekly": 53.869,
+          "weekly": 53.865,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -16652,7 +16789,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 43.093,
-          "weekly": 43.641,
+          "weekly": 43.636,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -16898,7 +17035,7 @@
         "aaAgentic": 49.7,
         "scores": {
           "top": 765.928,
-          "weekly": 72.826,
+          "weekly": 72.821,
           "leaderboard": 298.71,
           "coding": 71.5,
           "vision": 0,
@@ -17283,7 +17420,7 @@
         "aaAgentic": 49.7,
         "scores": {
           "top": 765.928,
-          "weekly": 74.331,
+          "weekly": 74.326,
           "leaderboard": 298.71,
           "coding": 71.5,
           "vision": 0,
@@ -17543,7 +17680,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 40.082,
-          "weekly": 48.885,
+          "weekly": 48.88,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -17678,7 +17815,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 51.093,
-          "weekly": 60.482,
+          "weekly": 60.478,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -17811,7 +17948,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 46,
-          "weekly": 42.238,
+          "weekly": 42.234,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -17958,7 +18095,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 41.588,
-          "weekly": 47.121,
+          "weekly": 47.117,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -18097,7 +18234,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 49.588,
-          "weekly": 50.111,
+          "weekly": 50.107,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -18240,7 +18377,7 @@
         "aaAgentic": 3.1,
         "scores": {
           "top": 49.101,
-          "weekly": 51.41,
+          "weekly": 51.406,
           "leaderboard": 17.79,
           "coding": 36.5,
           "vision": 0,
@@ -18512,7 +18649,7 @@
         "aaAgentic": 45.7,
         "scores": {
           "top": 761.199,
-          "weekly": 73.845,
+          "weekly": 73.841,
           "leaderboard": 295.088,
           "coding": 68.8,
           "vision": 0,
@@ -18908,7 +19045,7 @@
         "aaAgentic": 45.7,
         "scores": {
           "top": 758.137,
-          "weekly": 70.351,
+          "weekly": 70.347,
           "leaderboard": 295.088,
           "coding": 68.8,
           "vision": 0,
@@ -19160,7 +19297,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 30,
-          "weekly": 31.259,
+          "weekly": 31.255,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -19409,7 +19546,7 @@
         "aaAgentic": 30.3,
         "scores": {
           "top": 734.821,
-          "weekly": 69.901,
+          "weekly": 69.898,
           "leaderboard": 280.118,
           "coding": 60.8,
           "vision": 0,
@@ -19677,7 +19814,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54,
-          "weekly": 46.809,
+          "weekly": 46.806,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -19958,7 +20095,7 @@
         "aaAgentic": 56.6,
         "scores": {
           "top": 794.749,
-          "weekly": 71.645,
+          "weekly": 71.642,
           "leaderboard": 313.709,
           "coding": 76.5,
           "vision": 0,
@@ -20377,7 +20514,7 @@
         "aaAgentic": 56.6,
         "scores": {
           "top": 794.749,
-          "weekly": 73.15,
+          "weekly": 73.147,
           "leaderboard": 313.709,
           "coding": 76.5,
           "vision": 0,
@@ -20724,7 +20861,7 @@
         "aaAgentic": 31.2,
         "scores": {
           "top": 735.334,
-          "weekly": 65.878,
+          "weekly": 65.875,
           "leaderboard": 282.275,
           "coding": 59.1,
           "vision": 0,
@@ -20919,7 +21056,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 33.536,
-          "weekly": 37.116,
+          "weekly": 37.113,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -21120,7 +21257,7 @@
         "aaAgentic": 27.5,
         "scores": {
           "top": 692.333,
-          "weekly": 68.55,
+          "weekly": 68.548,
           "leaderboard": 260.74,
           "coding": 49.3,
           "vision": 0,
@@ -21394,7 +21531,7 @@
         "aaAgentic": 27.5,
         "scores": {
           "top": 687.24,
-          "weekly": 58.431,
+          "weekly": 58.428,
           "leaderboard": 260.74,
           "coding": 49.3,
           "vision": 0,
@@ -21669,7 +21806,7 @@
         "aaAgentic": 20.7,
         "scores": {
           "top": 760.951,
-          "weekly": 70.346,
+          "weekly": 70.343,
           "leaderboard": 285.945,
           "coding": 55.9,
           "vision": 0,
@@ -22003,7 +22140,7 @@
         "aaAgentic": 36.1,
         "scores": {
           "top": 741.106,
-          "weekly": 72.846,
+          "weekly": 72.843,
           "leaderboard": 282.507,
           "coding": 58.6,
           "vision": 0,
@@ -22383,7 +22520,7 @@
         "aaAgentic": 36.1,
         "scores": {
           "top": 739.601,
-          "weekly": 72.846,
+          "weekly": 72.843,
           "leaderboard": 282.507,
           "coding": 58.6,
           "vision": 0,
@@ -22752,7 +22889,7 @@
         "aaAgentic": 36.1,
         "scores": {
           "top": 741.106,
-          "weekly": 67.221,
+          "weekly": 67.218,
           "leaderboard": 282.507,
           "coding": 58.6,
           "vision": 0,
@@ -23076,7 +23213,7 @@
         "aaAgentic": 21.7,
         "scores": {
           "top": 709.225,
-          "weekly": 67.234,
+          "weekly": 67.232,
           "leaderboard": 261.54,
           "coding": 39.6,
           "vision": 0,
@@ -23452,7 +23589,7 @@
         "aaAgentic": 49.4,
         "scores": {
           "top": 766.626,
-          "weekly": 71.048,
+          "weekly": 71.046,
           "leaderboard": 300.426,
           "coding": 74.3,
           "vision": 0,
@@ -23908,7 +24045,7 @@
         "aaAgentic": 49.4,
         "scores": {
           "top": 766.626,
-          "weekly": 72.554,
+          "weekly": 72.551,
           "leaderboard": 300.426,
           "coding": 74.3,
           "vision": 0,
@@ -24330,7 +24467,7 @@
         "aaAgentic": 30.9,
         "scores": {
           "top": 751.694,
-          "weekly": 70.264,
+          "weekly": 70.262,
           "leaderboard": 287.903,
           "coding": 66,
           "vision": 0,
@@ -24603,7 +24740,7 @@
         "aaAgentic": 28.9,
         "scores": {
           "top": 63.251,
-          "weekly": 69.322,
+          "weekly": 69.32,
           "leaderboard": 33.64,
           "coding": 51.5,
           "vision": 0,
@@ -24922,7 +25059,7 @@
         "aaAgentic": 39.7,
         "scores": {
           "top": 748.351,
-          "weekly": 71.108,
+          "weekly": 71.105,
           "leaderboard": 290.191,
           "coding": 70.1,
           "vision": 0,
@@ -25395,7 +25532,7 @@
         "aaAgentic": 39.7,
         "scores": {
           "top": 748.351,
-          "weekly": 72.613,
+          "weekly": 72.611,
           "leaderboard": 290.191,
           "coding": 70.1,
           "vision": 0,
@@ -25703,7 +25840,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 30.577,
-          "weekly": 42.25,
+          "weekly": 42.248,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -25845,7 +25982,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.103,
-          "weekly": 54.071,
+          "weekly": 54.069,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -26006,7 +26143,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.103,
-          "weekly": 55.576,
+          "weekly": 55.574,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -26155,7 +26292,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 44.01,
-          "weekly": 41.547,
+          "weekly": 41.545,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -26444,7 +26581,7 @@
         "aaAgentic": 24.2,
         "scores": {
           "top": 673.958,
-          "weekly": 67.512,
+          "weekly": 67.51,
           "leaderboard": 252.055,
           "coding": 42.2,
           "vision": 0,
@@ -26766,7 +26903,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 41.588,
-          "weekly": 53.34,
+          "weekly": 53.339,
           "leaderboard": 0.95,
           "coding": 9.5,
           "vision": 0,
@@ -26921,7 +27058,7 @@
         "aaAgentic": 19.2,
         "scores": {
           "top": 60.213,
-          "weekly": 62.609,
+          "weekly": 62.607,
           "leaderboard": 25.97,
           "coding": 46.9,
           "vision": 0,
@@ -27084,7 +27221,7 @@
         "aaAgentic": 19.2,
         "scores": {
           "top": 60.213,
-          "weekly": 64.114,
+          "weekly": 64.112,
           "leaderboard": 25.97,
           "coding": 46.9,
           "vision": 0,
@@ -27244,7 +27381,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 43.041,
-          "weekly": 42.696,
+          "weekly": 42.695,
           "leaderboard": 1.38,
           "coding": 13.8,
           "vision": 0,
@@ -27391,7 +27528,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 50.505,
-          "weekly": 51.303,
+          "weekly": 51.301,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -27536,7 +27673,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 52.01,
-          "weekly": 51.593,
+          "weekly": 51.591,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -27694,7 +27831,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.103,
-          "weekly": 49.463,
+          "weekly": 49.461,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -27815,9 +27952,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.00000255",
-        "completion": "0.00001275",
-        "input_cache_read": "0.00000025599999"
+        "prompt": "0.0000025",
+        "completion": "0.000014",
+        "input_cache_read": "0.00000029"
       },
       "isFree": false,
       "topProvider": {
@@ -27871,7 +28008,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.103,
-          "weekly": 49.27,
+          "weekly": 49.105,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -27905,9 +28042,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.00000255",
-          "completion": "0.00001275",
-          "input_cache_read": "0.00000025599999"
+          "prompt": "0.0000025",
+          "completion": "0.000014",
+          "input_cache_read": "0.00000029"
         },
         "top_provider": {
           "context_length": 1048576,
@@ -28036,7 +28173,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.103,
-          "weekly": 51.928,
+          "weekly": 51.926,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -28188,7 +28325,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54,
-          "weekly": 49.798,
+          "weekly": 49.796,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -28335,7 +28472,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.106,
-          "weekly": 49.798,
+          "weekly": 49.796,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -28503,7 +28640,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54,
-          "weekly": 53.577,
+          "weekly": 53.575,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -28653,7 +28790,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54,
-          "weekly": 54.597,
+          "weekly": 54.596,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -28814,7 +28951,7 @@
         "aaAgentic": 21.6,
         "scores": {
           "top": 60.723,
-          "weekly": 68.028,
+          "weekly": 68.026,
           "leaderboard": 26.66,
           "coding": 41.9,
           "vision": 0,
@@ -28968,7 +29105,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 51.093,
-          "weekly": 50.904,
+          "weekly": 50.903,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -29128,7 +29265,7 @@
         "aaAgentic": 27.5,
         "scores": {
           "top": 62.403,
-          "weekly": 67.151,
+          "weekly": 67.149,
           "leaderboard": 31.76,
           "coding": 53.7,
           "vision": 0,
@@ -29280,7 +29417,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.106,
-          "weekly": 43.556,
+          "weekly": 43.554,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -29426,7 +29563,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.106,
-          "weekly": 45.061,
+          "weekly": 45.059,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -29730,7 +29867,7 @@
         "aaAgentic": 47.4,
         "scores": {
           "top": 728.691,
-          "weekly": 69.966,
+          "weekly": 69.965,
           "leaderboard": 286.062,
           "coding": 74.9,
           "vision": 0,
@@ -30195,7 +30332,7 @@
         "aaAgentic": 47.4,
         "scores": {
           "top": 728.691,
-          "weekly": 71.471,
+          "weekly": 71.47,
           "leaderboard": 286.062,
           "coding": 74.9,
           "vision": 0,
@@ -30457,9 +30594,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.000001035996",
-        "completion": "0.000002071992",
-        "input_cache_read": "0.000000086333"
+        "prompt": "0.000001030776",
+        "completion": "0.000002061552",
+        "input_cache_read": "0.000000085898"
       },
       "isFree": false,
       "topProvider": {
@@ -30598,7 +30735,7 @@
         "aaAgentic": 37.8,
         "scores": {
           "top": 712.393,
-          "weekly": 70.819,
+          "weekly": 70.828,
           "leaderboard": 272.086,
           "coding": 59.4,
           "vision": 0,
@@ -30626,9 +30763,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.000001035996",
-          "completion": "0.000002071992",
-          "input_cache_read": "0.000000086333"
+          "prompt": "0.000001030776",
+          "completion": "0.000002061552",
+          "input_cache_read": "0.000000085898"
         },
         "top_provider": {
           "context_length": 1024000,
@@ -30783,9 +30920,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.00000008554",
-        "completion": "0.00000017108",
-        "input_cache_read": "0.000000017108"
+        "prompt": "0.00000007938",
+        "completion": "0.00000015876",
+        "input_cache_read": "0.000000015876"
       },
       "isFree": false,
       "topProvider": {
@@ -30904,7 +31041,7 @@
         "aaAgentic": 33.7,
         "scores": {
           "top": 724.464,
-          "weekly": 74.955,
+          "weekly": 75.116,
           "leaderboard": 274.265,
           "coding": 56.2,
           "vision": 0,
@@ -30932,9 +31069,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.00000008554",
-          "completion": "0.00000017108",
-          "input_cache_read": "0.000000017108"
+          "prompt": "0.00000007938",
+          "completion": "0.00000015876",
+          "input_cache_read": "0.000000015876"
         },
         "top_provider": {
           "context_length": 1024000,
@@ -31117,7 +31254,7 @@
         "aaAgentic": 31.4,
         "scores": {
           "top": 55.753,
-          "weekly": 66.569,
+          "weekly": 66.567,
           "leaderboard": 35.42,
           "coding": 58.8,
           "vision": 0,
@@ -31336,7 +31473,7 @@
         "aaAgentic": 29.5,
         "scores": {
           "top": 764.101,
-          "weekly": 71.731,
+          "weekly": 71.729,
           "leaderboard": 289.55,
           "coding": 60.2,
           "vision": 0,
@@ -31619,7 +31756,7 @@
         "aaAgentic": 24.4,
         "scores": {
           "top": 754.518,
-          "weekly": 72.233,
+          "weekly": 72.231,
           "leaderboard": 282.83,
           "coding": 56.8,
           "vision": 0,
@@ -31833,7 +31970,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 43.173,
-          "weekly": 42.333,
+          "weekly": 42.331,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -31987,7 +32124,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54,
-          "weekly": 47.756,
+          "weekly": 47.754,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -32119,7 +32256,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 31.505,
-          "weekly": 30.632,
+          "weekly": 30.63,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -32403,7 +32540,7 @@
         "aaAgentic": 31.2,
         "scores": {
           "top": 737.77,
-          "weekly": 69.699,
+          "weekly": 69.697,
           "leaderboard": 282.531,
           "coding": 61.8,
           "vision": 0,
@@ -32856,7 +32993,7 @@
         "aaAgentic": 46.3,
         "scores": {
           "top": 786.49,
-          "weekly": 69.714,
+          "weekly": 69.712,
           "leaderboard": 306.22,
           "coding": 73.6,
           "vision": 0,
@@ -33297,7 +33434,7 @@
         "aaAgentic": 46.3,
         "scores": {
           "top": 786.49,
-          "weekly": 71.219,
+          "weekly": 71.217,
           "leaderboard": 306.22,
           "coding": 73.6,
           "vision": 0,
@@ -33749,7 +33886,7 @@
         "aaAgentic": 30.6,
         "scores": {
           "top": 742.002,
-          "weekly": 68.42,
+          "weekly": 68.419,
           "leaderboard": 281.242,
           "coding": 55.8,
           "vision": 0,
@@ -34066,7 +34203,7 @@
         "aaAgentic": 11,
         "scores": {
           "top": 58.923,
-          "weekly": 67.378,
+          "weekly": 67.377,
           "leaderboard": 22.2,
           "coding": 39.3,
           "vision": 0,
@@ -34223,7 +34360,7 @@
         "aaAgentic": 11,
         "scores": {
           "top": 58.923,
-          "weekly": 58.937,
+          "weekly": 58.936,
           "leaderboard": 22.2,
           "coding": 39.3,
           "vision": 0,
@@ -34381,7 +34518,7 @@
         "aaAgentic": 14.4,
         "scores": {
           "top": 60.003,
-          "weekly": 68.709,
+          "weekly": 68.707,
           "leaderboard": 25.13,
           "coding": 43.4,
           "vision": 0,
@@ -34549,7 +34686,7 @@
         "aaAgentic": 14.4,
         "scores": {
           "top": 60.003,
-          "weekly": 66.208,
+          "weekly": 66.207,
           "leaderboard": 25.13,
           "coding": 43.4,
           "vision": 0,
@@ -34706,7 +34843,7 @@
         "aaAgentic": 14.4,
         "scores": {
           "top": 60.003,
-          "weekly": 60.371,
+          "weekly": 60.369,
           "leaderboard": 25.13,
           "coding": 43.4,
           "vision": 0,
@@ -34921,7 +35058,7 @@
         "aaAgentic": 29,
         "scores": {
           "top": 742.169,
-          "weekly": 69.41,
+          "weekly": 69.408,
           "leaderboard": 279.625,
           "coding": 54.5,
           "vision": 0,
@@ -35287,7 +35424,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 698.173,
-          "weekly": 51.409,
+          "weekly": 51.408,
           "leaderboard": 235.505,
           "coding": 0,
           "vision": 0,
@@ -35634,7 +35771,7 @@
         "aaAgentic": 3.7,
         "scores": {
           "top": 655.696,
-          "weekly": 56.363,
+          "weekly": 56.361,
           "leaderboard": 236.395,
           "coding": 25.8,
           "vision": 0,
@@ -35832,7 +35969,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 47.505,
-          "weekly": 46.112,
+          "weekly": 46.111,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -36090,7 +36227,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 704.937,
-          "weekly": 52.112,
+          "weekly": 52.111,
           "leaderboard": 236.157,
           "coding": 0,
           "vision": 0,
@@ -36335,7 +36472,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 38.103,
-          "weekly": 36.472,
+          "weekly": 36.47,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -36457,7 +36594,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 38.103,
-          "weekly": 36.471,
+          "weekly": 36.47,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -36594,7 +36731,7 @@
         "aaAgentic": 15.1,
         "scores": {
           "top": 53.203,
-          "weekly": 61.556,
+          "weekly": 61.555,
           "leaderboard": 29.54,
           "coding": 59.5,
           "vision": 0,
@@ -36741,7 +36878,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 29.072,
-          "weekly": 46.405,
+          "weekly": 46.404,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -36950,7 +37087,7 @@
         "aaAgentic": 25.9,
         "scores": {
           "top": 737.077,
-          "weekly": 69.576,
+          "weekly": 69.575,
           "leaderboard": 277.89,
           "coding": 52.6,
           "vision": 0,
@@ -37218,7 +37355,7 @@
         "aaAgentic": 25.9,
         "scores": {
           "top": 736.988,
-          "weekly": 63.952,
+          "weekly": 63.95,
           "leaderboard": 277.89,
           "coding": 52.6,
           "vision": 0,
@@ -37423,7 +37560,7 @@
         "aaAgentic": 29.7,
         "scores": {
           "top": 63.92,
-          "weekly": 69.964,
+          "weekly": 69.962,
           "leaderboard": 33.4,
           "coding": 56.1,
           "vision": 0,
@@ -37584,7 +37721,7 @@
         "aaAgentic": 29.7,
         "scores": {
           "top": 63.92,
-          "weekly": 71.469,
+          "weekly": 71.468,
           "leaderboard": 33.4,
           "coding": 56.1,
           "vision": 0,
@@ -37745,7 +37882,7 @@
         "aaAgentic": 31.5,
         "scores": {
           "top": 64.28,
-          "weekly": 67.65,
+          "weekly": 67.648,
           "leaderboard": 34.24,
           "coding": 56.1,
           "vision": 0,
@@ -37906,7 +38043,7 @@
         "aaAgentic": 31.5,
         "scores": {
           "top": 64.28,
-          "weekly": 69.155,
+          "weekly": 69.154,
           "leaderboard": 34.24,
           "coding": 56.1,
           "vision": 0,
@@ -38071,7 +38208,7 @@
         "aaAgentic": 4.6,
         "scores": {
           "top": 57.003,
-          "weekly": 63.391,
+          "weekly": 63.39,
           "leaderboard": 16.45,
           "coding": 26.6,
           "vision": 0,
@@ -38281,7 +38418,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 747.797,
-          "weekly": 51.299,
+          "weekly": 51.298,
           "leaderboard": 253.55,
           "coding": 0,
           "vision": 0,
@@ -38489,7 +38626,7 @@
         "aaAgentic": 8.8,
         "scores": {
           "top": 61.71,
-          "weekly": 66.707,
+          "weekly": 66.706,
           "leaderboard": 21.76,
           "coding": 37.7,
           "vision": 0,
@@ -38652,7 +38789,7 @@
         "aaAgentic": 8.8,
         "scores": {
           "top": 58.803,
-          "weekly": 58.631,
+          "weekly": 58.63,
           "leaderboard": 21.76,
           "coding": 37.7,
           "vision": 0,
@@ -38803,7 +38940,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 51.093,
-          "weekly": 53.089,
+          "weekly": 53.088,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -38971,7 +39108,7 @@
         "aaAgentic": 7,
         "scores": {
           "top": 57.633,
-          "weekly": 66.58,
+          "weekly": 66.579,
           "leaderboard": 18.13,
           "coding": 28.7,
           "vision": 0,
@@ -39137,7 +39274,7 @@
         "aaAgentic": 7,
         "scores": {
           "top": 57.633,
-          "weekly": 65.453,
+          "weekly": 65.452,
           "leaderboard": 18.13,
           "coding": 28.7,
           "vision": 0,
@@ -39285,7 +39422,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.106,
-          "weekly": 43.211,
+          "weekly": 43.21,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -39432,7 +39569,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.106,
-          "weekly": 44.716,
+          "weekly": 44.715,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -39680,7 +39817,7 @@
         "aaAgentic": 44.2,
         "scores": {
           "top": 717.597,
-          "weekly": 69.847,
+          "weekly": 69.846,
           "leaderboard": 279.757,
           "coding": 71.1,
           "vision": 0,
@@ -40033,7 +40170,7 @@
         "aaAgentic": 44.2,
         "scores": {
           "top": 717.597,
-          "weekly": 71.352,
+          "weekly": 71.351,
           "leaderboard": 279.757,
           "coding": 71.1,
           "vision": 0,
@@ -40348,7 +40485,7 @@
         "aaAgentic": 9.5,
         "scores": {
           "top": 616.144,
-          "weekly": 63.576,
+          "weekly": 63.575,
           "leaderboard": 222.09,
           "coding": 31.1,
           "vision": 0,
@@ -40627,7 +40764,7 @@
         "aaAgentic": 6.5,
         "scores": {
           "top": 665.683,
-          "weekly": 63.833,
+          "weekly": 63.832,
           "leaderboard": 240.99,
           "coding": 34.7,
           "vision": 0,
@@ -40847,7 +40984,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 51.093,
-          "weekly": 56.29,
+          "weekly": 56.289,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -41019,7 +41156,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 743.899,
-          "weekly": 46.064,
+          "weekly": 46.063,
           "leaderboard": 255.933,
           "coding": 0,
           "vision": 0,
@@ -41204,7 +41341,7 @@
         "aaAgentic": 11.8,
         "scores": {
           "top": 58.383,
-          "weekly": 63.619,
+          "weekly": 63.618,
           "leaderboard": 20.71,
           "coding": 37,
           "vision": 0,
@@ -41366,7 +41503,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 51.093,
-          "weekly": 53.559,
+          "weekly": 53.557,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -41527,7 +41664,7 @@
         "aaAgentic": 21.3,
         "scores": {
           "top": 60.933,
-          "weekly": 65.751,
+          "weekly": 65.75,
           "leaderboard": 27.53,
           "coding": 45.7,
           "vision": 0,
@@ -41683,7 +41820,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54,
-          "weekly": 57.22,
+          "weekly": 57.219,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -41826,7 +41963,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 54.103,
-          "weekly": 49.049,
+          "weekly": 49.048,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -42079,7 +42216,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 671.606,
-          "weekly": 48.788,
+          "weekly": 48.787,
           "leaderboard": 225.308,
           "coding": 0,
           "vision": 0,
@@ -42314,7 +42451,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 49.588,
-          "weekly": 52.868,
+          "weekly": 52.867,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -42607,7 +42744,7 @@
         "aaAgentic": 23,
         "scores": {
           "top": 725.296,
-          "weekly": 68.097,
+          "weekly": 68.096,
           "leaderboard": 279.137,
           "coding": 68.8,
           "vision": 0,
@@ -43087,7 +43224,7 @@
         "aaAgentic": 23,
         "scores": {
           "top": 725.296,
-          "weekly": 69.602,
+          "weekly": 69.601,
           "leaderboard": 279.137,
           "coding": 68.8,
           "vision": 0,
@@ -43512,7 +43649,7 @@
         "aaAgentic": 42.1,
         "scores": {
           "top": 759.399,
-          "weekly": 67.822,
+          "weekly": 67.821,
           "leaderboard": 291.409,
           "coding": 63,
           "vision": 0,
@@ -43872,7 +44009,7 @@
         "aaAgentic": 42.1,
         "scores": {
           "top": 759.399,
-          "weekly": 69.327,
+          "weekly": 69.326,
           "leaderboard": 291.409,
           "coding": 63,
           "vision": 0,
@@ -44186,7 +44323,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 693.925,
-          "weekly": 53.431,
+          "weekly": 53.43,
           "leaderboard": 232.7,
           "coding": 0,
           "vision": 0,
@@ -44459,7 +44596,7 @@
         "aaAgentic": 19.8,
         "scores": {
           "top": 716.511,
-          "weekly": 65.414,
+          "weekly": 65.413,
           "leaderboard": 267.059,
           "coding": 48.2,
           "vision": 0,
@@ -44721,7 +44858,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 715.114,
-          "weekly": 54.062,
+          "weekly": 54.061,
           "leaderboard": 241.657,
           "coding": 0,
           "vision": 0,
@@ -45018,7 +45155,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 716.776,
-          "weekly": 52.702,
+          "weekly": 52.701,
           "leaderboard": 242.262,
           "coding": 0,
           "vision": 0,
@@ -45256,7 +45393,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 51.093,
-          "weekly": 51.35,
+          "weekly": 51.349,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -45497,7 +45634,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 757.542,
-          "weekly": 47.291,
+          "weekly": 47.29,
           "leaderboard": 255.833,
           "coding": 0,
           "vision": 0,
@@ -45821,7 +45958,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 757.542,
-          "weekly": 48.796,
+          "weekly": 48.795,
           "leaderboard": 255.833,
           "coding": 0,
           "vision": 0,
@@ -46063,7 +46200,7 @@
         "aaAgentic": 8.9,
         "scores": {
           "top": 49.483,
-          "weekly": 57.375,
+          "weekly": 57.374,
           "leaderboard": 18.53,
           "coding": 36.2,
           "vision": 0,
@@ -46213,7 +46350,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 50.505,
-          "weekly": 48.156,
+          "weekly": 48.155,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -46346,7 +46483,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 43.093,
-          "weekly": 50.641,
+          "weekly": 50.64,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -46837,7 +46974,7 @@
         "aaAgentic": 2.9,
         "scores": {
           "top": 53.938,
-          "weekly": 61.064,
+          "weekly": 61.063,
           "leaderboard": 11.77,
           "coding": 16.2,
           "vision": 0,
@@ -46970,7 +47107,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 24.082,
-          "weekly": 35.744,
+          "weekly": 35.743,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -47082,7 +47219,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 30.085,
-          "weekly": 32.518,
+          "weekly": 32.517,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -47350,7 +47487,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 41.536,
-          "weekly": 46.223,
+          "weekly": 46.222,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -47544,7 +47681,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 693.642,
-          "weekly": 56.294,
+          "weekly": 56.293,
           "leaderboard": 233.857,
           "coding": 0,
           "vision": 0,
@@ -47775,7 +47912,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 662.07,
-          "weekly": 48.601,
+          "weekly": 48.6,
           "leaderboard": 221.84,
           "coding": 0,
           "vision": 0,
@@ -47954,7 +48091,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 51.093,
-          "weekly": 56.635,
+          "weekly": 56.634,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -48289,7 +48426,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 713.542,
-          "weekly": 53.623,
+          "weekly": 53.622,
           "leaderboard": 241.086,
           "coding": 0,
           "vision": 0,
@@ -48575,7 +48712,7 @@
         "aaAgentic": 26.2,
         "scores": {
           "top": 709.723,
-          "weekly": 66.638,
+          "weekly": 66.637,
           "leaderboard": 264.613,
           "coding": 45.3,
           "vision": 0,
@@ -48907,7 +49044,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 678.628,
-          "weekly": 51.764,
+          "weekly": 51.763,
           "leaderboard": 227.1,
           "coding": 0,
           "vision": 0,
@@ -49494,7 +49631,7 @@
         "aaAgentic": 2,
         "scores": {
           "top": 55.443,
-          "weekly": 63.285,
+          "weekly": 63.284,
           "leaderboard": 11.59,
           "coding": 14.4,
           "vision": 0,
@@ -49638,7 +49775,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 41.536,
-          "weekly": 42.475,
+          "weekly": 42.474,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -49763,7 +49900,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 52.01,
-          "weekly": 43.079,
+          "weekly": 43.078,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -49899,7 +50036,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 52.01,
-          "weekly": 44.584,
+          "weekly": 44.583,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -50132,7 +50269,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 690.053,
-          "weekly": 48.475,
+          "weekly": 48.474,
           "leaderboard": 232.015,
           "coding": 0,
           "vision": 0,
@@ -50466,7 +50603,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 690.053,
-          "weekly": 49.98,
+          "weekly": 49.979,
           "leaderboard": 232.015,
           "coding": 0,
           "vision": 0,
@@ -51096,7 +51233,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 25.536,
-          "weekly": 29.938,
+          "weekly": 29.937,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -51945,7 +52082,7 @@
         "aaAgentic": 1.6,
         "scores": {
           "top": 601.693,
-          "weekly": 54.77,
+          "weekly": 54.769,
           "leaderboard": 208.35,
           "coding": 4.8,
           "vision": 0,
@@ -52745,7 +52882,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 728.793,
-          "weekly": 47.025,
+          "weekly": 47.024,
           "leaderboard": 246.65,
           "coding": 0,
           "vision": 0,
@@ -53310,7 +53447,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 733.357,
-          "weekly": 42.668,
+          "weekly": 42.667,
           "leaderboard": 252.1,
           "coding": 0,
           "vision": 0,
@@ -54346,7 +54483,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 654.329,
-          "weekly": 52.617,
+          "weekly": 52.616,
           "leaderboard": 219.025,
           "coding": 0,
           "vision": 0,
@@ -54567,7 +54704,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 671.493,
-          "weekly": 51.901,
+          "weekly": 51.9,
           "leaderboard": 227.7,
           "coding": 21,
           "vision": 0,
@@ -54998,7 +55135,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 38.577,
-          "weekly": 50.328,
+          "weekly": 50.327,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -55312,7 +55449,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 683.764,
-          "weekly": 53.793,
+          "weekly": 53.792,
           "leaderboard": 230.257,
           "coding": 0,
           "vision": 0,
@@ -56516,7 +56653,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 49.588,
-          "weekly": 52.507,
+          "weekly": 52.506,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -56656,7 +56793,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 43.093,
-          "weekly": 49.51,
+          "weekly": 49.509,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -56821,7 +56958,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 704.744,
-          "weekly": 41.791,
+          "weekly": 41.79,
           "leaderboard": 240.267,
           "coding": 0,
           "vision": 0,
@@ -57011,7 +57148,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 683.427,
-          "weekly": 40.044,
+          "weekly": 40.043,
           "leaderboard": 237.4,
           "coding": 0,
           "vision": 0,
@@ -57319,7 +57456,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 43.093,
-          "weekly": 48.902,
+          "weekly": 48.901,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -57455,7 +57592,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 52.01,
-          "weekly": 43.625,
+          "weekly": 43.624,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -57815,7 +57952,7 @@
         "aaAgentic": 18.6,
         "scores": {
           "top": 694.697,
-          "weekly": 63.785,
+          "weekly": 63.784,
           "leaderboard": 256.126,
           "coding": 45.8,
           "vision": 0,
@@ -58750,7 +58887,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 692.944,
-          "weekly": 55.097,
+          "weekly": 55.096,
           "leaderboard": 233.771,
           "coding": 0,
           "vision": 0,
@@ -58943,7 +59080,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 33.588,
-          "weekly": 42.738,
+          "weekly": 42.737,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -59064,7 +59201,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 27.041,
-          "weekly": 34.641,
+          "weekly": 34.64,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -59189,7 +59326,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 49.588,
-          "weekly": 51.029,
+          "weekly": 51.028,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -59962,7 +60099,7 @@
         "aaAgentic": 19.9,
         "scores": {
           "top": 706.606,
-          "weekly": 66.284,
+          "weekly": 66.283,
           "leaderboard": 261.644,
           "coding": 43.5,
           "vision": 0,
@@ -60922,7 +61059,7 @@
         "aaAgentic": 1.8,
         "scores": {
           "top": 572.422,
-          "weekly": 57.953,
+          "weekly": 57.952,
           "leaderboard": 200.33,
           "coding": 12.1,
           "vision": 0,
@@ -61271,14 +61408,14 @@
         ]
       },
       "pricing": {
-        "prompt": "0.00000025",
-        "completion": "0.00000095",
-        "input_cache_read": "0.00000013"
+        "prompt": "0.00000055",
+        "completion": "0.00000165",
+        "input_cache_read": "0.00000055"
       },
       "isFree": false,
       "topProvider": {
-        "context_length": 163840,
-        "max_completion_tokens": 32768,
+        "context_length": 161000,
+        "max_completion_tokens": 144900,
         "is_moderated": false
       },
       "architecture": {
@@ -61377,7 +61514,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 657.508,
-          "weekly": 53.776,
+          "weekly": 52.46,
           "leaderboard": 220.886,
           "coding": 0,
           "vision": 0,
@@ -61405,13 +61542,13 @@
           "instruct_type": "deepseek-v3.1"
         },
         "pricing": {
-          "prompt": "0.00000025",
-          "completion": "0.00000095",
-          "input_cache_read": "0.00000013"
+          "prompt": "0.00000055",
+          "completion": "0.00000165",
+          "input_cache_read": "0.00000055"
         },
         "top_provider": {
-          "context_length": 163840,
-          "max_completion_tokens": 32768,
+          "context_length": 161000,
+          "max_completion_tokens": 144900,
           "is_moderated": false
         },
         "per_request_limits": null,
@@ -62030,7 +62167,7 @@
         "aaAgentic": 26.5,
         "scores": {
           "top": 718.269,
-          "weekly": 63.009,
+          "weekly": 63.008,
           "leaderboard": 266.915,
           "coding": 37.8,
           "vision": 0,
@@ -62576,7 +62713,7 @@
         "aaAgentic": 19.6,
         "scores": {
           "top": 683.313,
-          "weekly": 62.704,
+          "weekly": 62.703,
           "leaderboard": 246.37,
           "coding": 15.6,
           "vision": 0,
@@ -62849,7 +62986,7 @@
         "aaAgentic": 19.6,
         "scores": {
           "top": 683.313,
-          "weekly": 64.209,
+          "weekly": 64.208,
           "leaderboard": 246.37,
           "coding": 15.6,
           "vision": 0,
@@ -63338,7 +63475,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 644.727,
-          "weekly": 57.384,
+          "weekly": 57.383,
           "leaderboard": 215.533,
           "coding": 0,
           "vision": 0,
@@ -63585,7 +63722,7 @@
         "aaAgentic": 13.4,
         "scores": {
           "top": 596.459,
-          "weekly": 67.201,
+          "weekly": 67.2,
           "leaderboard": 216.143,
           "coding": 30.4,
           "vision": 0,
@@ -65515,7 +65652,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 696.859,
-          "weekly": 51.884,
+          "weekly": 51.883,
           "leaderboard": 235.371,
           "coding": 0,
           "vision": 0,
@@ -65751,7 +65888,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 675.502,
-          "weekly": 48.164,
+          "weekly": 48.163,
           "leaderboard": 230.514,
           "coding": 0,
           "vision": 0,
@@ -65991,7 +66128,7 @@
         "aaAgentic": 3.8,
         "scores": {
           "top": 613.258,
-          "weekly": 60.064,
+          "weekly": 60.063,
           "leaderboard": 218.94,
           "coding": 22.1,
           "vision": 0,
@@ -66221,7 +66358,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 670.753,
-          "weekly": 47.545,
+          "weekly": 47.544,
           "leaderboard": 228.24,
           "coding": 0,
           "vision": 0,
@@ -67353,7 +67490,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 41.588,
-          "weekly": 48.832,
+          "weekly": 48.831,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -67471,7 +67608,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 35.093,
-          "weekly": 39.851,
+          "weekly": 39.85,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -68046,7 +68183,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 46,
-          "weekly": 45.856,
+          "weekly": 45.855,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -69210,7 +69347,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 50.505,
-          "weekly": 44.041,
+          "weekly": 44.04,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -69797,7 +69934,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 690.562,
-          "weekly": 38.239,
+          "weekly": 38.238,
           "leaderboard": 235.657,
           "coding": 0,
           "vision": 0,
@@ -70045,7 +70182,7 @@
         "aaAgentic": 17.6,
         "scores": {
           "top": 692.704,
-          "weekly": 53.654,
+          "weekly": 53.653,
           "leaderboard": 256.534,
           "coding": 37.6,
           "vision": 0,
@@ -71140,7 +71277,7 @@
         "aaAgentic": 1.9,
         "scores": {
           "top": 52.708,
-          "weekly": 60.353,
+          "weekly": 60.352,
           "leaderboard": 8.66,
           "coding": 13.8,
           "vision": 0,
@@ -71294,7 +71431,7 @@
         "aaAgentic": 1.8,
         "scores": {
           "top": 53.008,
-          "weekly": 60.753,
+          "weekly": 60.752,
           "leaderboard": 9.51,
           "coding": 15.3,
           "vision": 0,
@@ -71828,7 +71965,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 644.285,
-          "weekly": 48.957,
+          "weekly": 48.956,
           "leaderboard": 215.92,
           "coding": 0,
           "vision": 0,
@@ -73117,7 +73254,7 @@
         "aaAgentic": 1.8,
         "scores": {
           "top": 604.299,
-          "weekly": 52.369,
+          "weekly": 52.368,
           "leaderboard": 213.747,
           "coding": 20.2,
           "vision": 0,
@@ -74573,7 +74710,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 42.505,
-          "weekly": 33.544,
+          "weekly": 33.543,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -74837,7 +74974,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 33.588,
-          "weekly": 46.031,
+          "weekly": 46.03,
           "leaderboard": 0.27,
           "coding": 2.7,
           "vision": 0,
@@ -76172,7 +76309,7 @@
         "aaAgentic": 1.7,
         "scores": {
           "top": 55.215,
-          "weekly": 56.453,
+          "weekly": 56.452,
           "leaderboard": 12.62,
           "coding": 16.3,
           "vision": 0,
@@ -76689,7 +76826,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 50.505,
-          "weekly": 50.159,
+          "weekly": 50.158,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -76819,7 +76956,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 50.505,
-          "weekly": 51.664,
+          "weekly": 51.663,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -77077,7 +77214,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 25.52,
-          "weekly": 34.351,
+          "weekly": 34.35,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -77332,7 +77469,7 @@
         "aaAgentic": 3.1,
         "scores": {
           "top": 53.611,
-          "weekly": 58.762,
+          "weekly": 58.761,
           "leaderboard": 15.48,
           "coding": 24.6,
           "vision": 0,
@@ -77769,7 +77906,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 648.094,
-          "weekly": 47.406,
+          "weekly": 47.405,
           "leaderboard": 220.371,
           "coding": 0,
           "vision": 0,
@@ -78079,7 +78216,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 50.505,
-          "weekly": 44.435,
+          "weekly": 44.434,
           "leaderboard": 3.97,
           "coding": 39.7,
           "vision": 0,
@@ -79113,7 +79250,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 22.577,
-          "weekly": 34.673,
+          "weekly": 34.672,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -79239,7 +79376,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 46.051,
-          "weekly": 48.255,
+          "weekly": 48.254,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -80506,7 +80643,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 33.588,
-          "weekly": 40.188,
+          "weekly": 40.187,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -81335,7 +81472,7 @@
         "aaAgentic": 1,
         "scores": {
           "top": 41.536,
-          "weekly": 48.294,
+          "weekly": 48.293,
           "leaderboard": 1.14,
           "coding": 11.4,
           "vision": 0,
@@ -81482,7 +81619,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 41.536,
-          "weekly": 48.294,
+          "weekly": 48.293,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -82134,7 +82271,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 41.536,
-          "weekly": 41.114,
+          "weekly": 41.113,
           "leaderboard": 2.42,
           "coding": 24.2,
           "vision": 0,
@@ -82628,7 +82765,7 @@
         "aaAgentic": null,
         "scores": {
           "top": 32.082,
-          "weekly": 41.133,
+          "weekly": 41.132,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
