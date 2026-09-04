@@ -190,7 +190,7 @@ const serializable = models.map(serializeForClient);
         function taskBadgeHTML(p) {
           if (tk === 'all') return '';
           const map = {
-            coding: { v: p.aiderPassRate2, label: 'Aider' },
+            coding: { v: p.aiderPassRate2 ?? p.aaCoding, label: p.aiderPassRate2 != null ? 'Aider' : 'Coding' },
             math: { v: p.math, label: 'MATH' },
             reasoning: { v: Math.max(p.bbh || 0, p.gpqa || 0, p.musr || 0), label: 'BBH' },
             instruction: { v: p.ifeval, label: 'IFEval' },
