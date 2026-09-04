@@ -20,10 +20,13 @@ jobs:
         with:
           node-version: 22
 
-      - name: Fetch latest models
+      - name: Fetch models from OpenRouter
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: node scripts/fetch-models.mjs
+
+      - name: Fetch per-task benchmark scores (HF OLL + Aider)
+        run: node scripts/fetch-task-scores.mjs
 
       - name: Commit if changed
         run: |
@@ -33,6 +36,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes."
           else
-            git commit -m "chore: refresh models data"
+            git commit -m "chore: refresh models + task scores"
             git push
           fi

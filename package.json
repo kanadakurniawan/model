@@ -11,7 +11,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "fetch": "node scripts/fetch-models.mjs",
-    "start": "astro dev"
+    "start": "astro dev",
+    "fetch:all": "node scripts/fetch-models.mjs && node scripts/fetch-task-scores.mjs"
   },
   "dependencies": {
     "astro": "^7.3.0"

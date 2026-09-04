@@ -214,6 +214,24 @@ function aiderAliases(rawName) {
     'claude-opus-4': 'anthropic/claude-opus-4',
   };
   if (BARE[last]) out.add(BARE[last]);
+
+  const DATE_SUFFIX = (name) => name.replace(/-(\d{4}-\d{2}-\d{2})$/, '').replace(/-(\d{8})$/, '');
+  if (last.startsWith('gpt-4o-2024-') || last.startsWith('gpt-4o-2025-')) {
+    out.add(`openai/${DATE_SUFFIX(last)}`);
+  }
+  if (last.startsWith('claude-3-5-sonnet-')) {
+    out.add('anthropic/claude-3.5-sonnet');
+  }
+  if (last.startsWith('claude-3-5-haiku-')) {
+    out.add('anthropic/claude-3.5-haiku');
+  }
+  if (last.startsWith('grok-3-beta') || last.startsWith('grok-3-mini-beta')) {
+    out.add(`x-ai/${last}`);
+  }
+  if (last === 'grok-3-beta' || last === 'grok-3-mini-beta' || last === 'grok-4') {
+    out.add(`x-ai/${last}`);
+  }
+
   const GEMINI = {
     'gemini-2.0-pro-exp-02-05': 'google/gemini-2.0-pro-exp-02-05',
     'gemini-exp-1206': 'google/gemini-exp-1206',

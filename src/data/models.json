@@ -84025,7 +84025,12 @@
         "aaIntelligence": null,
         "aaCoding": null,
         "aaAgentic": null,
-        "taskScores": {},
+        "taskScores": {
+          "aiderPassRate2": 23.1,
+          "aiderPassRate1": 4.9,
+          "aiderModel": "gpt-4o-2024-08-06",
+          "aiderDate": "2024-12-30"
+        },
         "scores": {
           "top": 532.594,
           "weekly": 42.134,
@@ -84036,7 +84041,7 @@
           "chat": 188.567,
           "math": 0,
           "instruction": 0,
-          "aider": 0
+          "aider": 23.1
         }
       },
       "raw": {
