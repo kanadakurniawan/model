@@ -170,10 +170,14 @@ const serializable = models.map(serializeForClient);
         if (activeSort === 'name') {
           list.sort((a, b) => a.name.localeCompare(b.name));
         } else if (activeSort === 'cheapest') {
-          list.sort(function (a, b) {
-            if (a.isFree !== b.isFree) return a.isFree ? -1 : 1;
-            return ((a.prompt + a.completion) / 2) - ((b.prompt + b.completion) / 2);
-          });
+          if (list.every((x) => x.isFree)) {
+            list.sort((a, b) => (b.rankTop || 0) - (a.rankTop || 0));
+          } else {
+            list.sort(function (a, b) {
+              if (a.isFree !== b.isFree) return a.isFree ? -1 : 1;
+              return ((a.prompt + a.completion) / 2) - ((b.prompt + b.completion) / 2);
+            });
+          }
         } else {
           list.sort(function (a, b) {
             const sa = getSortScore(a);
