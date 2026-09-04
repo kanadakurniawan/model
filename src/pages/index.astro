@@ -231,11 +231,29 @@ const serializable = models.map(serializeForClient);
                   (p.aaIntelligence != null ? '<span>AI <span class="font-mono text-foreground/80">' + p.aaIntelligence + '</span></span>' : '') +
                   (p.arenaElo != null ? '<span>Elo <span class="font-mono text-foreground/80">' + Math.round(p.arenaElo) + '</span></span>' : '') +
                 '</div>';
+
+            const mobileRankInline = showRankPanel
+              ? '<span class="inline-flex items-center rounded bg-accent/15 px-1.5 py-0.5 font-mono text-[10px] text-accent">#' + rank + '</span>'
+              : '<span class="inline-flex items-center rounded bg-background px-1.5 py-0.5 font-mono text-[10px] text-muted">#' + rank + '</span>';
+
+            const mobileMetaItems = [
+              '<span class="inline-flex items-center rounded-md border border-border/60 px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-muted">' + p.provider + '</span>',
+              mobileRankInline,
+            ];
+            if (p.aaIntelligence != null) {
+              mobileMetaItems.push('<span class="text-[10px] text-muted">AI <span class="font-mono text-foreground/80">' + p.aaIntelligence + '</span></span>');
+            }
+            if (p.arenaElo != null) {
+              mobileMetaItems.push('<span class="text-[10px] text-muted">Elo <span class="font-mono text-foreground/80">' + Math.round(p.arenaElo) + '</span></span>');
+            }
+            const mobileMeta = '<div class="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 sm:hidden">' + mobileMetaItems.join('') + '</div>';
+
             return (
               '<article class="group rounded-xl border border-border bg-card p-4 transition hover:border-accent/50 sm:p-3">' +
                 '<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">' +
+                  '<div class="hidden h-7 w-7 shrink-0 items-center justify-center rounded-md bg-background text-sm font-mono text-muted sm:flex">' + rank + '</div>' +
                   '<div class="flex items-start gap-3 sm:flex-1 sm:items-center">' +
-                    '<span class="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-background text-sm font-mono text-muted">' + rank + '</span>' +
+                    '<span class="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-background text-sm font-mono text-muted sm:hidden">' + rank + '</span>' +
                     '<div class="min-w-0 flex-1">' +
                       '<div class="flex flex-wrap items-center gap-2">' +
                         '<a href="/model/' + p.slug + '" class="truncate font-medium hover:text-accent" title="' + escape(p.id) + '">' + escape(p.name) + '</a>' + tag +
@@ -246,6 +264,7 @@ const serializable = models.map(serializeForClient);
                         '<svg class="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>' +
                         '<span class="copy-hint hidden text-[10px] text-accent">tersalin ✓</span>' +
                       '</button>' +
+                      mobileMeta +
                       (allBadges.length ? '<div class="mt-1.5 flex flex-wrap gap-1.5 sm:hidden">' + tagsMobile + '</div>' : '') +
                     '</div>' +
                   '</div>' +
