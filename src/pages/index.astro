@@ -8,6 +8,7 @@ const models = modelsData.models as Model[];
 const fetchedAt = new Date(modelsData.fetchedAt).toLocaleString('id-ID', {
   dateStyle: 'long',
   timeStyle: 'short',
+  timeZone: 'Asia/Jakarta',
 });
 const freeCount = models.filter((m) => m.isFree).length;
 const withRank = models.filter((m) => m.rank.aaIntelligence != null).length;

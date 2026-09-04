@@ -21,7 +21,7 @@ function fmt(n: number): string {
 }
 
 const created = model.created
-  ? new Date(model.created * 1000).toLocaleDateString('id-ID', { dateStyle: 'long' })
+  ? new Date(model.created * 1000).toLocaleDateString('id-ID', { dateStyle: 'long', timeZone: 'Asia/Jakarta' })
   : '-';
 ---
 
