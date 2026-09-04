@@ -1,6 +1,16 @@
 import type { Model } from '../types';
 
-export type RankKey = 'top' | 'weekly' | 'leaderboard' | 'coding' | 'vision' | 'reasoning' | 'chat';
+export type RankKey =
+  | 'top'
+  | 'weekly'
+  | 'leaderboard'
+  | 'coding'
+  | 'vision'
+  | 'reasoning'
+  | 'chat'
+  | 'math'
+  | 'instruction'
+  | 'aider';
 
 export interface RankingEntry {
   model: Model;
@@ -30,7 +40,7 @@ export function rankModels(
 export function fmtPrice(n: number): string {
   if (!isFinite(n) || n === 0) return '0';
   if (n < 0.01) return n.toFixed(4);
-  if (n < 1) return n.toFixed(3);
+  if ( n < 1) return n.toFixed(3);
   return n.toFixed(2);
 }
 
@@ -42,6 +52,7 @@ export function priceUSDPerM(pricing: Model['pricing']): { prompt: number; compl
 }
 
 export function serializeForClient(m: Model) {
+  const ts = m.rank.taskScores || {};
   return {
     id: m.id,
     slug: m.slug,
@@ -57,11 +68,25 @@ export function serializeForClient(m: Model) {
     rankTop: m.rank.scores.top,
     rankWeekly: m.rank.scores.weekly,
     rankLeaderboard: m.rank.scores.leaderboard,
+    rankCoding: m.rank.scores.coding,
+    rankVision: m.rank.scores.vision,
+    rankReasoning: m.rank.scores.reasoning,
+    rankChat: m.rank.scores.chat,
+    rankMath: m.rank.scores.math,
+    rankInstruction: m.rank.scores.instruction,
+    rankAider: m.rank.scores.aider,
     aaIntelligence: m.rank.aaIntelligence,
     aaCoding: m.rank.aaCoding,
     aaAgentic: m.rank.aaAgentic,
     arenaElo: m.rank.arenaElo,
     arenaBestCategory: m.rank.arenaBestCategory,
     arenaBestRank: m.rank.arenaBestRankValue,
+    ifeval: ts.ifeval,
+    math: ts.math,
+    bbh: ts.bbh,
+    gpqa: ts.gpqa,
+    musr: ts.musr,
+    mmlupro: ts.mmlupro,
+    aiderPassRate2: ts.aiderPassRate2,
   };
 }

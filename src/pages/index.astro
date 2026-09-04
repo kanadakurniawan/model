@@ -61,8 +61,10 @@ const serializable = models.map(serializeForClient);
       <select id="task" class="rounded-md border border-border bg-card px-2 py-1.5 text-sm focus:border-accent focus:outline-none">
         <option value="all">Task: Semua</option>
         <option value="coding">Task: Coding</option>
-        <option value="vision">Task: Vision</option>
+        <option value="math">Task: Math</option>
         <option value="reasoning">Task: Reasoning</option>
+        <option value="instruction">Task: Instruction</option>
+        <option value="vision">Task: Vision</option>
         <option value="chat">Task: Chat</option>
       </select>
       <label class="flex items-center gap-1.5 rounded-md border border-border bg-card px-2 py-1.5 text-sm">
@@ -128,32 +130,73 @@ const serializable = models.map(serializeForClient);
       function apply() {
         const term = (q.value || '').trim().toLowerCase();
         const tk = task.value;
+        const s = sort.value;
+        const isTaskFiltered = tk !== 'all';
+        const activeSort = isTaskFiltered ? tk : s;
+
         let list = data.filter(function (p) {
           if (scope === 'free' && !p.isFree) return false;
           if (term && !(p.name.toLowerCase().includes(term) || p.id.toLowerCase().includes(term))) return false;
           if (fVision.checked && !p.vision) return false;
           if (fTools.checked && !p.tools) return false;
-          if (tk === 'coding' && !(p.tools || (p.aaCoding != null && p.aaCoding > 20))) return false;
+          if (tk === 'coding' && !(p.aiderPassRate2 != null || (p.aaCoding != null && p.aaCoding > 20) || p.rankCoding > 0)) return false;
+          if (tk === 'math' && (p.math == null || p.math <= 0)) return false;
+          if (tk === 'reasoning' && !(p.bbh != null || p.gpqa != null || p.musr != null || (p.aaAgentic != null && p.aaAgentic > 20) || p.rankReasoning > 0)) return false;
+          if (tk === 'instruction' && (p.ifeval == null || p.ifeval <= 0)) return false;
           if (tk === 'vision' && !p.vision) return false;
-          if (tk === 'reasoning' && !(p.aaAgentic != null && p.aaAgentic > 20)) return false;
           if (tk === 'chat' && !p.isFree && !p.tools && (p.aaIntelligence == null || p.aaIntelligence < 20)) return false;
           return true;
         });
 
-        const s = sort.value;
-        list.sort(function (a, b) {
-          if (s === 'cheapest') {
-            if (a.isFree !== b.isFree) return a.isFree ? -1 : 1;
-            return avg(a) - avg(b);
+        function getSortScore(p) {
+          switch (activeSort) {
+            case 'top': return p.rankTop || 0;
+            case 'weekly': return p.rankWeekly || 0;
+            case 'leaderboard': return p.rankLeaderboard || 0;
+            case 'cheapest': return p.isFree ? -1 : ((p.prompt + p.completion) / 2);
+            case 'newest': return p.created || 0;
+            case 'context': return p.context || 0;
+            case 'name': return 0;
+            case 'coding': return p.aiderPassRate2 ?? p.rankCoding ?? 0;
+            case 'math': return p.math ?? p.rankMath ?? 0;
+            case 'reasoning': return Math.max(p.bbh || 0, p.gpqa || 0, p.musr || 0) || p.rankReasoning || 0;
+            case 'instruction': return p.ifeval ?? p.rankInstruction ?? 0;
+            case 'vision': return p.rankVision || 0;
+            case 'chat': return p.rankChat || p.aaIntelligence || 0;
+            default: return 0;
           }
-          if (s === 'newest') return b.created - a.created;
-          if (s === 'context') return b.context - a.context;
-          if (s === 'name') return a.name.localeCompare(b.name);
-          if (s === 'top') return (b.rankTop || 0) - (a.rankTop || 0);
-          if (s === 'weekly') return (b.rankWeekly || 0) - (a.rankWeekly || 0);
-          if (s === 'leaderboard') return (b.rankLeaderboard || 0) - (a.rankLeaderboard || 0);
-          return 0;
-        });
+        }
+
+        if (activeSort === 'name') {
+          list.sort((a, b) => a.name.localeCompare(b.name));
+        } else if (activeSort === 'cheapest') {
+          list.sort(function (a, b) {
+            if (a.isFree !== b.isFree) return a.isFree ? -1 : 1;
+            return ((a.prompt + a.completion) / 2) - ((b.prompt + b.completion) / 2);
+          });
+        } else {
+          list.sort(function (a, b) {
+            const sa = getSortScore(a);
+            const sb = getSortScore(b);
+            if (sb !== sa) return sb - sa;
+            return (b.aaIntelligence || 0) - (a.aaIntelligence || 0);
+          });
+        }
+
+        function taskBadgeHTML(p) {
+          if (tk === 'all') return '';
+          const map = {
+            coding: { v: p.aiderPassRate2, label: 'Aider' },
+            math: { v: p.math, label: 'MATH' },
+            reasoning: { v: Math.max(p.bbh || 0, p.gpqa || 0, p.musr || 0), label: 'BBH' },
+            instruction: { v: p.ifeval, label: 'IFEval' },
+            vision: { v: p.rankVision, label: 'Arena' },
+            chat: { v: p.aaIntelligence, label: 'AI' },
+          };
+          const m = map[tk];
+          if (!m || m.v == null || m.v === 0) return '';
+          return '<span class="rounded-md bg-accent/15 px-1.5 py-0.5 text-[10px] font-mono text-accent">' + m.label + ' ' + (typeof m.v === 'number' ? m.v.toFixed(1) : m.v) + '</span>';
+        }
 
         const html = list
           .map(function (p, i) {
@@ -166,9 +209,11 @@ const serializable = models.map(serializeForClient);
             const tags = [];
             if (p.vision) tags.push('vision');
             if (p.tools) tags.push('tools');
-            const tagsMobile = tags.map(function (t) { return '<span class="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted">' + t + '</span>'; }).join('');
-            const tagsDesktop = tags.map(function (t) { return '<span class="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted">' + t + '</span>'; }).join('');
-            const showRankPanel = ['top', 'weekly', 'leaderboard'].includes(s);
+            const taskBadge = taskBadgeHTML(p);
+            const allBadges = [...tags, taskBadge].filter(Boolean);
+            const tagsMobile = allBadges.map(function (t) { return '<span class="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted">' + t + '</span>'; }).join('');
+            const tagsDesktop = allBadges.map(function (t) { return '<span class="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted">' + t + '</span>'; }).join('');
+            const showRankPanel = !isTaskFiltered && ['top', 'weekly', 'leaderboard'].includes(s);
             const rankPanel = showRankPanel
               ? '<div class="flex items-center gap-3 rounded-md border border-border/60 bg-background/50 px-2 py-1">' +
                   '<div><div class="text-[10px] uppercase tracking-wide text-muted">' + rankLabel(s) + '</div>' +
@@ -197,7 +242,7 @@ const serializable = models.map(serializeForClient);
                         '<svg class="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>' +
                         '<span class="copy-hint hidden text-[10px] text-accent">tersalin ✓</span>' +
                       '</button>' +
-                      (tagsMobile ? '<div class="mt-1.5 flex flex-wrap gap-1.5 sm:hidden">' + tagsMobile + '</div>' : '') +
+                      (allBadges.length ? '<div class="mt-1.5 flex flex-wrap gap-1.5 sm:hidden">' + tagsMobile + '</div>' : '') +
                     '</div>' +
                   '</div>' +
                   '<div class="hidden flex-col items-end text-xs sm:flex sm:w-56">' + rankPanel + '</div>' +
@@ -206,7 +251,7 @@ const serializable = models.map(serializeForClient);
                     '<div><div class="text-[10px] uppercase tracking-wide text-muted sm:text-xs">Output / 1M</div><div class="font-mono">$' + fmt(completion) + '</div></div>' +
                     '<div><div class="text-[10px] uppercase tracking-wide text-muted sm:text-xs">Context</div><div class="font-mono">' + p.context.toLocaleString('id-ID') + '</div></div>' +
                   '</div>' +
-                  (tagsDesktop ? '<div class="hidden flex-wrap justify-end gap-1.5 sm:flex sm:w-28">' + tagsDesktop + '</div>' : '<div class="hidden sm:block sm:w-28"></div>') +
+                  (allBadges.length ? '<div class="hidden flex-wrap justify-end gap-1.5 sm:flex sm:w-32">' + tagsDesktop + '</div>' : '<div class="hidden sm:block sm:w-32"></div>') +
                 '</div>' +
               '</article>'
             );
@@ -217,7 +262,6 @@ const serializable = models.map(serializeForClient);
         empty.classList.toggle('hidden', list.length > 0);
         count.textContent = list.length + ' model';
 
-        // re-bind copy buttons
         grid.querySelectorAll('.kodename').forEach(function (el) {
           if (el.dataset.bound) return;
           el.dataset.bound = '1';

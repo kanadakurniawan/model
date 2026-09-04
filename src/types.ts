@@ -28,6 +28,21 @@ export interface Benchmarks {
   artificial_analysis?: ArtificialAnalysis;
 }
 
+export interface TaskScores {
+  ifeval?: number | null;
+  bbh?: number | null;
+  math?: number | null;
+  gpqa?: number | null;
+  musr?: number | null;
+  mmlupro?: number | null;
+  ollAverage?: number | null;
+  ollFullname?: string | null;
+  aiderPassRate2?: number | null;
+  aiderPassRate1?: number | null;
+  aiderModel?: string | null;
+  aiderDate?: string | null;
+}
+
 export interface Rank {
   arenaElo: number | null;
   arenaBestRank: number | null;
@@ -36,6 +51,7 @@ export interface Rank {
   aaIntelligence: number | null;
   aaCoding: number | null;
   aaAgentic: number | null;
+  taskScores: TaskScores;
   scores: {
     top: number;
     weekly: number;
@@ -44,6 +60,9 @@ export interface Rank {
     vision: number;
     reasoning: number;
     chat: number;
+    math: number;
+    instruction: number;
+    aider: number;
   };
 }
 

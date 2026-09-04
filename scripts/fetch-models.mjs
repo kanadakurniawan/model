@@ -115,6 +115,7 @@ function computeRanks(model) {
     aaIntelligence: ai,
     aaCoding: coding,
     aaAgentic: agentic,
+    taskScores: {},
     scores: {
       top: Number(top.toFixed(3)),
       weekly: Number(weekly.toFixed(3)),
@@ -123,6 +124,9 @@ function computeRanks(model) {
       vision: Number((tasks.vision || 0).toFixed(3)),
       reasoning: Number((tasks.reasoning || 0).toFixed(3)),
       chat: Number((tasks.chat || 0).toFixed(3)),
+      math: 0,
+      instruction: 0,
+      aider: 0,
     },
   };
 }

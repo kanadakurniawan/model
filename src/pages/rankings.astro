@@ -11,10 +11,13 @@ const tabs: { key: RankKey; label: string; sub: string; filter?: (m: Model) => b
   { key: 'top',         label: 'Top Models',         sub: 'Gabaran ELO + AA Intelligence + Context + Capability' },
   { key: 'weekly',      label: 'Weekly Usage',       sub: 'Recency × kemampuan ÷ harga (proxy popularitas)' },
   { key: 'leaderboard', label: 'LLM Leaderboard',    sub: 'Artificial Analysis Intelligence Index' },
-  { key: 'coding',      label: 'Top by Task · Coding',  sub: 'AA Coding Index', filter: (m) => (m.supported_parameters?.includes('tools') ?? false) || m.modality.input.includes('text') },
-  { key: 'vision',      label: 'Top by Task · Vision',  sub: 'Dukungan input gambar + skor', filter: (m) => m.modality.input.includes('image') },
-  { key: 'reasoning',   label: 'Top by Task · Reasoning', sub: 'AA Agentic Index', filter: (m) => true! },
-  { key: 'chat',        label: 'Top by Task · Chat',     sub: 'Inteligensi + tools + json', filter: (m) => m.modality.input.includes('text') },
+  { key: 'coding',      label: 'Top · Coding',       sub: 'AA Coding Index', filter: (m) => (m.supported_parameters?.includes('tools') ?? false) || m.modality.input.includes('text') },
+  { key: 'aider',       label: 'Top · Coding (Aider)', sub: 'Aider polyglot pass_rate_2 (225 exercises × 6 bahasa)' },
+  { key: 'math',        label: 'Top · Math',         sub: 'HF Open LLM Leaderboard MATH Lvl 5' },
+  { key: 'reasoning',   label: 'Top · Reasoning',    sub: 'AA Agentic + HF BBH/GPQA/MUSR' },
+  { key: 'instruction', label: 'Top · Instruction',  sub: 'HF Open LLM Leaderboard IFEval' },
+  { key: 'vision',      label: 'Top · Vision',       sub: 'Dukungan input gambar + skor', filter: (m) => m.modality.input.includes('image') },
+  { key: 'chat',        label: 'Top · Chat',         sub: 'Inteligensi + tools + json', filter: (m) => m.modality.input.includes('text') },
 ];
 
 const ranked = tabs.map((t) => ({
