@@ -1,7 +1,1581 @@
 {
-  "fetchedAt": "2026-09-22T16:17:45.025Z",
+  "fetchedAt": "2026-09-22T20:54:06.683Z",
   "source": "https://openrouter.ai/api/v1/models",
   "models": [
+    {
+      "id": "openai/gpt-6-luna-pro",
+      "slug": "openai-gpt-6-luna-pro",
+      "canonical_slug": "openai/gpt-6-luna-pro-20260922",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6 Luna Pro",
+      "description": "GPT-6 Luna Pro is the same underlying model as [GPT-6 Luna](https://openrouter.ai/openai/gpt-6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
+      "created": 1790100791,
+      "context_length": 1050000,
+      "modality": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "prompt": "0.0000001",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000001",
+        "input_cache_write": "0.000000125"
+      },
+      "isFree": false,
+      "topProvider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "knowledge_cutoff": null,
+      "rank": {
+        "arenaElo": null,
+        "arenaBestRank": null,
+        "arenaBestCategory": null,
+        "arenaBestRankValue": null,
+        "aaIntelligence": null,
+        "aaCoding": null,
+        "aaAgentic": null,
+        "taskScores": {},
+        "scores": {
+          "top": 54.106,
+          "weekly": 75.852,
+          "leaderboard": 0,
+          "coding": 0,
+          "vision": 0,
+          "reasoning": 0,
+          "chat": 15,
+          "math": 0,
+          "instruction": 0,
+          "aider": 0
+        }
+      },
+      "raw": {
+        "id": "openai/gpt-6-luna-pro",
+        "canonical_slug": "openai/gpt-6-luna-pro-20260922",
+        "hugging_face_id": null,
+        "name": "OpenAI: GPT-6 Luna Pro",
+        "created": 1790100791,
+        "description": "GPT-6 Luna Pro is the same underlying model as [GPT-6 Luna](https://openrouter.ai/openai/gpt-6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
+        "context_length": 1050000,
+        "architecture": {
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "file",
+            "image",
+            "text"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "GPT",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.0000001",
+          "completion": "0.0000005",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000001",
+          "input_cache_write": "0.000000125",
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000002",
+              "completion": "0.00000075",
+              "input_cache_read": "0.00000002",
+              "input_cache_write": "0.00000025"
+            }
+          ]
+        },
+        "top_provider": {
+          "context_length": 1050000,
+          "max_completion_tokens": 128000,
+          "is_moderated": true
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ],
+        "default_parameters": {
+          "temperature": null,
+          "top_p": null,
+          "top_k": null,
+          "frequency_penalty": null,
+          "presence_penalty": null,
+          "repetition_penalty": null
+        },
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/openai/gpt-6-luna-pro-20260922/endpoints"
+        },
+        "reasoning": {
+          "mandatory": false,
+          "default_enabled": true,
+          "supported_efforts": [
+            "max",
+            "xhigh",
+            "high",
+            "medium",
+            "low",
+            "none"
+          ],
+          "default_effort": "medium"
+        }
+      }
+    },
+    {
+      "id": "openai/gpt-6-luna-pro:batch",
+      "slug": "openai-gpt-6-luna-pro-batch",
+      "canonical_slug": "openai/gpt-6-luna-pro-20260922",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6 Luna Pro (batch)",
+      "description": "GPT-6 Luna Pro is the same underlying model as [GPT-6 Luna](https://openrouter.ai/openai/gpt-6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
+      "created": 1790100791,
+      "context_length": 1050000,
+      "modality": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "prompt": "0.00000005",
+        "completion": "0.00000025",
+        "input_cache_read": "0.000000005",
+        "input_cache_write": "0.0000000625"
+      },
+      "isFree": false,
+      "topProvider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "knowledge_cutoff": null,
+      "rank": {
+        "arenaElo": null,
+        "arenaBestRank": null,
+        "arenaBestCategory": null,
+        "arenaBestRankValue": null,
+        "aaIntelligence": null,
+        "aaCoding": null,
+        "aaAgentic": null,
+        "taskScores": {},
+        "scores": {
+          "top": 54.106,
+          "weekly": 77.357,
+          "leaderboard": 0,
+          "coding": 0,
+          "vision": 0,
+          "reasoning": 0,
+          "chat": 15,
+          "math": 0,
+          "instruction": 0,
+          "aider": 0
+        }
+      },
+      "raw": {
+        "id": "openai/gpt-6-luna-pro:batch",
+        "canonical_slug": "openai/gpt-6-luna-pro-20260922",
+        "hugging_face_id": null,
+        "name": "OpenAI: GPT-6 Luna Pro (batch)",
+        "created": 1790100791,
+        "description": "GPT-6 Luna Pro is the same underlying model as [GPT-6 Luna](https://openrouter.ai/openai/gpt-6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
+        "context_length": 1050000,
+        "architecture": {
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "file",
+            "image",
+            "text"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "GPT",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.00000005",
+          "completion": "0.00000025",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000005",
+          "input_cache_write": "0.0000000625",
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000001",
+              "completion": "0.000000375",
+              "input_cache_read": "0.00000001",
+              "input_cache_write": "0.000000125"
+            }
+          ]
+        },
+        "top_provider": {
+          "context_length": 1050000,
+          "max_completion_tokens": 128000,
+          "is_moderated": true
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ],
+        "default_parameters": {
+          "temperature": null,
+          "top_p": null,
+          "top_k": null,
+          "frequency_penalty": null,
+          "presence_penalty": null,
+          "repetition_penalty": null
+        },
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/openai/gpt-6-luna-pro-20260922/endpoints"
+        },
+        "reasoning": {
+          "mandatory": false,
+          "default_enabled": true,
+          "supported_efforts": [
+            "max",
+            "xhigh",
+            "high",
+            "medium",
+            "low",
+            "none"
+          ],
+          "default_effort": "medium"
+        }
+      }
+    },
+    {
+      "id": "openai/gpt-6-luna",
+      "slug": "openai-gpt-6-luna",
+      "canonical_slug": "openai/gpt-6-luna-20260922",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6 Luna",
+      "description": "GPT-6 Luna is the fast, cost-efficient model in OpenAI's GPT-6 series, positioned below GPT-6 Sol. It is suited for high-volume and latency-sensitive workloads such as chat, classification, and lightweight agentic...",
+      "created": 1790100786,
+      "context_length": 1050000,
+      "modality": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "prompt": "0.0000001",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000001",
+        "input_cache_write": "0.000000125"
+      },
+      "isFree": false,
+      "topProvider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "knowledge_cutoff": null,
+      "rank": {
+        "arenaElo": null,
+        "arenaBestRank": null,
+        "arenaBestCategory": null,
+        "arenaBestRankValue": null,
+        "aaIntelligence": null,
+        "aaCoding": null,
+        "aaAgentic": null,
+        "taskScores": {},
+        "scores": {
+          "top": 54.106,
+          "weekly": 75.852,
+          "leaderboard": 0,
+          "coding": 0,
+          "vision": 0,
+          "reasoning": 0,
+          "chat": 15,
+          "math": 0,
+          "instruction": 0,
+          "aider": 0
+        }
+      },
+      "raw": {
+        "id": "openai/gpt-6-luna",
+        "canonical_slug": "openai/gpt-6-luna-20260922",
+        "hugging_face_id": null,
+        "name": "OpenAI: GPT-6 Luna",
+        "created": 1790100786,
+        "description": "GPT-6 Luna is the fast, cost-efficient model in OpenAI's GPT-6 series, positioned below GPT-6 Sol. It is suited for high-volume and latency-sensitive workloads such as chat, classification, and lightweight agentic...",
+        "context_length": 1050000,
+        "architecture": {
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "file",
+            "image",
+            "text"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "GPT",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.0000001",
+          "completion": "0.0000005",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000001",
+          "input_cache_write": "0.000000125",
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000002",
+              "completion": "0.00000075",
+              "input_cache_read": "0.00000002",
+              "input_cache_write": "0.00000025"
+            }
+          ]
+        },
+        "top_provider": {
+          "context_length": 1050000,
+          "max_completion_tokens": 128000,
+          "is_moderated": true
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ],
+        "default_parameters": {
+          "temperature": null,
+          "top_p": null,
+          "top_k": null,
+          "frequency_penalty": null,
+          "presence_penalty": null,
+          "repetition_penalty": null
+        },
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/openai/gpt-6-luna-20260922/endpoints"
+        },
+        "reasoning": {
+          "mandatory": false,
+          "default_enabled": true,
+          "supported_efforts": [
+            "max",
+            "xhigh",
+            "high",
+            "medium",
+            "low",
+            "none"
+          ],
+          "default_effort": "medium"
+        }
+      }
+    },
+    {
+      "id": "openai/gpt-6-luna:batch",
+      "slug": "openai-gpt-6-luna-batch",
+      "canonical_slug": "openai/gpt-6-luna-20260922",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6 Luna (batch)",
+      "description": "GPT-6 Luna is the fast, cost-efficient model in OpenAI's GPT-6 series, positioned below GPT-6 Sol. It is suited for high-volume and latency-sensitive workloads such as chat, classification, and lightweight agentic...",
+      "created": 1790100786,
+      "context_length": 1050000,
+      "modality": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "prompt": "0.00000005",
+        "completion": "0.00000025",
+        "input_cache_read": "0.000000005",
+        "input_cache_write": "0.0000000625"
+      },
+      "isFree": false,
+      "topProvider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "knowledge_cutoff": null,
+      "rank": {
+        "arenaElo": null,
+        "arenaBestRank": null,
+        "arenaBestCategory": null,
+        "arenaBestRankValue": null,
+        "aaIntelligence": null,
+        "aaCoding": null,
+        "aaAgentic": null,
+        "taskScores": {},
+        "scores": {
+          "top": 54.106,
+          "weekly": 77.357,
+          "leaderboard": 0,
+          "coding": 0,
+          "vision": 0,
+          "reasoning": 0,
+          "chat": 15,
+          "math": 0,
+          "instruction": 0,
+          "aider": 0
+        }
+      },
+      "raw": {
+        "id": "openai/gpt-6-luna:batch",
+        "canonical_slug": "openai/gpt-6-luna-20260922",
+        "hugging_face_id": null,
+        "name": "OpenAI: GPT-6 Luna (batch)",
+        "created": 1790100786,
+        "description": "GPT-6 Luna is the fast, cost-efficient model in OpenAI's GPT-6 series, positioned below GPT-6 Sol. It is suited for high-volume and latency-sensitive workloads such as chat, classification, and lightweight agentic...",
+        "context_length": 1050000,
+        "architecture": {
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "file",
+            "image",
+            "text"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "GPT",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.00000005",
+          "completion": "0.00000025",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000005",
+          "input_cache_write": "0.0000000625",
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000001",
+              "completion": "0.000000375",
+              "input_cache_read": "0.00000001",
+              "input_cache_write": "0.000000125"
+            }
+          ]
+        },
+        "top_provider": {
+          "context_length": 1050000,
+          "max_completion_tokens": 128000,
+          "is_moderated": true
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ],
+        "default_parameters": {
+          "temperature": null,
+          "top_p": null,
+          "top_k": null,
+          "frequency_penalty": null,
+          "presence_penalty": null,
+          "repetition_penalty": null
+        },
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/openai/gpt-6-luna-20260922/endpoints"
+        },
+        "reasoning": {
+          "mandatory": false,
+          "default_enabled": true,
+          "supported_efforts": [
+            "max",
+            "xhigh",
+            "high",
+            "medium",
+            "low",
+            "none"
+          ],
+          "default_effort": "medium"
+        }
+      }
+    },
+    {
+      "id": "openai/gpt-6-sol-pro",
+      "slug": "openai-gpt-6-sol-pro",
+      "canonical_slug": "openai/gpt-6-sol-pro-20260922",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6 Sol Pro",
+      "description": "GPT-6 Sol Pro is the same underlying model as [GPT-6 Sol](https://openrouter.ai/openai/gpt-6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
+      "created": 1790100781,
+      "context_length": 1050000,
+      "modality": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.0000025"
+      },
+      "isFree": false,
+      "topProvider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "knowledge_cutoff": null,
+      "rank": {
+        "arenaElo": null,
+        "arenaBestRank": null,
+        "arenaBestCategory": null,
+        "arenaBestRankValue": null,
+        "aaIntelligence": null,
+        "aaCoding": null,
+        "aaAgentic": null,
+        "taskScores": {},
+        "scores": {
+          "top": 54.106,
+          "weekly": 69.346,
+          "leaderboard": 0,
+          "coding": 0,
+          "vision": 0,
+          "reasoning": 0,
+          "chat": 15,
+          "math": 0,
+          "instruction": 0,
+          "aider": 0
+        }
+      },
+      "raw": {
+        "id": "openai/gpt-6-sol-pro",
+        "canonical_slug": "openai/gpt-6-sol-pro-20260922",
+        "hugging_face_id": null,
+        "name": "OpenAI: GPT-6 Sol Pro",
+        "created": 1790100781,
+        "description": "GPT-6 Sol Pro is the same underlying model as [GPT-6 Sol](https://openrouter.ai/openai/gpt-6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
+        "context_length": 1050000,
+        "architecture": {
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "file",
+            "image",
+            "text"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "GPT",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.000002",
+          "completion": "0.00001",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000002",
+          "input_cache_write": "0.0000025",
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000004",
+              "completion": "0.000015",
+              "input_cache_read": "0.0000004",
+              "input_cache_write": "0.000005"
+            }
+          ]
+        },
+        "top_provider": {
+          "context_length": 1050000,
+          "max_completion_tokens": 128000,
+          "is_moderated": true
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ],
+        "default_parameters": {
+          "temperature": null,
+          "top_p": null,
+          "top_k": null,
+          "frequency_penalty": null,
+          "presence_penalty": null,
+          "repetition_penalty": null
+        },
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/openai/gpt-6-sol-pro-20260922/endpoints"
+        },
+        "reasoning": {
+          "mandatory": false,
+          "default_enabled": true,
+          "supported_efforts": [
+            "max",
+            "xhigh",
+            "high",
+            "medium",
+            "low",
+            "none"
+          ],
+          "default_effort": "medium"
+        }
+      }
+    },
+    {
+      "id": "openai/gpt-6-sol-pro:batch",
+      "slug": "openai-gpt-6-sol-pro-batch",
+      "canonical_slug": "openai/gpt-6-sol-pro-20260922",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6 Sol Pro (batch)",
+      "description": "GPT-6 Sol Pro is the same underlying model as [GPT-6 Sol](https://openrouter.ai/openai/gpt-6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
+      "created": 1790100781,
+      "context_length": 1050000,
+      "modality": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "prompt": "0.000001",
+        "completion": "0.000005",
+        "input_cache_read": "0.0000001",
+        "input_cache_write": "0.00000125"
+      },
+      "isFree": false,
+      "topProvider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "knowledge_cutoff": null,
+      "rank": {
+        "arenaElo": null,
+        "arenaBestRank": null,
+        "arenaBestCategory": null,
+        "arenaBestRankValue": null,
+        "aaIntelligence": null,
+        "aaCoding": null,
+        "aaAgentic": null,
+        "taskScores": {},
+        "scores": {
+          "top": 54.106,
+          "weekly": 70.852,
+          "leaderboard": 0,
+          "coding": 0,
+          "vision": 0,
+          "reasoning": 0,
+          "chat": 15,
+          "math": 0,
+          "instruction": 0,
+          "aider": 0
+        }
+      },
+      "raw": {
+        "id": "openai/gpt-6-sol-pro:batch",
+        "canonical_slug": "openai/gpt-6-sol-pro-20260922",
+        "hugging_face_id": null,
+        "name": "OpenAI: GPT-6 Sol Pro (batch)",
+        "created": 1790100781,
+        "description": "GPT-6 Sol Pro is the same underlying model as [GPT-6 Sol](https://openrouter.ai/openai/gpt-6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
+        "context_length": 1050000,
+        "architecture": {
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "file",
+            "image",
+            "text"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "GPT",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.000001",
+          "completion": "0.000005",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000001",
+          "input_cache_write": "0.00000125",
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000002",
+              "completion": "0.0000075",
+              "input_cache_read": "0.0000002",
+              "input_cache_write": "0.0000025"
+            }
+          ]
+        },
+        "top_provider": {
+          "context_length": 1050000,
+          "max_completion_tokens": 128000,
+          "is_moderated": true
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ],
+        "default_parameters": {
+          "temperature": null,
+          "top_p": null,
+          "top_k": null,
+          "frequency_penalty": null,
+          "presence_penalty": null,
+          "repetition_penalty": null
+        },
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/openai/gpt-6-sol-pro-20260922/endpoints"
+        },
+        "reasoning": {
+          "mandatory": false,
+          "default_enabled": true,
+          "supported_efforts": [
+            "max",
+            "xhigh",
+            "high",
+            "medium",
+            "low",
+            "none"
+          ],
+          "default_effort": "medium"
+        }
+      }
+    },
+    {
+      "id": "openai/gpt-6-sol",
+      "slug": "openai-gpt-6-sol",
+      "canonical_slug": "openai/gpt-6-sol-20260922",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6 Sol",
+      "description": "GPT-6 Sol is the cost-efficient high-end model in OpenAI's GPT-6 series, positioned below the flagship GPT-6 Astra and above the fast GPT-6 Luna tier. It is suited for demanding professional...",
+      "created": 1790100775,
+      "context_length": 1050000,
+      "modality": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.0000025"
+      },
+      "isFree": false,
+      "topProvider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "knowledge_cutoff": null,
+      "rank": {
+        "arenaElo": null,
+        "arenaBestRank": null,
+        "arenaBestCategory": null,
+        "arenaBestRankValue": null,
+        "aaIntelligence": null,
+        "aaCoding": null,
+        "aaAgentic": null,
+        "taskScores": {},
+        "scores": {
+          "top": 54.106,
+          "weekly": 69.346,
+          "leaderboard": 0,
+          "coding": 0,
+          "vision": 0,
+          "reasoning": 0,
+          "chat": 15,
+          "math": 0,
+          "instruction": 0,
+          "aider": 0
+        }
+      },
+      "raw": {
+        "id": "openai/gpt-6-sol",
+        "canonical_slug": "openai/gpt-6-sol-20260922",
+        "hugging_face_id": null,
+        "name": "OpenAI: GPT-6 Sol",
+        "created": 1790100775,
+        "description": "GPT-6 Sol is the cost-efficient high-end model in OpenAI's GPT-6 series, positioned below the flagship GPT-6 Astra and above the fast GPT-6 Luna tier. It is suited for demanding professional...",
+        "context_length": 1050000,
+        "architecture": {
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "file",
+            "image",
+            "text"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "GPT",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.000002",
+          "completion": "0.00001",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000002",
+          "input_cache_write": "0.0000025",
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000004",
+              "completion": "0.000015",
+              "input_cache_read": "0.0000004",
+              "input_cache_write": "0.000005"
+            }
+          ]
+        },
+        "top_provider": {
+          "context_length": 1050000,
+          "max_completion_tokens": 128000,
+          "is_moderated": true
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ],
+        "default_parameters": {
+          "temperature": null,
+          "top_p": null,
+          "top_k": null,
+          "frequency_penalty": null,
+          "presence_penalty": null,
+          "repetition_penalty": null
+        },
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/openai/gpt-6-sol-20260922/endpoints"
+        },
+        "reasoning": {
+          "mandatory": false,
+          "default_enabled": true,
+          "supported_efforts": [
+            "max",
+            "xhigh",
+            "high",
+            "medium",
+            "low",
+            "none"
+          ],
+          "default_effort": "medium"
+        }
+      }
+    },
+    {
+      "id": "openai/gpt-6-sol:batch",
+      "slug": "openai-gpt-6-sol-batch",
+      "canonical_slug": "openai/gpt-6-sol-20260922",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6 Sol (batch)",
+      "description": "GPT-6 Sol is the cost-efficient high-end model in OpenAI's GPT-6 series, positioned below the flagship GPT-6 Astra and above the fast GPT-6 Luna tier. It is suited for demanding professional...",
+      "created": 1790100775,
+      "context_length": 1050000,
+      "modality": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "prompt": "0.000001",
+        "completion": "0.000005",
+        "input_cache_read": "0.0000001",
+        "input_cache_write": "0.00000125"
+      },
+      "isFree": false,
+      "topProvider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "knowledge_cutoff": null,
+      "rank": {
+        "arenaElo": null,
+        "arenaBestRank": null,
+        "arenaBestCategory": null,
+        "arenaBestRankValue": null,
+        "aaIntelligence": null,
+        "aaCoding": null,
+        "aaAgentic": null,
+        "taskScores": {},
+        "scores": {
+          "top": 54.106,
+          "weekly": 70.852,
+          "leaderboard": 0,
+          "coding": 0,
+          "vision": 0,
+          "reasoning": 0,
+          "chat": 15,
+          "math": 0,
+          "instruction": 0,
+          "aider": 0
+        }
+      },
+      "raw": {
+        "id": "openai/gpt-6-sol:batch",
+        "canonical_slug": "openai/gpt-6-sol-20260922",
+        "hugging_face_id": null,
+        "name": "OpenAI: GPT-6 Sol (batch)",
+        "created": 1790100775,
+        "description": "GPT-6 Sol is the cost-efficient high-end model in OpenAI's GPT-6 series, positioned below the flagship GPT-6 Astra and above the fast GPT-6 Luna tier. It is suited for demanding professional...",
+        "context_length": 1050000,
+        "architecture": {
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "file",
+            "image",
+            "text"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "GPT",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.000001",
+          "completion": "0.000005",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000001",
+          "input_cache_write": "0.00000125",
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000002",
+              "completion": "0.0000075",
+              "input_cache_read": "0.0000002",
+              "input_cache_write": "0.0000025"
+            }
+          ]
+        },
+        "top_provider": {
+          "context_length": 1050000,
+          "max_completion_tokens": 128000,
+          "is_moderated": true
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ],
+        "default_parameters": {
+          "temperature": null,
+          "top_p": null,
+          "top_k": null,
+          "frequency_penalty": null,
+          "presence_penalty": null,
+          "repetition_penalty": null
+        },
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/openai/gpt-6-sol-20260922/endpoints"
+        },
+        "reasoning": {
+          "mandatory": false,
+          "default_enabled": true,
+          "supported_efforts": [
+            "max",
+            "xhigh",
+            "high",
+            "medium",
+            "low",
+            "none"
+          ],
+          "default_effort": "medium"
+        }
+      }
+    },
+    {
+      "id": "anthropic/claude-opus-5.5",
+      "slug": "anthropic-claude-opus-5-5",
+      "canonical_slug": "anthropic/claude-opus-5.5-20260921",
+      "hugging_face_id": null,
+      "name": "Anthropic: Claude Opus 5.5",
+      "description": "Claude Opus 5.5 is Anthropic's flagship model for demanding reasoning, coding, and long-horizon agentic work, succeeding Claude Opus 5. It is particularly strong at multi-step changes in large codebases, code...",
+      "created": 1790094732,
+      "context_length": 1000000,
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "prompt": "0.000004",
+        "completion": "0.00002",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.000005"
+      },
+      "isFree": false,
+      "topProvider": {
+        "context_length": 1000000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "verbosity"
+      ],
+      "knowledge_cutoff": null,
+      "rank": {
+        "arenaElo": null,
+        "arenaBestRank": null,
+        "arenaBestCategory": null,
+        "arenaBestRankValue": null,
+        "aaIntelligence": null,
+        "aaCoding": null,
+        "aaAgentic": null,
+        "taskScores": {},
+        "scores": {
+          "top": 54,
+          "weekly": 67.841,
+          "leaderboard": 0,
+          "coding": 0,
+          "vision": 0,
+          "reasoning": 0,
+          "chat": 15,
+          "math": 0,
+          "instruction": 0,
+          "aider": 0
+        }
+      },
+      "raw": {
+        "id": "anthropic/claude-opus-5.5",
+        "canonical_slug": "anthropic/claude-opus-5.5-20260921",
+        "hugging_face_id": null,
+        "name": "Anthropic: Claude Opus 5.5",
+        "created": 1790094732,
+        "description": "Claude Opus 5.5 is Anthropic's flagship model for demanding reasoning, coding, and long-horizon agentic work, succeeding Claude Opus 5. It is particularly strong at multi-step changes in large codebases, code...",
+        "context_length": 1000000,
+        "architecture": {
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "text",
+            "image",
+            "file"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "Claude",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.000004",
+          "completion": "0.00002",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000002",
+          "input_cache_write": "0.000005",
+          "input_cache_write_1h": "0.000008"
+        },
+        "top_provider": {
+          "context_length": 1000000,
+          "max_completion_tokens": 128000,
+          "is_moderated": true
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "verbosity"
+        ],
+        "default_parameters": {},
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/anthropic/claude-opus-5.5-20260921/endpoints"
+        },
+        "reasoning": {
+          "mandatory": true,
+          "supported_efforts": [
+            "max",
+            "xhigh",
+            "high",
+            "medium",
+            "low"
+          ],
+          "default_effort": "high"
+        }
+      }
+    },
+    {
+      "id": "anthropic/claude-opus-5.5:batch",
+      "slug": "anthropic-claude-opus-5-5-batch",
+      "canonical_slug": "anthropic/claude-opus-5.5-20260921",
+      "hugging_face_id": null,
+      "name": "Anthropic: Claude Opus 5.5 (batch)",
+      "description": "Claude Opus 5.5 is Anthropic's flagship model for demanding reasoning, coding, and long-horizon agentic work, succeeding Claude Opus 5. It is particularly strong at multi-step changes in large codebases, code...",
+      "created": 1790094732,
+      "context_length": 1000000,
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "input_cache_read": "0.0000001",
+        "input_cache_write": "0.0000025"
+      },
+      "isFree": false,
+      "topProvider": {
+        "context_length": 1000000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "stop",
+        "structured_outputs",
+        "tool_choice",
+        "tools",
+        "verbosity"
+      ],
+      "knowledge_cutoff": null,
+      "rank": {
+        "arenaElo": null,
+        "arenaBestRank": null,
+        "arenaBestCategory": null,
+        "arenaBestRankValue": null,
+        "aaIntelligence": null,
+        "aaCoding": null,
+        "aaAgentic": null,
+        "taskScores": {},
+        "scores": {
+          "top": 54,
+          "weekly": 69.346,
+          "leaderboard": 0,
+          "coding": 0,
+          "vision": 0,
+          "reasoning": 0,
+          "chat": 15,
+          "math": 0,
+          "instruction": 0,
+          "aider": 0
+        }
+      },
+      "raw": {
+        "id": "anthropic/claude-opus-5.5:batch",
+        "canonical_slug": "anthropic/claude-opus-5.5-20260921",
+        "hugging_face_id": null,
+        "name": "Anthropic: Claude Opus 5.5 (batch)",
+        "created": 1790094732,
+        "description": "Claude Opus 5.5 is Anthropic's flagship model for demanding reasoning, coding, and long-horizon agentic work, succeeding Claude Opus 5. It is particularly strong at multi-step changes in large codebases, code...",
+        "context_length": 1000000,
+        "architecture": {
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "text",
+            "image",
+            "file"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "Claude",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.000002",
+          "completion": "0.00001",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000001",
+          "input_cache_write": "0.0000025",
+          "input_cache_write_1h": "0.000004"
+        },
+        "top_provider": {
+          "context_length": 1000000,
+          "max_completion_tokens": 128000,
+          "is_moderated": true
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "tool_choice",
+          "tools",
+          "verbosity"
+        ],
+        "default_parameters": {},
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/anthropic/claude-opus-5.5-20260921/endpoints"
+        },
+        "reasoning": {
+          "mandatory": true,
+          "supported_efforts": [
+            "max",
+            "xhigh",
+            "high",
+            "medium",
+            "low"
+          ],
+          "default_effort": "high"
+        }
+      }
+    },
     {
       "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
       "slug": "xiaomi-mimo-v2-6-pro-ultraspeed",
@@ -73,7 +1647,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 69.164,
+          "weekly": 68.922,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -151,7 +1725,7 @@
       "id": "xiaomi/mimo-v2.6-flash",
       "slug": "xiaomi-mimo-v2-6-flash",
       "canonical_slug": "xiaomi/mimo-v2.6-flash-20260921",
-      "hugging_face_id": null,
+      "hugging_face_id": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
       "name": "Xiaomi: MiMo-V2.6-Flash",
       "description": "MiMo-V2.6-Flash is an open-source foundation model developed by Xiaomi. Built on a Mixture-of-Experts architecture with 309B total parameters and 15B activated per token, it employs a hybrid attention mechanism for...",
       "created": 1790021264,
@@ -195,15 +1769,20 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
         "max_tokens",
+        "min_p",
         "presence_penalty",
         "reasoning",
+        "repetition_penalty",
         "response_format",
+        "seed",
         "stop",
         "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
+        "top_k",
         "top_p"
       ],
       "knowledge_cutoff": null,
@@ -218,7 +1797,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 76.626,
+          "weekly": 76.383,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -232,7 +1811,7 @@
       "raw": {
         "id": "xiaomi/mimo-v2.6-flash",
         "canonical_slug": "xiaomi/mimo-v2.6-flash-20260921",
-        "hugging_face_id": null,
+        "hugging_face_id": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
         "name": "Xiaomi: MiMo-V2.6-Flash",
         "created": 1790021264,
         "description": "MiMo-V2.6-Flash is an open-source foundation model developed by Xiaomi. Built on a Mixture-of-Experts architecture with 309B total parameters and 15B activated per token, it employs a hybrid attention mechanism for...",
@@ -265,15 +1844,20 @@
         "supported_parameters": [
           "frequency_penalty",
           "include_reasoning",
+          "logit_bias",
           "max_tokens",
+          "min_p",
           "presence_penalty",
           "reasoning",
+          "repetition_penalty",
           "response_format",
+          "seed",
           "stop",
           "structured_outputs",
           "temperature",
           "tool_choice",
           "tools",
+          "top_k",
           "top_p"
         ],
         "default_parameters": {
@@ -296,7 +1880,7 @@
       "id": "xiaomi/mimo-v2.6-pro",
       "slug": "xiaomi-mimo-v2-6-pro",
       "canonical_slug": "xiaomi/mimo-v2.6-pro-20260921",
-      "hugging_face_id": null,
+      "hugging_face_id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
       "name": "Xiaomi: MiMo-V2.6-Pro",
       "description": "MiMo-V2.6-Pro is the flagship foundation model developed by Xiaomi. Built at a scale of over 1T parameters, it is designed to push the ceiling of capability for the most demanding...",
       "created": 1790021259,
@@ -340,15 +1924,20 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
         "max_tokens",
+        "min_p",
         "presence_penalty",
         "reasoning",
+        "repetition_penalty",
         "response_format",
+        "seed",
         "stop",
         "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
+        "top_k",
         "top_p"
       ],
       "benchmarks": {
@@ -371,7 +1960,7 @@
         "taskScores": {},
         "scores": {
           "top": 67.993,
-          "weekly": 92.684,
+          "weekly": 92.441,
           "leaderboard": 32.41,
           "coding": 46.3,
           "vision": 0,
@@ -385,7 +1974,7 @@
       "raw": {
         "id": "xiaomi/mimo-v2.6-pro",
         "canonical_slug": "xiaomi/mimo-v2.6-pro-20260921",
-        "hugging_face_id": null,
+        "hugging_face_id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
         "name": "Xiaomi: MiMo-V2.6-Pro",
         "created": 1790021259,
         "description": "MiMo-V2.6-Pro is the flagship foundation model developed by Xiaomi. Built at a scale of over 1T parameters, it is designed to push the ceiling of capability for the most demanding...",
@@ -418,15 +2007,20 @@
         "supported_parameters": [
           "frequency_penalty",
           "include_reasoning",
+          "logit_bias",
           "max_tokens",
+          "min_p",
           "presence_penalty",
           "reasoning",
+          "repetition_penalty",
           "response_format",
+          "seed",
           "stop",
           "structured_outputs",
           "temperature",
           "tool_choice",
           "tools",
+          "top_k",
           "top_p"
         ],
         "default_parameters": {
@@ -530,7 +2124,7 @@
         "taskScores": {},
         "scores": {
           "top": 66.415,
-          "weekly": 89.271,
+          "weekly": 87.929,
           "leaderboard": 32.48,
           "coding": 46.4,
           "vision": 0,
@@ -629,6 +2223,157 @@
       }
     },
     {
+      "id": "qwen/qwen3.8-omni-flash",
+      "slug": "qwen-qwen3-8-omni-flash",
+      "canonical_slug": "qwen/qwen3.8-omni-flash-20260918",
+      "hugging_face_id": null,
+      "name": "Qwen: Qwen3.8 Omni Flash",
+      "description": "Qwen3.8 Omni Flash is an omni-modal reasoning model from Alibaba, the first Qwen model built around agentic capabilities with native audio-video understanding. It is suited for audio-video analysis and summarization,...",
+      "created": 1789959954,
+      "context_length": 1000000,
+      "modality": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.00000047",
+        "input_cache_read": "0.000000016"
+      },
+      "isFree": false,
+      "topProvider": {
+        "context_length": 1000000,
+        "max_completion_tokens": 131072,
+        "is_moderated": false
+      },
+      "architecture": {
+        "modality": "text+image+audio+video->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Qwen",
+        "instruct_type": null
+      },
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logprobs",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "knowledge_cutoff": null,
+      "rank": {
+        "arenaElo": null,
+        "arenaBestRank": null,
+        "arenaBestCategory": null,
+        "arenaBestRankValue": null,
+        "aaIntelligence": null,
+        "aaCoding": null,
+        "aaAgentic": null,
+        "taskScores": {},
+        "scores": {
+          "top": 54,
+          "weekly": 71.554,
+          "leaderboard": 0,
+          "coding": 0,
+          "vision": 0,
+          "reasoning": 0,
+          "chat": 15,
+          "math": 0,
+          "instruction": 0,
+          "aider": 0
+        }
+      },
+      "raw": {
+        "id": "qwen/qwen3.8-omni-flash",
+        "canonical_slug": "qwen/qwen3.8-omni-flash-20260918",
+        "hugging_face_id": null,
+        "name": "Qwen: Qwen3.8 Omni Flash",
+        "created": 1789959954,
+        "description": "Qwen3.8 Omni Flash is an omni-modal reasoning model from Alibaba, the first Qwen model built around agentic capabilities with native audio-video understanding. It is suited for audio-video analysis and summarization,...",
+        "context_length": 1000000,
+        "architecture": {
+          "modality": "text+image+audio+video->text",
+          "input_modalities": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "Qwen",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.00000015",
+          "completion": "0.00000047",
+          "input_cache_read": "0.000000016"
+        },
+        "top_provider": {
+          "context_length": 1000000,
+          "max_completion_tokens": 131072,
+          "is_moderated": false
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ],
+        "default_parameters": {},
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/qwen/qwen3.8-omni-flash-20260918/endpoints"
+        },
+        "reasoning": {
+          "mandatory": false,
+          "default_enabled": true,
+          "supports_max_tokens": true
+        }
+      }
+    },
+    {
       "id": "prism-ml/ternary-bonsai-2-27b",
       "slug": "prism-ml-ternary-bonsai-2-27b",
       "canonical_slug": "prism-ml/ternary-bonsai-2-27b-20260918",
@@ -700,7 +2445,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 66.278,
+          "weekly": 66.005,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -850,7 +2595,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 63.862,
+          "weekly": 63.599,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -987,7 +2732,7 @@
         "taskScores": {},
         "scores": {
           "top": 35.093,
-          "weekly": 47.06,
+          "weekly": 46.848,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -1063,9 +2808,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.00000056496",
-        "completion": "0.00000169488",
-        "input_cache_read": "0.000000017976"
+        "prompt": "0.00000039996",
+        "completion": "0.00000119988",
+        "input_cache_read": "0.000000012726"
       },
       "isFree": false,
       "topProvider": {
@@ -1118,7 +2863,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 59.755,
+          "weekly": 60.407,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -1153,9 +2898,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.00000056496",
-          "completion": "0.00000169488",
-          "input_cache_read": "0.000000017976"
+          "prompt": "0.00000039996",
+          "completion": "0.00000119988",
+          "input_cache_read": "0.000000012726"
         },
         "top_provider": {
           "context_length": 1048576,
@@ -1281,7 +3026,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 62.634,
+          "weekly": 62.537,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -1433,7 +3178,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.536,
-          "weekly": 52.167,
+          "weekly": 52.103,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -1562,7 +3307,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.536,
-          "weekly": 51.208,
+          "weekly": 51.143,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -1693,7 +3438,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 51.377,
+          "weekly": 51.317,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -1829,7 +3574,6 @@
       },
       "supported_parameters": [
         "include_reasoning",
-        "max_completion_tokens",
         "max_tokens",
         "reasoning",
         "reasoning_effort",
@@ -1839,7 +3583,7 @@
         "tool_choice",
         "tools"
       ],
-      "knowledge_cutoff": "2026-02-16",
+      "knowledge_cutoff": null,
       "rank": {
         "arenaElo": null,
         "arenaBestRank": null,
@@ -1851,7 +3595,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 54.872,
+          "weekly": 54.812,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -1866,8 +3610,8 @@
         "id": "~openai/gpt-sol-latest",
         "canonical_slug": "~openai/gpt-sol-latest",
         "alias_target": {
-          "name": "OpenAI: GPT-5.6 Sol",
-          "slug": "openai/gpt-5.6-sol"
+          "name": "OpenAI: GPT-6 Sol",
+          "slug": "openai/gpt-6-sol"
         },
         "hugging_face_id": null,
         "name": "OpenAI: GPT Sol Latest",
@@ -1911,7 +3655,6 @@
         "per_request_limits": null,
         "supported_parameters": [
           "include_reasoning",
-          "max_completion_tokens",
           "max_tokens",
           "reasoning",
           "reasoning_effort",
@@ -1930,7 +3673,7 @@
           "repetition_penalty": null
         },
         "supported_voices": null,
-        "knowledge_cutoff": "2026-02-16",
+        "knowledge_cutoff": null,
         "expiration_date": null,
         "links": {
           "details": "/api/v1/models/~openai/gpt-sol-latest/endpoints"
@@ -2017,7 +3760,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 54.537,
+          "weekly": 54.477,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -2135,16 +3878,16 @@
         ]
       },
       "pricing": {
-        "prompt": "0.0000002",
-        "completion": "0.0000012",
-        "input_cache_read": "0.00000002",
-        "input_cache_write": "0.00000025"
+        "prompt": "0.0000001",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000001",
+        "input_cache_write": "0.000000125"
       },
       "isFree": false,
       "topProvider": {
         "context_length": 1050000,
         "max_completion_tokens": 128000,
-        "is_moderated": false
+        "is_moderated": true
       },
       "architecture": {
         "modality": "text+image+file->text",
@@ -2161,7 +3904,6 @@
       },
       "supported_parameters": [
         "include_reasoning",
-        "max_completion_tokens",
         "max_tokens",
         "reasoning",
         "reasoning_effort",
@@ -2171,7 +3913,7 @@
         "tool_choice",
         "tools"
       ],
-      "knowledge_cutoff": "2026-02-16",
+      "knowledge_cutoff": null,
       "rank": {
         "arenaElo": null,
         "arenaBestRank": null,
@@ -2183,7 +3925,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 59.537,
+          "weekly": 61.317,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -2198,8 +3940,8 @@
         "id": "~openai/gpt-luna-latest",
         "canonical_slug": "~openai/gpt-luna-latest",
         "alias_target": {
-          "name": "OpenAI: GPT-5.6 Luna",
-          "slug": "openai/gpt-5.6-luna"
+          "name": "OpenAI: GPT-6 Luna",
+          "slug": "openai/gpt-6-luna"
         },
         "hugging_face_id": null,
         "name": "OpenAI: GPT Luna Latest",
@@ -2220,30 +3962,29 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.0000002",
-          "completion": "0.0000012",
+          "prompt": "0.0000001",
+          "completion": "0.0000005",
           "web_search": "0.01",
-          "input_cache_read": "0.00000002",
-          "input_cache_write": "0.00000025",
+          "input_cache_read": "0.00000001",
+          "input_cache_write": "0.000000125",
           "overrides": [
             {
               "min_prompt_tokens": 272000,
-              "prompt": "0.0000004",
-              "completion": "0.0000018",
-              "input_cache_read": "0.00000004",
-              "input_cache_write": "0.0000005"
+              "prompt": "0.0000002",
+              "completion": "0.00000075",
+              "input_cache_read": "0.00000002",
+              "input_cache_write": "0.00000025"
             }
           ]
         },
         "top_provider": {
           "context_length": 1050000,
           "max_completion_tokens": 128000,
-          "is_moderated": false
+          "is_moderated": true
         },
         "per_request_limits": null,
         "supported_parameters": [
           "include_reasoning",
-          "max_completion_tokens",
           "max_tokens",
           "reasoning",
           "reasoning_effort",
@@ -2262,7 +4003,7 @@
           "repetition_penalty": null
         },
         "supported_voices": null,
-        "knowledge_cutoff": "2026-02-16",
+        "knowledge_cutoff": null,
         "expiration_date": null,
         "links": {
           "details": "/api/v1/models/~openai/gpt-luna-latest/endpoints"
@@ -2345,7 +4086,7 @@
         "taskScores": {},
         "scores": {
           "top": 46,
-          "weekly": 46.456,
+          "weekly": 46.398,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -2495,7 +4236,7 @@
         "taskScores": {},
         "scores": {
           "top": 46,
-          "weekly": 49.658,
+          "weekly": 49.6,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -2656,7 +4397,7 @@
         "taskScores": {},
         "scores": {
           "top": 56.968,
-          "weekly": 72.947,
+          "weekly": 72.893,
           "leaderboard": 22.92,
           "coding": 57,
           "vision": 0,
@@ -2818,7 +4559,7 @@
         "taskScores": {},
         "scores": {
           "top": 50.473,
-          "weekly": 57.343,
+          "weekly": 57.289,
           "leaderboard": 22.92,
           "coding": 57,
           "vision": 0,
@@ -2981,7 +4722,7 @@
         "taskScores": {},
         "scores": {
           "top": 65.953,
-          "weekly": 76.321,
+          "weekly": 76.27,
           "leaderboard": 27.65,
           "coding": 39.5,
           "vision": 0,
@@ -3234,7 +4975,7 @@
         "taskScores": {},
         "scores": {
           "top": 65.953,
-          "weekly": 77.44,
+          "weekly": 77.389,
           "leaderboard": 27.65,
           "coding": 39.5,
           "vision": 0,
@@ -3386,7 +5127,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.075,
-          "weekly": 63.132,
+          "weekly": 63.089,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -3524,7 +5265,7 @@
         "taskScores": {},
         "scores": {
           "top": 35.093,
-          "weekly": 52.036,
+          "weekly": 51.993,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -3667,7 +5408,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 53.015,
+          "weekly": 52.972,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -3812,7 +5553,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.093,
-          "weekly": 55.961,
+          "weekly": 55.918,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -3957,7 +5698,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 53.015,
+          "weekly": 52.972,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -4110,7 +5851,7 @@
         "taskScores": {},
         "scores": {
           "top": 69.916,
-          "weekly": 70.975,
+          "weekly": 70.945,
           "leaderboard": 44.58,
           "coding": 76.9,
           "vision": 0,
@@ -4279,7 +6020,7 @@
         "taskScores": {},
         "scores": {
           "top": 69.916,
-          "weekly": 72.48,
+          "weekly": 72.45,
           "leaderboard": 44.58,
           "coding": 76.9,
           "vision": 0,
@@ -4440,7 +6181,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 49.895,
+          "weekly": 49.865,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -4593,7 +6334,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 51.4,
+          "weekly": 51.37,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -4746,7 +6487,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.093,
-          "weekly": 46.268,
+          "weekly": 46.239,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -4899,7 +6640,7 @@
         "taskScores": {},
         "scores": {
           "top": 67.62,
-          "weekly": 72.285,
+          "weekly": 72.258,
           "leaderboard": 39.4,
           "coding": 76.2,
           "vision": 0,
@@ -5063,7 +6804,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 61.113,
+          "weekly": 61.088,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -5304,7 +7045,7 @@
         "taskScores": {},
         "scores": {
           "top": 782.395,
-          "weekly": 54.792,
+          "weekly": 54.767,
           "leaderboard": 264.833,
           "coding": 0,
           "vision": 0,
@@ -5626,7 +7367,7 @@
         "taskScores": {},
         "scores": {
           "top": 772.188,
-          "weekly": 71.563,
+          "weekly": 71.538,
           "leaderboard": 292.92,
           "coding": 76.3,
           "vision": 0,
@@ -5940,7 +7681,7 @@
         "taskScores": {},
         "scores": {
           "top": 772.188,
-          "weekly": 73.068,
+          "weekly": 73.043,
           "leaderboard": 292.92,
           "coding": 76.3,
           "vision": 0,
@@ -6255,7 +7996,7 @@
         "taskScores": {},
         "scores": {
           "top": 812.87,
-          "weekly": 70.826,
+          "weekly": 70.803,
           "leaderboard": 315.667,
           "coding": 81.6,
           "vision": 0,
@@ -6573,7 +8314,7 @@
         "taskScores": {},
         "scores": {
           "top": 812.87,
-          "weekly": 72.331,
+          "weekly": 72.308,
           "leaderboard": 315.667,
           "coding": 81.6,
           "vision": 0,
@@ -6818,7 +8559,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.918,
-          "weekly": 65.231,
+          "weekly": 65.209,
           "leaderboard": 10.01,
           "coding": 22.4,
           "vision": 0,
@@ -6975,7 +8716,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 55.263,
+          "weekly": 55.245,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -7125,7 +8866,7 @@
         "taskScores": {},
         "scores": {
           "top": 49.873,
-          "weekly": 63.963,
+          "weekly": 63.946,
           "leaderboard": 21.38,
           "coding": 55.6,
           "vision": 0,
@@ -7280,7 +9021,7 @@
         "taskScores": {},
         "scores": {
           "top": 49.873,
-          "weekly": 54.359,
+          "weekly": 54.342,
           "leaderboard": 21.38,
           "coding": 55.6,
           "vision": 0,
@@ -7436,7 +9177,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.588,
-          "weekly": 60.236,
+          "weekly": 60.219,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -7602,7 +9343,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 58.789,
+          "weekly": 58.773,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -7821,7 +9562,7 @@
         "taskScores": {},
         "scores": {
           "top": 784.603,
-          "weekly": 75.386,
+          "weekly": 75.37,
           "leaderboard": 297.31,
           "coding": 71.5,
           "vision": 0,
@@ -8114,7 +9855,7 @@
         "taskScores": {},
         "scores": {
           "top": 784.118,
-          "weekly": 77.376,
+          "weekly": 77.36,
           "leaderboard": 297.31,
           "coding": 71.5,
           "vision": 0,
@@ -8336,7 +10077,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 59.988,
+          "weekly": 59.975,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -8491,7 +10232,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 57.632,
+          "weekly": 57.62,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -8630,7 +10371,7 @@
         "taskScores": {},
         "scores": {
           "top": 19.567,
-          "weekly": 42.574,
+          "weekly": 42.562,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -8743,7 +10484,7 @@
         "taskScores": {},
         "scores": {
           "top": 27.567,
-          "weekly": 47.46,
+          "weekly": 47.448,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -8874,7 +10615,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.588,
-          "weekly": 55.075,
+          "weekly": 55.063,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -9022,7 +10763,7 @@
         "taskScores": {},
         "scores": {
           "top": 27.567,
-          "weekly": 47.402,
+          "weekly": 47.39,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -9239,7 +10980,7 @@
         "taskScores": {},
         "scores": {
           "top": 779.628,
-          "weekly": 72.951,
+          "weekly": 72.94,
           "leaderboard": 297.604,
           "coding": 74.8,
           "vision": 0,
@@ -9568,7 +11309,7 @@
         "taskScores": {},
         "scores": {
           "top": 779.143,
-          "weekly": 72.644,
+          "weekly": 72.633,
           "leaderboard": 297.604,
           "coding": 74.8,
           "vision": 0,
@@ -9823,7 +11564,7 @@
         "taskScores": {},
         "scores": {
           "top": 64.11,
-          "weekly": 67.78,
+          "weekly": 67.771,
           "leaderboard": 30.4,
           "coding": 68.1,
           "vision": 0,
@@ -9997,7 +11738,7 @@
         "taskScores": {},
         "scores": {
           "top": 53.203,
-          "weekly": 57.945,
+          "weekly": 57.936,
           "leaderboard": 30.4,
           "coding": 68.1,
           "vision": 0,
@@ -10148,7 +11889,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.546,
-          "weekly": 50.441,
+          "weekly": 50.432,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -10379,7 +12120,7 @@
         "taskScores": {},
         "scores": {
           "top": 772.491,
-          "weekly": 69.299,
+          "weekly": 69.289,
           "leaderboard": 291.947,
           "coding": 76.1,
           "vision": 0,
@@ -10721,7 +12462,7 @@
         "taskScores": {},
         "scores": {
           "top": 772.491,
-          "weekly": 70.804,
+          "weekly": 70.795,
           "leaderboard": 291.947,
           "coding": 76.1,
           "vision": 0,
@@ -10963,7 +12704,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 54.491,
+          "weekly": 54.483,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -11111,7 +12852,7 @@
         "taskScores": {},
         "scores": {
           "top": 66.073,
-          "weekly": 68.321,
+          "weekly": 68.313,
           "leaderboard": 35.12,
           "coding": 71.9,
           "vision": 0,
@@ -11273,7 +13014,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 54.156,
+          "weekly": 54.147,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -11435,7 +13176,7 @@
         "taskScores": {},
         "scores": {
           "top": 64.903,
-          "weekly": 69.168,
+          "weekly": 69.159,
           "leaderboard": 32.08,
           "coding": 68.8,
           "vision": 0,
@@ -11793,7 +13534,7 @@
         "taskScores": {},
         "scores": {
           "top": 769.345,
-          "weekly": 70.08,
+          "weekly": 70.071,
           "leaderboard": 294.53,
           "coding": 76.8,
           "vision": 0,
@@ -12066,7 +13807,7 @@
         "taskScores": {},
         "scores": {
           "top": 48.082,
-          "weekly": 50.33,
+          "weekly": 50.321,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -12222,7 +13963,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.963,
-          "weekly": 64.829,
+          "weekly": 64.82,
           "leaderboard": 11.71,
           "coding": 26.8,
           "vision": 0,
@@ -12372,7 +14113,7 @@
         "taskScores": {},
         "scores": {
           "top": 49.87,
-          "weekly": 49.481,
+          "weekly": 49.472,
           "leaderboard": 11.71,
           "coding": 26.8,
           "vision": 0,
@@ -12505,7 +14246,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.093,
-          "weekly": 47.331,
+          "weekly": 47.323,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -12700,7 +14441,7 @@
         "taskScores": {},
         "scores": {
           "top": 701.284,
-          "weekly": 58.519,
+          "weekly": 58.511,
           "leaderboard": 241.156,
           "coding": 52.7,
           "vision": 0,
@@ -12912,7 +14653,7 @@
         "taskScores": {},
         "scores": {
           "top": 49.588,
-          "weekly": 55.871,
+          "weekly": 55.863,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -13185,7 +14926,7 @@
         "taskScores": {},
         "scores": {
           "top": 762.393,
-          "weekly": 68.736,
+          "weekly": 68.729,
           "leaderboard": 288.18,
           "coding": 72.2,
           "vision": 0,
@@ -13398,7 +15139,7 @@
       },
       "pricing": {
         "prompt": "0.00000003",
-        "completion": "0.000001",
+        "completion": "0.0000008",
         "input_cache_read": "0.000000008"
       },
       "isFree": false,
@@ -13454,7 +15195,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.588,
-          "weekly": 56.393,
+          "weekly": 56.856,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -13490,7 +15231,7 @@
         },
         "pricing": {
           "prompt": "0.00000003",
-          "completion": "0.000001",
+          "completion": "0.0000008",
           "input_cache_read": "0.000000008"
         },
         "top_provider": {
@@ -13682,7 +15423,7 @@
         "taskScores": {},
         "scores": {
           "top": 733.403,
-          "weekly": 70.968,
+          "weekly": 70.963,
           "leaderboard": 274.02,
           "coding": 69.1,
           "vision": 0,
@@ -13878,7 +15619,6 @@
         "frequency_penalty",
         "include_reasoning",
         "logit_bias",
-        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -13891,7 +15631,6 @@
         "tool_choice",
         "tools",
         "top_k",
-        "top_logprobs",
         "top_p"
       ],
       "benchmarks": {
@@ -13914,7 +15653,7 @@
         "taskScores": {},
         "scores": {
           "top": 46.103,
-          "weekly": 49.311,
+          "weekly": 49.305,
           "leaderboard": 5.29,
           "coding": 52.9,
           "vision": 0,
@@ -13961,7 +15700,6 @@
           "frequency_penalty",
           "include_reasoning",
           "logit_bias",
-          "logprobs",
           "max_tokens",
           "min_p",
           "presence_penalty",
@@ -13974,7 +15712,6 @@
           "tool_choice",
           "tools",
           "top_k",
-          "top_logprobs",
           "top_p"
         ],
         "default_parameters": {
@@ -14089,7 +15826,7 @@
         "taskScores": {},
         "scores": {
           "top": 46.103,
-          "weekly": 43.893,
+          "weekly": 43.887,
           "leaderboard": 5.29,
           "coding": 52.9,
           "vision": 0,
@@ -14251,7 +15988,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 60.291,
+          "weekly": 60.286,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -14529,7 +16266,7 @@
         "taskScores": {},
         "scores": {
           "top": 795.313,
-          "weekly": 69.158,
+          "weekly": 69.153,
           "leaderboard": 307.387,
           "coding": 78,
           "vision": 0,
@@ -14905,7 +16642,7 @@
         "taskScores": {},
         "scores": {
           "top": 795.313,
-          "weekly": 70.663,
+          "weekly": 70.658,
           "leaderboard": 307.387,
           "coding": 78,
           "vision": 0,
@@ -15177,7 +16914,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 61.574,
+          "weekly": 61.569,
           "leaderboard": 5.06,
           "coding": 50.6,
           "vision": 0,
@@ -15318,7 +17055,7 @@
         "taskScores": {},
         "scores": {
           "top": 46.103,
-          "weekly": 52.991,
+          "weekly": 52.986,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -15438,7 +17175,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.093,
-          "weekly": 43.642,
+          "weekly": 43.638,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -15680,7 +17417,7 @@
         "taskScores": {},
         "scores": {
           "top": 749.014,
-          "weekly": 66.48,
+          "weekly": 66.475,
           "leaderboard": 279.706,
           "coding": 69.2,
           "vision": 0,
@@ -16058,7 +17795,7 @@
         "taskScores": {},
         "scores": {
           "top": 749.014,
-          "weekly": 67.985,
+          "weekly": 67.98,
           "leaderboard": 279.706,
           "coding": 69.2,
           "vision": 0,
@@ -16337,7 +18074,7 @@
         "taskScores": {},
         "scores": {
           "top": 60.763,
-          "weekly": 62.79,
+          "weekly": 62.785,
           "leaderboard": 20.47,
           "coding": 49.3,
           "vision": 0,
@@ -16516,7 +18253,7 @@
         "taskScores": {},
         "scores": {
           "top": 60.763,
-          "weekly": 64.295,
+          "weekly": 64.291,
           "leaderboard": 20.47,
           "coding": 49.3,
           "vision": 0,
@@ -16689,7 +18426,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.833,
-          "weekly": 56.88,
+          "weekly": 56.875,
           "leaderboard": 17.9,
           "coding": 45.3,
           "vision": 0,
@@ -16907,7 +18644,7 @@
         "taskScores": {},
         "scores": {
           "top": 703.565,
-          "weekly": 56.542,
+          "weekly": 56.538,
           "leaderboard": 259.06,
           "coding": 52.1,
           "vision": 0,
@@ -17194,7 +18931,7 @@
         "taskScores": {},
         "scores": {
           "top": 703.565,
-          "weekly": 53.554,
+          "weekly": 53.549,
           "leaderboard": 259.06,
           "coding": 52.1,
           "vision": 0,
@@ -17427,7 +19164,7 @@
         "taskScores": {},
         "scores": {
           "top": 55.505,
-          "weekly": 49.55,
+          "weekly": 49.546,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -17697,7 +19434,7 @@
         "taskScores": {},
         "scores": {
           "top": 791.68,
-          "weekly": 67.194,
+          "weekly": 67.19,
           "leaderboard": 301.593,
           "coding": 76.2,
           "vision": 0,
@@ -18091,7 +19828,7 @@
         "taskScores": {},
         "scores": {
           "top": 791.68,
-          "weekly": 67.79,
+          "weekly": 67.786,
           "leaderboard": 301.593,
           "coding": 76.2,
           "vision": 0,
@@ -18487,7 +20224,7 @@
         "taskScores": {},
         "scores": {
           "top": 743.979,
-          "weekly": 65.809,
+          "weekly": 65.804,
           "leaderboard": 277.907,
           "coding": 71.3,
           "vision": 0,
@@ -18756,7 +20493,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.093,
-          "weekly": 47.069,
+          "weekly": 47.066,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -18897,7 +20634,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 55.152,
+          "weekly": 55.149,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -19057,7 +20794,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 56.657,
+          "weekly": 56.654,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -19224,7 +20961,7 @@
         "taskScores": {},
         "scores": {
           "top": 65.296,
-          "weekly": 70.072,
+          "weekly": 70.069,
           "leaderboard": 33.25,
           "coding": 71.4,
           "vision": 0,
@@ -19400,7 +21137,7 @@
         "taskScores": {},
         "scores": {
           "top": 65.296,
-          "weekly": 71.577,
+          "weekly": 71.574,
           "leaderboard": 33.25,
           "coding": 71.4,
           "vision": 0,
@@ -19567,7 +21304,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 50.152,
+          "weekly": 50.149,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -19727,7 +21464,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 51.657,
+          "weekly": 51.654,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -19894,7 +21631,7 @@
         "taskScores": {},
         "scores": {
           "top": 66.736,
-          "weekly": 66.992,
+          "weekly": 66.989,
           "leaderboard": 37.14,
           "coding": 76.7,
           "vision": 0,
@@ -20070,7 +21807,7 @@
         "taskScores": {},
         "scores": {
           "top": 66.736,
-          "weekly": 68.497,
+          "weekly": 68.494,
           "leaderboard": 37.14,
           "coding": 76.7,
           "vision": 0,
@@ -20237,7 +21974,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 50.487,
+          "weekly": 50.483,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -20398,7 +22135,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 51.992,
+          "weekly": 51.989,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -20567,7 +22304,7 @@
         "taskScores": {},
         "scores": {
           "top": 68.206,
-          "weekly": 69.287,
+          "weekly": 69.283,
           "leaderboard": 40.64,
           "coding": 77.4,
           "vision": 0,
@@ -20744,7 +22481,7 @@
         "taskScores": {},
         "scores": {
           "top": 68.206,
-          "weekly": 70.792,
+          "weekly": 70.789,
           "leaderboard": 40.64,
           "coding": 77.4,
           "vision": 0,
@@ -21036,7 +22773,7 @@
         "taskScores": {},
         "scores": {
           "top": 755.554,
-          "weekly": 66.873,
+          "weekly": 66.869,
           "leaderboard": 285.825,
           "coding": 72.4,
           "vision": 0,
@@ -21312,7 +23049,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.495,
-          "weekly": 51.836,
+          "weekly": 51.833,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -21414,7 +23151,7 @@
       "name": "AionLabs: Aion-3.0-Mini",
       "description": "Aion-3.0 Mini is a multi-model roleplaying and storytelling system from AionLabs, built on the DeepSeek family of models. It uses a collaborative generation process in which multiple specialized models each...",
       "created": 1783443096,
-      "context_length": 1048576,
+      "context_length": 131072,
       "modality": {
         "input": [
           "text"
@@ -21430,7 +23167,7 @@
       },
       "isFree": false,
       "topProvider": {
-        "context_length": 1048576,
+        "context_length": 131072,
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
@@ -21466,8 +23203,8 @@
         "aaAgentic": null,
         "taskScores": {},
         "scores": {
-          "top": 54.103,
-          "weekly": 54.24,
+          "top": 49.588,
+          "weekly": 54.236,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -21485,7 +23222,7 @@
         "name": "AionLabs: Aion-3.0-Mini",
         "created": 1783443096,
         "description": "Aion-3.0 Mini is a multi-model roleplaying and storytelling system from AionLabs, built on the DeepSeek family of models. It uses a collaborative generation process in which multiple specialized models each...",
-        "context_length": 1048576,
+        "context_length": 131072,
         "architecture": {
           "modality": "text->text",
           "input_modalities": [
@@ -21503,7 +23240,7 @@
           "input_cache_read": "0.00000018"
         },
         "top_provider": {
-          "context_length": 1048576,
+          "context_length": 131072,
           "max_completion_tokens": 32768,
           "is_moderated": false
         },
@@ -21538,7 +23275,7 @@
       "name": "AionLabs: Aion-3.0",
       "description": "Aion-3.0 is a multi-model roleplaying and storytelling system from AionLabs, built on the GLM family of models. It uses a collaborative generation process in which multiple specialized models each contribute...",
       "created": 1783443095,
-      "context_length": 1048576,
+      "context_length": 131072,
       "modality": {
         "input": [
           "text"
@@ -21554,7 +23291,7 @@
       },
       "isFree": false,
       "topProvider": {
-        "context_length": 1048576,
+        "context_length": 131072,
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
@@ -21590,8 +23327,8 @@
         "aaAgentic": null,
         "taskScores": {},
         "scores": {
-          "top": 54.103,
-          "weekly": 51.08,
+          "top": 49.588,
+          "weekly": 51.076,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -21609,7 +23346,7 @@
         "name": "AionLabs: Aion-3.0",
         "created": 1783443095,
         "description": "Aion-3.0 is a multi-model roleplaying and storytelling system from AionLabs, built on the GLM family of models. It uses a collaborative generation process in which multiple specialized models each contribute...",
-        "context_length": 1048576,
+        "context_length": 131072,
         "architecture": {
           "modality": "text->text",
           "input_modalities": [
@@ -21627,7 +23364,7 @@
           "input_cache_read": "0.00000075"
         },
         "top_provider": {
-          "context_length": 1048576,
+          "context_length": 131072,
           "max_completion_tokens": 32768,
           "is_moderated": false
         },
@@ -21772,7 +23509,7 @@
         "taskScores": {},
         "scores": {
           "top": 698.718,
-          "weekly": 57.753,
+          "weekly": 57.75,
           "leaderboard": 235.5,
           "coding": 0,
           "vision": 0,
@@ -21981,7 +23718,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.093,
-          "weekly": 53.485,
+          "weekly": 53.482,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -22101,7 +23838,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.093,
-          "weekly": 43.256,
+          "weekly": 43.253,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -22351,7 +24088,7 @@
         "taskScores": {},
         "scores": {
           "top": 754.748,
-          "weekly": 65.615,
+          "weekly": 65.612,
           "leaderboard": 284.54,
           "coding": 71.5,
           "vision": 0,
@@ -22740,7 +24477,7 @@
         "taskScores": {},
         "scores": {
           "top": 754.748,
-          "weekly": 67.12,
+          "weekly": 67.117,
           "leaderboard": 284.54,
           "coding": 71.5,
           "vision": 0,
@@ -23004,7 +24741,7 @@
         "taskScores": {},
         "scores": {
           "top": 40.082,
-          "weekly": 48.515,
+          "weekly": 48.511,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -23138,7 +24875,7 @@
         "taskScores": {},
         "scores": {
           "top": 46,
-          "weekly": 41.909,
+          "weekly": 41.907,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -23289,7 +25026,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.588,
-          "weekly": 46.825,
+          "weekly": 46.822,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -23432,7 +25169,7 @@
         "taskScores": {},
         "scores": {
           "top": 49.588,
-          "weekly": 49.815,
+          "weekly": 49.812,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -23579,7 +25316,7 @@
         "taskScores": {},
         "scores": {
           "top": 46.011,
-          "weekly": 46.995,
+          "weekly": 46.993,
           "leaderboard": 10.58,
           "coding": 36.5,
           "vision": 0,
@@ -23855,7 +25592,7 @@
         "taskScores": {},
         "scores": {
           "top": 747.347,
-          "weekly": 66.857,
+          "weekly": 66.854,
           "leaderboard": 278.882,
           "coding": 68.8,
           "vision": 0,
@@ -24251,7 +25988,7 @@
         "taskScores": {},
         "scores": {
           "top": 723.822,
-          "weekly": 50.501,
+          "weekly": 50.499,
           "leaderboard": 278.882,
           "coding": 68.8,
           "vision": 0,
@@ -24503,7 +26240,7 @@
         "taskScores": {},
         "scores": {
           "top": 30,
-          "weekly": 30.983,
+          "weekly": 30.98,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -24756,7 +26493,7 @@
         "taskScores": {},
         "scores": {
           "top": 722.82,
-          "weekly": 62.779,
+          "weekly": 62.777,
           "leaderboard": 265.59,
           "coding": 60.8,
           "vision": 0,
@@ -25029,7 +26766,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 46.549,
+          "weekly": 46.547,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -25315,7 +27052,7 @@
         "taskScores": {},
         "scores": {
           "top": 785.683,
-          "weekly": 66.386,
+          "weekly": 66.384,
           "leaderboard": 303.026,
           "coding": 76.5,
           "vision": 0,
@@ -25738,7 +27475,7 @@
         "taskScores": {},
         "scores": {
           "top": 785.683,
-          "weekly": 67.891,
+          "weekly": 67.889,
           "leaderboard": 303.026,
           "coding": 76.5,
           "vision": 0,
@@ -26025,7 +27762,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.588,
-          "weekly": 45.37,
+          "weekly": 45.368,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -26161,7 +27898,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.536,
-          "weekly": 36.875,
+          "weekly": 36.873,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -26366,7 +28103,7 @@
         "taskScores": {},
         "scores": {
           "top": 685.1,
-          "weekly": 62.151,
+          "weekly": 62.148,
           "leaderboard": 249.01,
           "coding": 49.3,
           "vision": 0,
@@ -26644,7 +28381,7 @@
         "taskScores": {},
         "scores": {
           "top": 680.008,
-          "weekly": 52.031,
+          "weekly": 52.029,
           "leaderboard": 249.01,
           "coding": 49.3,
           "vision": 0,
@@ -26923,7 +28660,7 @@
         "taskScores": {},
         "scores": {
           "top": 752.016,
-          "weekly": 64.428,
+          "weekly": 64.426,
           "leaderboard": 274.305,
           "coding": 55.9,
           "vision": 0,
@@ -27261,7 +28998,7 @@
         "taskScores": {},
         "scores": {
           "top": 730.013,
-          "weekly": 66.137,
+          "weekly": 66.135,
           "leaderboard": 268.9,
           "coding": 58.6,
           "vision": 0,
@@ -27600,7 +29337,7 @@
         "taskScores": {},
         "scores": {
           "top": 695.624,
-          "weekly": 54.655,
+          "weekly": 54.653,
           "leaderboard": 238.335,
           "coding": 39.6,
           "vision": 0,
@@ -27980,7 +29717,7 @@
         "taskScores": {},
         "scores": {
           "top": 759.095,
-          "weekly": 64.632,
+          "weekly": 64.63,
           "leaderboard": 288.528,
           "coding": 74.3,
           "vision": 0,
@@ -28440,7 +30177,7 @@
         "taskScores": {},
         "scores": {
           "top": 759.095,
-          "weekly": 66.137,
+          "weekly": 66.135,
           "leaderboard": 288.528,
           "coding": 74.3,
           "vision": 0,
@@ -28866,7 +30603,7 @@
         "taskScores": {},
         "scores": {
           "top": 739.178,
-          "weekly": 63.183,
+          "weekly": 63.182,
           "leaderboard": 273.188,
           "coding": 66,
           "vision": 0,
@@ -29143,7 +30880,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.041,
-          "weekly": 52.844,
+          "weekly": 52.842,
           "leaderboard": 5.15,
           "coding": 51.5,
           "vision": 0,
@@ -29466,7 +31203,7 @@
         "taskScores": {},
         "scores": {
           "top": 737.79,
-          "weekly": 63.152,
+          "weekly": 63.15,
           "leaderboard": 274.887,
           "coding": 70.1,
           "vision": 0,
@@ -29943,7 +31680,7 @@
         "taskScores": {},
         "scores": {
           "top": 737.79,
-          "weekly": 64.657,
+          "weekly": 64.655,
           "leaderboard": 274.887,
           "coding": 70.1,
           "vision": 0,
@@ -30255,7 +31992,7 @@
         "taskScores": {},
         "scores": {
           "top": 30.577,
-          "weekly": 42.069,
+          "weekly": 42.068,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -30401,7 +32138,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 53.9,
+          "weekly": 53.899,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -30566,7 +32303,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 55.406,
+          "weekly": 55.404,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -30719,7 +32456,7 @@
         "taskScores": {},
         "scores": {
           "top": 44.01,
-          "weekly": 41.38,
+          "weekly": 41.378,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -31012,7 +32749,7 @@
         "taskScores": {},
         "scores": {
           "top": 666.418,
-          "weekly": 62.153,
+          "weekly": 62.152,
           "leaderboard": 241.631,
           "coding": 42.2,
           "vision": 0,
@@ -31487,7 +33224,7 @@
         "taskScores": {},
         "scores": {
           "top": 666.418,
-          "weekly": 62.638,
+          "weekly": 62.636,
           "leaderboard": 241.631,
           "coding": 42.2,
           "vision": 0,
@@ -31814,7 +33551,7 @@
         "taskScores": {},
         "scores": {
           "top": 55.353,
-          "weekly": 55.97,
+          "weekly": 55.969,
           "leaderboard": 14.63,
           "coding": 46.9,
           "vision": 0,
@@ -31981,7 +33718,7 @@
         "taskScores": {},
         "scores": {
           "top": 55.353,
-          "weekly": 57.475,
+          "weekly": 57.474,
           "leaderboard": 14.63,
           "coding": 46.9,
           "vision": 0,
@@ -32145,7 +33882,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.041,
-          "weekly": 42.541,
+          "weekly": 42.539,
           "leaderboard": 1.38,
           "coding": 13.8,
           "vision": 0,
@@ -32296,7 +34033,7 @@
         "taskScores": {},
         "scores": {
           "top": 50.505,
-          "weekly": 51.149,
+          "weekly": 51.147,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -32445,7 +34182,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.01,
-          "weekly": 51.439,
+          "weekly": 51.437,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -32607,7 +34344,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 49.309,
+          "weekly": 49.308,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -32731,9 +34468,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.0000015",
-        "completion": "0.0000075",
-        "input_cache_read": "0.00000015"
+        "prompt": "0.0000014989",
+        "completion": "0.000010758",
+        "input_cache_read": "0.0000003"
       },
       "isFree": false,
       "topProvider": {
@@ -32788,7 +34525,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 50.268,
+          "weekly": 49.596,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -32825,9 +34562,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.0000015",
-          "completion": "0.0000075",
-          "input_cache_read": "0.00000015"
+          "prompt": "0.0000014989",
+          "completion": "0.000010758",
+          "input_cache_read": "0.0000003"
         },
         "top_provider": {
           "context_length": 1048576,
@@ -32957,7 +34694,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 51.773,
+          "weekly": 51.772,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -33113,7 +34850,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 49.644,
+          "weekly": 49.642,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -33270,7 +35007,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 53.424,
+          "weekly": 53.422,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -33424,7 +35161,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 54.444,
+          "weekly": 54.443,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -33589,7 +35326,7 @@
         "taskScores": {},
         "scores": {
           "top": 56.553,
-          "weekly": 62.011,
+          "weekly": 62.01,
           "leaderboard": 16.93,
           "coding": 41.9,
           "vision": 0,
@@ -33747,7 +35484,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 50.751,
+          "weekly": 50.75,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -33911,7 +35648,7 @@
         "taskScores": {},
         "scores": {
           "top": 57.513,
-          "weekly": 61.194,
+          "weekly": 61.193,
           "leaderboard": 20.35,
           "coding": 53.7,
           "vision": 0,
@@ -34067,7 +35804,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 43.406,
+          "weekly": 43.405,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -34217,7 +35954,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 44.911,
+          "weekly": 44.91,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -34525,7 +36262,7 @@
         "taskScores": {},
         "scores": {
           "top": 718.633,
-          "weekly": 62.657,
+          "weekly": 62.655,
           "leaderboard": 271.827,
           "coding": 74.9,
           "vision": 0,
@@ -34994,7 +36731,7 @@
         "taskScores": {},
         "scores": {
           "top": 718.633,
-          "weekly": 64.162,
+          "weekly": 64.161,
           "leaderboard": 271.827,
           "coding": 74.9,
           "vision": 0,
@@ -35259,9 +36996,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.000000927768",
-        "completion": "0.000001855536",
-        "input_cache_read": "0.000000077314"
+        "prompt": "0.000000883746",
+        "completion": "0.000001767492",
+        "input_cache_read": "0.0000000736455"
       },
       "isFree": false,
       "topProvider": {
@@ -35401,7 +37138,7 @@
         "taskScores": {},
         "scores": {
           "top": 704.123,
-          "weekly": 64.95,
+          "weekly": 65.054,
           "leaderboard": 260.275,
           "coding": 59.4,
           "vision": 0,
@@ -35432,9 +37169,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.000000927768",
-          "completion": "0.000001855536",
-          "input_cache_read": "0.000000077314"
+          "prompt": "0.000000883746",
+          "completion": "0.000001767492",
+          "input_cache_read": "0.0000000736455"
         },
         "top_provider": {
           "context_length": 1024000,
@@ -35711,7 +37448,7 @@
         "taskScores": {},
         "scores": {
           "top": 714.282,
-          "weekly": 68.856,
+          "weekly": 68.855,
           "leaderboard": 259.985,
           "coding": 56.2,
           "vision": 0,
@@ -35928,7 +37665,7 @@
         "taskScores": {},
         "scores": {
           "top": 50.683,
-          "weekly": 59.662,
+          "weekly": 59.661,
           "leaderboard": 23.59,
           "coding": 58.8,
           "vision": 0,
@@ -36151,7 +37888,7 @@
         "taskScores": {},
         "scores": {
           "top": 753.325,
-          "weekly": 64.824,
+          "weekly": 64.823,
           "leaderboard": 275.645,
           "coding": 60.2,
           "vision": 0,
@@ -36438,7 +38175,7 @@
         "taskScores": {},
         "scores": {
           "top": 738.031,
-          "weekly": 56.886,
+          "weekly": 56.885,
           "leaderboard": 254.38,
           "coding": 56.8,
           "vision": 0,
@@ -36656,7 +38393,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.173,
-          "weekly": 42.188,
+          "weekly": 42.186,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -36764,10 +38501,10 @@
         ]
       },
       "pricing": {
-        "prompt": "0.000005",
-        "completion": "0.000025",
-        "input_cache_read": "0.0000005",
-        "input_cache_write": "0.00000625"
+        "prompt": "0.000004",
+        "completion": "0.00002",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.000005"
       },
       "isFree": false,
       "topProvider": {
@@ -36814,7 +38551,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 47.611,
+          "weekly": 48.094,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -36829,8 +38566,8 @@
         "id": "~anthropic/claude-opus-latest",
         "canonical_slug": "~anthropic/claude-opus-latest",
         "alias_target": {
-          "name": "Anthropic: Claude Opus 5",
-          "slug": "anthropic/claude-opus-5"
+          "name": "Anthropic: Claude Opus 5.5",
+          "slug": "anthropic/claude-opus-5.5"
         },
         "hugging_face_id": "",
         "name": "Anthropic: Claude Opus Latest",
@@ -36851,12 +38588,12 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.000005",
-          "completion": "0.000025",
+          "prompt": "0.000004",
+          "completion": "0.00002",
           "web_search": "0.01",
-          "input_cache_read": "0.0000005",
-          "input_cache_write": "0.00000625",
-          "input_cache_write_1h": "0.00001"
+          "input_cache_read": "0.0000002",
+          "input_cache_write": "0.000005",
+          "input_cache_write_1h": "0.000008"
         },
         "top_provider": {
           "context_length": 1000000,
@@ -36886,8 +38623,7 @@
           "details": "/api/v1/models/~anthropic/claude-opus-latest/endpoints"
         },
         "reasoning": {
-          "mandatory": false,
-          "default_enabled": true,
+          "mandatory": true,
           "supported_efforts": [
             "max",
             "xhigh",
@@ -36950,7 +38686,7 @@
         "taskScores": {},
         "scores": {
           "top": 31.505,
-          "weekly": 30.487,
+          "weekly": 30.486,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -37238,7 +38974,7 @@
         "taskScores": {},
         "scores": {
           "top": 728.307,
-          "weekly": 62.315,
+          "weekly": 62.314,
           "leaderboard": 268.394,
           "coding": 61.8,
           "vision": 0,
@@ -37554,7 +39290,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 47.575,
+          "weekly": 47.574,
           "leaderboard": 7.36,
           "coding": 73.6,
           "vision": 0,
@@ -37717,7 +39453,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 49.081,
+          "weekly": 49.079,
           "leaderboard": 7.36,
           "coding": 73.6,
           "vision": 0,
@@ -38032,7 +39768,7 @@
         "taskScores": {},
         "scores": {
           "top": 734.337,
-          "weekly": 62.332,
+          "weekly": 62.331,
           "leaderboard": 269.65,
           "coding": 55.8,
           "vision": 0,
@@ -38354,7 +40090,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 56.924,
+          "weekly": 56.923,
           "leaderboard": 3.93,
           "coding": 39.3,
           "vision": 0,
@@ -38516,7 +40252,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 48.374,
+          "weekly": 48.373,
           "leaderboard": 3.93,
           "coding": 39.3,
           "vision": 0,
@@ -38678,7 +40414,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 56.706,
+          "weekly": 56.705,
           "leaderboard": 4.34,
           "coding": 43.4,
           "vision": 0,
@@ -38843,7 +40579,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 48.368,
+          "weekly": 48.367,
           "leaderboard": 4.34,
           "coding": 43.4,
           "vision": 0,
@@ -39062,7 +40798,7 @@
         "taskScores": {},
         "scores": {
           "top": 725.688,
-          "weekly": 53.088,
+          "weekly": 53.086,
           "leaderboard": 249.7,
           "coding": 54.5,
           "vision": 0,
@@ -39432,7 +41168,7 @@
         "taskScores": {},
         "scores": {
           "top": 694.009,
-          "weekly": 51.288,
+          "weekly": 51.286,
           "leaderboard": 233.99,
           "coding": 0,
           "vision": 0,
@@ -39783,7 +41519,7 @@
         "taskScores": {},
         "scores": {
           "top": 648.101,
-          "weekly": 53.081,
+          "weekly": 53.08,
           "leaderboard": 228.965,
           "coding": 25.8,
           "vision": 0,
@@ -39985,7 +41721,7 @@
         "taskScores": {},
         "scores": {
           "top": 47.505,
-          "weekly": 45.992,
+          "weekly": 45.991,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -40247,7 +41983,7 @@
         "taskScores": {},
         "scores": {
           "top": 699.319,
-          "weekly": 51.992,
+          "weekly": 51.991,
           "leaderboard": 234.114,
           "coding": 0,
           "vision": 0,
@@ -40496,7 +42232,7 @@
         "taskScores": {},
         "scores": {
           "top": 38.103,
-          "weekly": 36.352,
+          "weekly": 36.351,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -40622,7 +42358,7 @@
         "taskScores": {},
         "scores": {
           "top": 38.103,
-          "weekly": 36.352,
+          "weekly": 36.351,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -40756,7 +42492,7 @@
         "taskScores": {},
         "scores": {
           "top": 29.072,
-          "weekly": 46.295,
+          "weekly": 46.294,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -40969,7 +42705,7 @@
         "taskScores": {},
         "scores": {
           "top": 726.747,
-          "weekly": 63.028,
+          "weekly": 63.027,
           "leaderboard": 264.62,
           "coding": 52.6,
           "vision": 0,
@@ -41189,7 +42925,7 @@
         "taskScores": {},
         "scores": {
           "top": 58.22,
-          "weekly": 62.256,
+          "weekly": 62.255,
           "leaderboard": 20.1,
           "coding": 56.1,
           "vision": 0,
@@ -41354,7 +43090,7 @@
         "taskScores": {},
         "scores": {
           "top": 58.22,
-          "weekly": 63.761,
+          "weekly": 63.76,
           "leaderboard": 20.1,
           "coding": 56.1,
           "vision": 0,
@@ -41519,7 +43255,7 @@
         "taskScores": {},
         "scores": {
           "top": 59.24,
-          "weekly": 60.822,
+          "weekly": 60.821,
           "leaderboard": 22.48,
           "coding": 56.1,
           "vision": 0,
@@ -41684,7 +43420,7 @@
         "taskScores": {},
         "scores": {
           "top": 59.24,
-          "weekly": 62.327,
+          "weekly": 62.326,
           "leaderboard": 22.48,
           "coding": 56.1,
           "vision": 0,
@@ -41852,7 +43588,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.483,
-          "weekly": 59.925,
+          "weekly": 59.924,
           "leaderboard": 10.57,
           "coding": 26.6,
           "vision": 0,
@@ -42020,7 +43756,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.483,
-          "weekly": 61.43,
+          "weekly": 61.429,
           "leaderboard": 10.57,
           "coding": 26.6,
           "vision": 0,
@@ -42233,7 +43969,7 @@
         "taskScores": {},
         "scores": {
           "top": 741.404,
-          "weekly": 51.193,
+          "weekly": 51.192,
           "leaderboard": 251.225,
           "coding": 0,
           "vision": 0,
@@ -42445,7 +44181,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.933,
-          "weekly": 61.252,
+          "weekly": 61.251,
           "leaderboard": 12.73,
           "coding": 37.7,
           "vision": 0,
@@ -42612,7 +44348,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.933,
-          "weekly": 53.368,
+          "weekly": 53.367,
           "leaderboard": 12.73,
           "coding": 37.7,
           "vision": 0,
@@ -42767,7 +44503,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 52.987,
+          "weekly": 52.986,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -42939,7 +44675,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 57.758,
+          "weekly": 57.757,
           "leaderboard": 2.87,
           "coding": 28.7,
           "vision": 0,
@@ -43094,7 +44830,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 43.113,
+          "weekly": 43.112,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -43245,7 +44981,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 44.618,
+          "weekly": 44.617,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -43497,7 +45233,7 @@
         "taskScores": {},
         "scores": {
           "top": 695.871,
-          "weekly": 48.509,
+          "weekly": 48.508,
           "leaderboard": 240.479,
           "coding": 71.1,
           "vision": 0,
@@ -43854,7 +45590,7 @@
         "taskScores": {},
         "scores": {
           "top": 695.871,
-          "weekly": 50.014,
+          "weekly": 50.013,
           "leaderboard": 240.479,
           "coding": 71.1,
           "vision": 0,
@@ -44173,7 +45909,7 @@
         "taskScores": {},
         "scores": {
           "top": 607.786,
-          "weekly": 54.718,
+          "weekly": 54.717,
           "leaderboard": 206.11,
           "coding": 31.1,
           "vision": 0,
@@ -44456,7 +46192,7 @@
         "taskScores": {},
         "scores": {
           "top": 657.32,
-          "weekly": 59.736,
+          "weekly": 59.735,
           "leaderboard": 232.04,
           "coding": 34.7,
           "vision": 0,
@@ -44680,7 +46416,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 56.196,
+          "weekly": 56.195,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -44856,7 +46592,7 @@
         "taskScores": {},
         "scores": {
           "top": 737.482,
-          "weekly": 45.97,
+          "weekly": 45.969,
           "leaderboard": 253.6,
           "coding": 0,
           "vision": 0,
@@ -45045,7 +46781,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 53.718,
+          "weekly": 53.717,
           "leaderboard": 3.7,
           "coding": 37,
           "vision": 0,
@@ -45211,7 +46947,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 53.465,
+          "weekly": 53.464,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -45376,7 +47112,7 @@
         "taskScores": {},
         "scores": {
           "top": 55.773,
-          "weekly": 59.081,
+          "weekly": 59.08,
           "leaderboard": 15.49,
           "coding": 45.7,
           "vision": 0,
@@ -45536,7 +47272,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 57.127,
+          "weekly": 57.126,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -45683,7 +47419,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 48.956,
+          "weekly": 48.955,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -45940,7 +47676,7 @@
         "taskScores": {},
         "scores": {
           "top": 666.233,
-          "weekly": 48.695,
+          "weekly": 48.694,
           "leaderboard": 223.354,
           "coding": 0,
           "vision": 0,
@@ -46126,7 +47862,7 @@
       "name": "AionLabs: Aion-2.0",
       "description": "Aion-2.0 is a variant of DeepSeek V3.2 optimized for immersive roleplaying and storytelling. It is particularly strong at introducing tension, crises, and conflict into stories, making narratives feel more engaging....",
       "created": 1771881306,
-      "context_length": 1048576,
+      "context_length": 131072,
       "modality": {
         "input": [
           "text"
@@ -46142,7 +47878,7 @@
       },
       "isFree": false,
       "topProvider": {
-        "context_length": 1048576,
+        "context_length": 131072,
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
@@ -46178,8 +47914,8 @@
         "aaAgentic": null,
         "taskScores": {},
         "scores": {
-          "top": 54.103,
-          "weekly": 52.777,
+          "top": 49.588,
+          "weekly": 52.776,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -46197,7 +47933,7 @@
         "name": "AionLabs: Aion-2.0",
         "created": 1771881306,
         "description": "Aion-2.0 is a variant of DeepSeek V3.2 optimized for immersive roleplaying and storytelling. It is particularly strong at introducing tension, crises, and conflict into stories, making narratives feel more engaging....",
-        "context_length": 1048576,
+        "context_length": 131072,
         "architecture": {
           "modality": "text->text",
           "input_modalities": [
@@ -46215,7 +47951,7 @@
           "input_cache_read": "0.0000002"
         },
         "top_provider": {
-          "context_length": 1048576,
+          "context_length": 131072,
           "max_completion_tokens": 32768,
           "is_moderated": false
         },
@@ -46476,7 +48212,7 @@
         "taskScores": {},
         "scores": {
           "top": 715.968,
-          "weekly": 60.808,
+          "weekly": 60.807,
           "leaderboard": 265.108,
           "coding": 68.8,
           "vision": 0,
@@ -46960,7 +48696,7 @@
         "taskScores": {},
         "scores": {
           "top": 715.968,
-          "weekly": 62.313,
+          "weekly": 62.312,
           "leaderboard": 265.108,
           "coding": 68.8,
           "vision": 0,
@@ -47389,7 +49125,7 @@
         "taskScores": {},
         "scores": {
           "top": 748.448,
-          "weekly": 60.414,
+          "weekly": 60.413,
           "leaderboard": 276.613,
           "coding": 63,
           "vision": 0,
@@ -47753,7 +49489,7 @@
         "taskScores": {},
         "scores": {
           "top": 748.448,
-          "weekly": 61.919,
+          "weekly": 61.918,
           "leaderboard": 276.613,
           "coding": 63,
           "vision": 0,
@@ -48071,7 +49807,7 @@
         "taskScores": {},
         "scores": {
           "top": 688.769,
-          "weekly": 53.344,
+          "weekly": 53.343,
           "leaderboard": 230.825,
           "coding": 0,
           "vision": 0,
@@ -48348,7 +50084,7 @@
         "taskScores": {},
         "scores": {
           "top": 706.556,
-          "weekly": 58.967,
+          "weekly": 58.966,
           "leaderboard": 254.043,
           "coding": 48.2,
           "vision": 0,
@@ -48614,7 +50350,7 @@
         "taskScores": {},
         "scores": {
           "top": 709.771,
-          "weekly": 53.977,
+          "weekly": 53.976,
           "leaderboard": 239.714,
           "coding": 0,
           "vision": 0,
@@ -49153,7 +50889,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 51.266,
+          "weekly": 51.265,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -49405,7 +51141,7 @@
         "taskScores": {},
         "scores": {
           "top": 748.988,
-          "weekly": 47.21,
+          "weekly": 47.209,
           "leaderboard": 252.723,
           "coding": 0,
           "vision": 0,
@@ -49747,7 +51483,7 @@
         "taskScores": {},
         "scores": {
           "top": 748.988,
-          "weekly": 48.715,
+          "weekly": 48.714,
           "leaderboard": 252.723,
           "coding": 0,
           "vision": 0,
@@ -50000,7 +51736,7 @@
         "taskScores": {},
         "scores": {
           "top": 45.853,
-          "weekly": 52.454,
+          "weekly": 52.453,
           "leaderboard": 10.06,
           "coding": 36.2,
           "vision": 0,
@@ -50291,7 +52027,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.093,
-          "weekly": 50.563,
+          "weekly": 50.562,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -50792,7 +52528,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.928,
-          "weekly": 58.307,
+          "weekly": 58.306,
           "leaderboard": 7.08,
           "coding": 16.2,
           "vision": 0,
@@ -50940,7 +52676,7 @@
         "taskScores": {},
         "scores": {
           "top": 24.082,
-          "weekly": 35.668,
+          "weekly": 35.667,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -51332,7 +53068,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.536,
-          "weekly": 46.149,
+          "weekly": 46.148,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -51529,7 +53265,7 @@
         "taskScores": {},
         "scores": {
           "top": 688.427,
-          "weekly": 56.218,
+          "weekly": 56.217,
           "leaderboard": 231.971,
           "coding": 0,
           "vision": 0,
@@ -52289,7 +54025,7 @@
         "taskScores": {},
         "scores": {
           "top": 708.514,
-          "weekly": 53.559,
+          "weekly": 53.558,
           "leaderboard": 239.257,
           "coding": 0,
           "vision": 0,
@@ -53510,7 +55246,7 @@
         "taskScores": {},
         "scores": {
           "top": 53.763,
-          "weekly": 60.984,
+          "weekly": 60.983,
           "leaderboard": 7.67,
           "coding": 14.4,
           "vision": 0,
@@ -53658,7 +55394,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.536,
-          "weekly": 42.415,
+          "weekly": 42.414,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -53787,7 +55523,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.01,
-          "weekly": 43.019,
+          "weekly": 43.018,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -54164,7 +55900,7 @@
         "taskScores": {},
         "scores": {
           "top": 684.214,
-          "weekly": 48.415,
+          "weekly": 48.414,
           "leaderboard": 229.892,
           "coding": 0,
           "vision": 0,
@@ -54752,7 +56488,7 @@
         "taskScores": {},
         "scores": {
           "top": 45.673,
-          "weekly": 49.937,
+          "weekly": 49.936,
           "leaderboard": 9.15,
           "coding": 31.3,
           "vision": 0,
@@ -54888,7 +56624,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.041,
-          "weekly": 45.385,
+          "weekly": 45.384,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -55148,7 +56884,7 @@
         "taskScores": {},
         "scores": {
           "top": 25.536,
-          "weekly": 29.88,
+          "weekly": 29.879,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -55420,7 +57156,7 @@
         "taskScores": {},
         "scores": {
           "top": 46,
-          "weekly": 46.142,
+          "weekly": 46.141,
           "leaderboard": 2.3,
           "coding": 23,
           "vision": 0,
@@ -55601,7 +57337,7 @@
         "taskScores": {},
         "scores": {
           "top": 629.13,
-          "weekly": 52.767,
+          "weekly": 52.766,
           "leaderboard": 218.09,
           "coding": 14.4,
           "vision": 0,
@@ -55809,7 +57545,7 @@
         "taskScores": {},
         "scores": {
           "top": 624.58,
-          "weekly": 53.192,
+          "weekly": 53.191,
           "leaderboard": 215.67,
           "coding": 9.7,
           "vision": 0,
@@ -56017,7 +57753,7 @@
         "taskScores": {},
         "scores": {
           "top": 624.58,
-          "weekly": 54.697,
+          "weekly": 54.696,
           "leaderboard": 215.67,
           "coding": 9.7,
           "vision": 0,
@@ -57037,7 +58773,7 @@
         "taskScores": {},
         "scores": {
           "top": 722.559,
-          "weekly": 46.97,
+          "weekly": 46.969,
           "leaderboard": 244.383,
           "coding": 0,
           "vision": 0,
@@ -57352,7 +59088,7 @@
         "taskScores": {},
         "scores": {
           "top": 722.559,
-          "weekly": 48.475,
+          "weekly": 48.474,
           "leaderboard": 244.383,
           "coding": 0,
           "vision": 0,
@@ -58128,7 +59864,7 @@
         "taskScores": {},
         "scores": {
           "top": 696.473,
-          "weekly": 50.575,
+          "weekly": 50.574,
           "leaderboard": 239.29,
           "coding": 49.4,
           "vision": 0,
@@ -58887,7 +60623,7 @@
         "taskScores": {},
         "scores": {
           "top": 669.293,
-          "weekly": 51.85,
+          "weekly": 51.849,
           "leaderboard": 226.9,
           "coding": 21,
           "vision": 0,
@@ -59193,7 +60929,7 @@
         "taskScores": {},
         "scores": {
           "top": 34.505,
-          "weekly": 36.013,
+          "weekly": 36.012,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -59987,7 +61723,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.586,
-          "weekly": 46.71,
+          "weekly": 46.709,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -60390,7 +62126,7 @@
         "taskScores": {},
         "scores": {
           "top": 669.994,
-          "weekly": 57.122,
+          "weekly": 57.121,
           "leaderboard": 239.645,
           "coding": 43.9,
           "vision": 0,
@@ -60667,7 +62403,7 @@
         "taskScores": {},
         "scores": {
           "top": 669.994,
-          "weekly": 58.627,
+          "weekly": 58.626,
           "leaderboard": 239.645,
           "coding": 43.9,
           "vision": 0,
@@ -61843,7 +63579,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.01,
-          "weekly": 43.58,
+          "weekly": 43.579,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -63158,7 +64894,7 @@
         "taskScores": {},
         "scores": {
           "top": 687.679,
-          "weekly": 55.053,
+          "weekly": 55.052,
           "leaderboard": 231.857,
           "coding": 0,
           "vision": 0,
@@ -63480,7 +65216,7 @@
         "taskScores": {},
         "scores": {
           "top": 27.041,
-          "weekly": 34.598,
+          "weekly": 34.597,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -63609,7 +65345,7 @@
         "taskScores": {},
         "scores": {
           "top": 49.588,
-          "weekly": 50.986,
+          "weekly": 50.985,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -63760,7 +65496,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.093,
-          "weekly": 46.582,
+          "weekly": 46.581,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -63962,7 +65698,7 @@
         "taskScores": {},
         "scores": {
           "top": 651.736,
-          "weekly": 44.852,
+          "weekly": 44.851,
           "leaderboard": 221.325,
           "coding": 0,
           "vision": 0,
@@ -65377,7 +67113,7 @@
         "taskScores": {},
         "scores": {
           "top": 568.782,
-          "weekly": 55.994,
+          "weekly": 55.993,
           "leaderboard": 196.17,
           "coding": 12.1,
           "vision": 0,
@@ -66929,7 +68665,7 @@
         "taskScores": {},
         "scores": {
           "top": 702.798,
-          "weekly": 50.358,
+          "weekly": 50.357,
           "leaderboard": 240.43,
           "coding": 37.8,
           "vision": 0,
@@ -68669,7 +70405,7 @@
         "taskScores": {},
         "scores": {
           "top": 549.763,
-          "weekly": 62.037,
+          "weekly": 62.036,
           "leaderboard": 189.27,
           "coding": 20.7,
           "vision": 0,
@@ -69410,7 +71146,7 @@
         "taskScores": {},
         "scores": {
           "top": 606.425,
-          "weekly": 47.702,
+          "weekly": 47.701,
           "leaderboard": 204.867,
           "coding": 0,
           "vision": 0,
@@ -69635,7 +71371,7 @@
         "taskScores": {},
         "scores": {
           "top": 606.425,
-          "weekly": 49.207,
+          "weekly": 49.206,
           "leaderboard": 204.867,
           "coding": 0,
           "vision": 0,
@@ -70421,7 +72157,7 @@
         "taskScores": {},
         "scores": {
           "top": 670.552,
-          "weekly": 48.129,
+          "weekly": 48.128,
           "leaderboard": 228.714,
           "coding": 0,
           "vision": 0,
@@ -70665,7 +72401,7 @@
         "taskScores": {},
         "scores": {
           "top": 607.064,
-          "weekly": 57.149,
+          "weekly": 57.148,
           "leaderboard": 212.433,
           "coding": 22.1,
           "vision": 0,
@@ -71075,7 +72811,7 @@
         "taskScores": {},
         "scores": {
           "top": 25.536,
-          "weekly": 38.694,
+          "weekly": 38.693,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -71366,7 +73102,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 57.09,
+          "weekly": 57.089,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -71561,7 +73297,7 @@
         "taskScores": {},
         "scores": {
           "top": 609.868,
-          "weekly": 49.873,
+          "weekly": 49.872,
           "leaderboard": 206.1,
           "coding": 0,
           "vision": 0,
@@ -72064,7 +73800,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.588,
-          "weekly": 48.799,
+          "weekly": 48.798,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -72186,7 +73922,7 @@
         "taskScores": {},
         "scores": {
           "top": 35.093,
-          "weekly": 39.818,
+          "weekly": 39.817,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -72602,7 +74338,7 @@
         "taskScores": {},
         "scores": {
           "top": 549.591,
-          "weekly": 50.345,
+          "weekly": 50.344,
           "leaderboard": 184.2,
           "coding": 0,
           "vision": 0,
@@ -74571,7 +76307,7 @@
         "taskScores": {},
         "scores": {
           "top": 675.084,
-          "weekly": 41.705,
+          "weekly": 41.704,
           "leaderboard": 233.789,
           "coding": 37.6,
           "vision": 0,
@@ -75527,7 +77263,7 @@
         "taskScores": {},
         "scores": {
           "top": 49.588,
-          "weekly": 56.166,
+          "weekly": 56.165,
           "leaderboard": 1.38,
           "coding": 13.8,
           "vision": 0,
@@ -75690,7 +77426,7 @@
         },
         "scores": {
           "top": 49.588,
-          "weekly": 56.166,
+          "weekly": 56.165,
           "leaderboard": 1.53,
           "coding": 15.3,
           "vision": 0,
@@ -76058,7 +77794,7 @@
         "taskScores": {},
         "scores": {
           "top": 50.505,
-          "weekly": 50.229,
+          "weekly": 50.228,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -76241,7 +77977,7 @@
         },
         "scores": {
           "top": 641.425,
-          "weekly": 48.931,
+          "weekly": 48.93,
           "leaderboard": 214.88,
           "coding": 0,
           "vision": 0,
@@ -76449,7 +78185,7 @@
         "taskScores": {},
         "scores": {
           "top": 641.425,
-          "weekly": 50.436,
+          "weekly": 50.435,
           "leaderboard": 214.88,
           "coding": 0,
           "vision": 0,
@@ -76669,7 +78405,7 @@
         },
         "scores": {
           "top": 590.972,
-          "weekly": 50.229,
+          "weekly": 50.228,
           "leaderboard": 196.533,
           "coding": 0,
           "vision": 0,
@@ -77569,7 +79305,7 @@
         },
         "scores": {
           "top": 596.101,
-          "weekly": 46.423,
+          "weekly": 46.422,
           "leaderboard": 202.02,
           "coding": 20.2,
           "vision": 0,
@@ -78500,7 +80236,7 @@
         "taskScores": {},
         "scores": {
           "top": 538.72,
-          "weekly": 48.295,
+          "weekly": 48.294,
           "leaderboard": 180.763,
           "coding": 16.3,
           "vision": 0,
@@ -79334,7 +81070,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.588,
-          "weekly": 46.007,
+          "weekly": 46.006,
           "leaderboard": 0.27,
           "coding": 2.7,
           "vision": 0,
@@ -80200,7 +81936,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.536,
-          "weekly": 36.879,
+          "weekly": 36.878,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -80447,7 +82183,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.536,
-          "weekly": 36.879,
+          "weekly": 36.878,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -81252,7 +82988,7 @@
         },
         "scores": {
           "top": 50.505,
-          "weekly": 50.137,
+          "weekly": 50.136,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -82192,7 +83928,7 @@
         "taskScores": {},
         "scores": {
           "top": 29.072,
-          "weekly": 45.204,
+          "weekly": 45.203,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -82985,7 +84721,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.588,
-          "weekly": 49.663,
+          "weekly": 49.662,
           "leaderboard": 1.19,
           "coding": 11.9,
           "vision": 0,
@@ -83506,7 +85242,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.536,
-          "weekly": 42.279,
+          "weekly": 42.278,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -84040,7 +85776,7 @@
         "taskScores": {},
         "scores": {
           "top": 30.577,
-          "weekly": 37.36,
+          "weekly": 37.359,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -84969,7 +86705,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.588,
-          "weekly": 40.535,
+          "weekly": 40.534,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -86084,7 +87820,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.536,
-          "weekly": 48.279,
+          "weekly": 48.278,
           "leaderboard": 1.14,
           "coding": 11.4,
           "vision": 0,
@@ -86235,7 +87971,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.536,
-          "weekly": 48.279,
+          "weekly": 48.278,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -86720,7 +88456,7 @@
         },
         "scores": {
           "top": 528.744,
-          "weekly": 42.121,
+          "weekly": 42.12,
           "leaderboard": 177.167,
           "coding": 0,
           "vision": 0,
@@ -87423,7 +89159,7 @@
         "taskScores": {},
         "scores": {
           "top": 32.082,
-          "weekly": 41.12,
+          "weekly": 41.119,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -89220,7 +90956,7 @@
         "taskScores": {},
         "scores": {
           "top": 37.072,
-          "weekly": 47.409,
+          "weekly": 47.408,
           "leaderboard": 1.07,
           "coding": 10.7,
           "vision": 0,
