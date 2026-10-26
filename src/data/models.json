@@ -1,7 +1,317 @@
 {
-  "fetchedAt": "2026-10-26T12:16:07.567Z",
+  "fetchedAt": "2026-10-26T22:17:50.636Z",
   "source": "https://openrouter.ai/api/v1/models",
   "models": [
+    {
+      "id": "openai/gpt-6.1-terra",
+      "slug": "openai-gpt-6-1-terra",
+      "canonical_slug": "openai/gpt-6.1-terra-20261026",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6.1 Terra",
+      "description": "GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, priced below GPT-6.1 Sol. It is suited for everyday agentic, coding, and writing work, is particularly strong at understanding screenshots...",
+      "created": 1793038409,
+      "context_length": 1050000,
+      "modality": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "prompt": "0.000001",
+        "completion": "0.000005",
+        "input_cache_read": "0.00000005",
+        "input_cache_write": "0.00000125"
+      },
+      "isFree": false,
+      "topProvider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools",
+        "verbosity"
+      ],
+      "knowledge_cutoff": null,
+      "rank": {
+        "arenaElo": null,
+        "arenaBestRank": null,
+        "arenaBestCategory": null,
+        "arenaBestRankValue": null,
+        "aaIntelligence": null,
+        "aaCoding": null,
+        "aaAgentic": null,
+        "taskScores": {},
+        "scores": {
+          "top": 54.106,
+          "weekly": 70.852,
+          "leaderboard": 0,
+          "coding": 0,
+          "vision": 0,
+          "reasoning": 0,
+          "chat": 15,
+          "math": 0,
+          "instruction": 0,
+          "aider": 0
+        }
+      },
+      "raw": {
+        "id": "openai/gpt-6.1-terra",
+        "canonical_slug": "openai/gpt-6.1-terra-20261026",
+        "hugging_face_id": null,
+        "name": "OpenAI: GPT-6.1 Terra",
+        "created": 1793038409,
+        "description": "GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, priced below GPT-6.1 Sol. It is suited for everyday agentic, coding, and writing work, is particularly strong at understanding screenshots...",
+        "context_length": 1050000,
+        "architecture": {
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "file",
+            "image",
+            "text"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "GPT",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.000001",
+          "completion": "0.000005",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000005",
+          "input_cache_write": "0.00000125",
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000002",
+              "completion": "0.0000075",
+              "input_cache_read": "0.0000001",
+              "input_cache_write": "0.0000025"
+            }
+          ]
+        },
+        "top_provider": {
+          "context_length": 1050000,
+          "max_completion_tokens": 128000,
+          "is_moderated": true
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools",
+          "verbosity"
+        ],
+        "default_parameters": {},
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/openai/gpt-6.1-terra-20261026/endpoints"
+        },
+        "reasoning": {
+          "mandatory": false,
+          "default_enabled": true,
+          "supported_efforts": [
+            "max",
+            "xhigh",
+            "high",
+            "medium",
+            "low",
+            "none"
+          ],
+          "default_effort": "medium"
+        }
+      }
+    },
+    {
+      "id": "openai/gpt-6.1-terra:batch",
+      "slug": "openai-gpt-6-1-terra-batch",
+      "canonical_slug": "openai/gpt-6.1-terra-20261026",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6.1 Terra (batch)",
+      "description": "GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, priced below GPT-6.1 Sol. It is suited for everyday agentic, coding, and writing work, is particularly strong at understanding screenshots...",
+      "created": 1793038409,
+      "context_length": 1050000,
+      "modality": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "prompt": "0.0000005",
+        "completion": "0.0000025",
+        "input_cache_read": "0.000000025",
+        "input_cache_write": "0.000000625"
+      },
+      "isFree": false,
+      "topProvider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools",
+        "verbosity"
+      ],
+      "knowledge_cutoff": null,
+      "rank": {
+        "arenaElo": null,
+        "arenaBestRank": null,
+        "arenaBestCategory": null,
+        "arenaBestRankValue": null,
+        "aaIntelligence": null,
+        "aaCoding": null,
+        "aaAgentic": null,
+        "taskScores": {},
+        "scores": {
+          "top": 54.106,
+          "weekly": 72.357,
+          "leaderboard": 0,
+          "coding": 0,
+          "vision": 0,
+          "reasoning": 0,
+          "chat": 15,
+          "math": 0,
+          "instruction": 0,
+          "aider": 0
+        }
+      },
+      "raw": {
+        "id": "openai/gpt-6.1-terra:batch",
+        "canonical_slug": "openai/gpt-6.1-terra-20261026",
+        "hugging_face_id": null,
+        "name": "OpenAI: GPT-6.1 Terra (batch)",
+        "created": 1793038409,
+        "description": "GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, priced below GPT-6.1 Sol. It is suited for everyday agentic, coding, and writing work, is particularly strong at understanding screenshots...",
+        "context_length": 1050000,
+        "architecture": {
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "file",
+            "image",
+            "text"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "GPT",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.0000005",
+          "completion": "0.0000025",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000025",
+          "input_cache_write": "0.000000625",
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000001",
+              "completion": "0.00000375",
+              "input_cache_read": "0.00000005",
+              "input_cache_write": "0.00000125"
+            }
+          ]
+        },
+        "top_provider": {
+          "context_length": 1050000,
+          "max_completion_tokens": 128000,
+          "is_moderated": true
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools",
+          "verbosity"
+        ],
+        "default_parameters": {},
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/openai/gpt-6.1-terra-20261026/endpoints"
+        },
+        "reasoning": {
+          "mandatory": false,
+          "default_enabled": true,
+          "supported_efforts": [
+            "max",
+            "xhigh",
+            "high",
+            "medium",
+            "low",
+            "none"
+          ],
+          "default_effort": "medium"
+        }
+      }
+    },
     {
       "id": "moonshotai/kimi-k3.1-pro",
       "slug": "moonshotai-kimi-k3-1-pro",
@@ -48,6 +358,7 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logprobs",
         "max_tokens",
         "presence_penalty",
         "reasoning",
@@ -56,7 +367,8 @@
         "stop",
         "structured_outputs",
         "tool_choice",
-        "tools"
+        "tools",
+        "top_logprobs"
       ],
       "benchmarks": {
         "design_arena": [
@@ -128,7 +440,7 @@
         "taskScores": {},
         "scores": {
           "top": 824.369,
-          "weekly": 83.911,
+          "weekly": 83.003,
           "leaderboard": 312.656,
           "coding": 55.1,
           "vision": 0,
@@ -174,6 +486,7 @@
         "supported_parameters": [
           "frequency_penalty",
           "include_reasoning",
+          "logprobs",
           "max_tokens",
           "presence_penalty",
           "reasoning",
@@ -182,7 +495,8 @@
           "stop",
           "structured_outputs",
           "tool_choice",
-          "tools"
+          "tools",
+          "top_logprobs"
         ],
         "default_parameters": {
           "top_p": 0.95
@@ -327,7 +641,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 57.737,
+          "weekly": 57.269,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -477,7 +791,7 @@
         "taskScores": {},
         "scores": {
           "top": 66.913,
-          "weekly": 79.597,
+          "weekly": 79.36,
           "leaderboard": 29.89,
           "coding": 42.7,
           "vision": 0,
@@ -719,7 +1033,7 @@
         "taskScores": {},
         "scores": {
           "top": 770.87,
-          "weekly": 77.424,
+          "weekly": 77.251,
           "leaderboard": 283.983,
           "coding": 39.5,
           "vision": 0,
@@ -1033,7 +1347,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 58.125,
+          "weekly": 57.959,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -1176,7 +1490,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 54.266,
+          "weekly": 54.108,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -1349,7 +1663,7 @@
         "taskScores": {},
         "scores": {
           "top": 726.203,
-          "weekly": 60.211,
+          "weekly": 60.058,
           "leaderboard": 244.4,
           "coding": 0,
           "vision": 0,
@@ -1566,7 +1880,7 @@
         "taskScores": {},
         "scores": {
           "top": 722.892,
-          "weekly": 62.42,
+          "weekly": 62.267,
           "leaderboard": 243.233,
           "coding": 0,
           "vision": 0,
@@ -1745,7 +2059,7 @@
         "taskScores": {},
         "scores": {
           "top": 30.526,
-          "weekly": 46.217,
+          "weekly": 46.078,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -1870,7 +2184,7 @@
         "taskScores": {},
         "scores": {
           "top": 30.526,
-          "weekly": 46.217,
+          "weekly": 46.078,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -2040,7 +2354,7 @@
         "taskScores": {},
         "scores": {
           "top": 763.053,
-          "weekly": 56.691,
+          "weekly": 56.555,
           "leaderboard": 257.8,
           "coding": 0,
           "vision": 0,
@@ -2271,7 +2585,7 @@
         "taskScores": {},
         "scores": {
           "top": 688.613,
-          "weekly": 71.888,
+          "weekly": 71.754,
           "leaderboard": 246.39,
           "coding": 26.5,
           "vision": 0,
@@ -2501,7 +2815,7 @@
         "taskScores": {},
         "scores": {
           "top": 688.51,
-          "weekly": 64.448,
+          "weekly": 64.314,
           "leaderboard": 246.39,
           "coding": 26.5,
           "vision": 0,
@@ -2671,7 +2985,7 @@
         "taskScores": {},
         "scores": {
           "top": 38.103,
-          "weekly": 45.331,
+          "weekly": 45.198,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -2789,7 +3103,7 @@
         "taskScores": {},
         "scores": {
           "top": 38.103,
-          "weekly": 44.851,
+          "weekly": 44.742,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -2912,7 +3226,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.093,
-          "weekly": 48.853,
+          "weekly": 48.745,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -3042,7 +3356,7 @@
         "taskScores": {},
         "scores": {
           "top": 49.536,
-          "weekly": 60.422,
+          "weekly": 60.317,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -3258,7 +3572,7 @@
         "taskScores": {},
         "scores": {
           "top": 804.82,
-          "weekly": 75.428,
+          "weekly": 75.323,
           "leaderboard": 304.07,
           "coding": 52.6,
           "vision": 0,
@@ -3552,7 +3866,7 @@
         "taskScores": {},
         "scores": {
           "top": 804.82,
-          "weekly": 76.933,
+          "weekly": 76.828,
           "leaderboard": 304.07,
           "coding": 52.6,
           "vision": 0,
@@ -3763,7 +4077,7 @@
         "taskScores": {},
         "scores": {
           "top": 30,
-          "weekly": 48.732,
+          "weekly": 48.629,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -3873,7 +4187,7 @@
         "taskScores": {},
         "scores": {
           "top": 30,
-          "weekly": 48.732,
+          "weekly": 48.629,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -4073,7 +4387,7 @@
         "taskScores": {},
         "scores": {
           "top": 770.093,
-          "weekly": 52.606,
+          "weekly": 52.513,
           "leaderboard": 260.36,
           "coding": 0,
           "vision": 0,
@@ -4313,7 +4627,7 @@
         "taskScores": {},
         "scores": {
           "top": 67.213,
-          "weekly": 73.401,
+          "weekly": 73.338,
           "leaderboard": 30.59,
           "coding": 43.7,
           "vision": 0,
@@ -4530,7 +4844,7 @@
         "taskScores": {},
         "scores": {
           "top": 780.37,
-          "weekly": 77.119,
+          "weekly": 77.059,
           "leaderboard": 289.78,
           "coding": 43.4,
           "vision": 0,
@@ -4789,7 +5103,7 @@
         "taskScores": {},
         "scores": {
           "top": 780.37,
-          "weekly": 78.624,
+          "weekly": 78.564,
           "leaderboard": 289.78,
           "coding": 43.4,
           "vision": 0,
@@ -4996,7 +5310,7 @@
         "taskScores": {},
         "scores": {
           "top": 48.082,
-          "weekly": 53.722,
+          "weekly": 53.667,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -5208,7 +5522,7 @@
         "taskScores": {},
         "scores": {
           "top": 751.06,
-          "weekly": 70.125,
+          "weekly": 70.071,
           "leaderboard": 276.13,
           "coding": 38.4,
           "vision": 0,
@@ -5431,7 +5745,7 @@
         "taskScores": {},
         "scores": {
           "top": 63.423,
-          "weekly": 77.077,
+          "weekly": 77.036,
           "leaderboard": 28.77,
           "coding": 41.1,
           "vision": 0,
@@ -5582,7 +5896,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 52.361,
+          "weekly": 52.326,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -5744,7 +6058,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 53.867,
+          "weekly": 53.831,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -5985,7 +6299,7 @@
         "taskScores": {},
         "scores": {
           "top": 802.851,
-          "weekly": 73.081,
+          "weekly": 73.046,
           "leaderboard": 302.88,
           "coding": 51.8,
           "vision": 0,
@@ -6298,7 +6612,7 @@
         "taskScores": {},
         "scores": {
           "top": 802.851,
-          "weekly": 74.587,
+          "weekly": 74.551,
           "leaderboard": 302.88,
           "coding": 51.8,
           "vision": 0,
@@ -6611,7 +6925,7 @@
         "taskScores": {},
         "scores": {
           "top": 809.285,
-          "weekly": 74.681,
+          "weekly": 74.647,
           "leaderboard": 307.74,
           "coding": 56,
           "vision": 0,
@@ -6915,7 +7229,7 @@
         "taskScores": {},
         "scores": {
           "top": 809.285,
-          "weekly": 76.186,
+          "weekly": 76.152,
           "leaderboard": 307.74,
           "coding": 56,
           "vision": 0,
@@ -7155,7 +7469,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 50.95,
+          "weekly": 50.921,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -7304,7 +7618,7 @@
         "taskScores": {},
         "scores": {
           "top": 38.833,
-          "weekly": 50.359,
+          "weekly": 50.33,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -7454,7 +7768,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 51.058,
+          "weekly": 51.032,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -7605,7 +7919,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 52.006,
+          "weekly": 51.98,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -7760,7 +8074,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 51.302,
+          "weekly": 51.275,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -7905,7 +8219,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 55.696,
+          "weekly": 55.67,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -8037,7 +8351,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 52.536,
+          "weekly": 52.51,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -8217,7 +8531,7 @@
         "taskScores": {},
         "scores": {
           "top": 674.398,
-          "weekly": 69.95,
+          "weekly": 69.924,
           "leaderboard": 240.35,
           "coding": 24.1,
           "vision": 0,
@@ -8408,7 +8722,7 @@
         "taskScores": {},
         "scores": {
           "top": 50.417,
-          "weekly": 55.982,
+          "weekly": 55.957,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -8545,7 +8859,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 58.366,
+          "weekly": 58.341,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -8708,7 +9022,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 59.872,
+          "weekly": 59.846,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -8879,7 +9193,7 @@
         "taskScores": {},
         "scores": {
           "top": 65.536,
-          "weekly": 73.606,
+          "weekly": 73.581,
           "leaderboard": 26.67,
           "coding": 38.1,
           "vision": 0,
@@ -9058,7 +9372,7 @@
         "taskScores": {},
         "scores": {
           "top": 65.536,
-          "weekly": 75.112,
+          "weekly": 75.086,
           "leaderboard": 26.67,
           "coding": 38.1,
           "vision": 0,
@@ -9229,7 +9543,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 51.861,
+          "weekly": 51.836,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -9392,7 +9706,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 53.366,
+          "weekly": 53.341,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -9563,7 +9877,7 @@
         "taskScores": {},
         "scores": {
           "top": 68.386,
-          "weekly": 70.901,
+          "weekly": 70.876,
           "leaderboard": 33.32,
           "coding": 47.6,
           "vision": 0,
@@ -9742,7 +10056,7 @@
         "taskScores": {},
         "scores": {
           "top": 68.386,
-          "weekly": 72.406,
+          "weekly": 72.381,
           "leaderboard": 33.32,
           "coding": 47.6,
           "vision": 0,
@@ -9999,7 +10313,7 @@
         "taskScores": {},
         "scores": {
           "top": 821.43,
-          "weekly": 73.392,
+          "weekly": 73.367,
           "leaderboard": 313.102,
           "coding": 57.6,
           "vision": 0,
@@ -10317,7 +10631,7 @@
         "taskScores": {},
         "scores": {
           "top": 821.43,
-          "weekly": 74.897,
+          "weekly": 74.872,
           "leaderboard": 313.102,
           "coding": 57.6,
           "vision": 0,
@@ -10532,7 +10846,7 @@
         "taskScores": {},
         "scores": {
           "top": 30,
-          "weekly": 32.7,
+          "weekly": 32.676,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -10653,7 +10967,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 51.624,
+          "weekly": 51.6,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -10814,7 +11128,7 @@
         "taskScores": {},
         "scores": {
           "top": 65.476,
-          "weekly": 74.246,
+          "weekly": 74.222,
           "leaderboard": 26.53,
           "coding": 37.9,
           "vision": 0,
@@ -11038,7 +11352,7 @@
         "taskScores": {},
         "scores": {
           "top": 793.21,
-          "weekly": 75.144,
+          "weekly": 75.12,
           "leaderboard": 296.124,
           "coding": 46.3,
           "vision": 0,
@@ -11295,7 +11609,7 @@
         "taskScores": {},
         "scores": {
           "top": 764.823,
-          "weekly": 71.238,
+          "weekly": 71.214,
           "leaderboard": 286.447,
           "coding": 46.4,
           "vision": 0,
@@ -11511,7 +11825,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 58.2,
+          "weekly": 58.176,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -11660,7 +11974,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 58.235,
+          "weekly": 58.214,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -11812,7 +12126,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 55.98,
+          "weekly": 55.958,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -11907,9 +12221,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.0000002565",
+        "prompt": "0.0000001188",
         "completion": "0.000008",
-        "input_cache_read": "0.00000026"
+        "input_cache_read": "0.00000012"
       },
       "isFree": false,
       "topProvider": {
@@ -11962,7 +12276,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 52.254,
+          "weekly": 52.272,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -11997,9 +12311,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.0000002565",
+          "prompt": "0.0000001188",
           "completion": "0.000008",
-          "input_cache_read": "0.00000026"
+          "input_cache_read": "0.00000012"
         },
         "top_provider": {
           "context_length": 1048576,
@@ -12070,14 +12384,14 @@
         ]
       },
       "pricing": {
-        "prompt": "0.00000002",
-        "completion": "0.000001",
-        "input_cache_read": "0.000000015"
+        "prompt": "0.00000004",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000003"
       },
       "isFree": false,
       "topProvider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 393216,
         "is_moderated": false
       },
       "architecture": {
@@ -12128,7 +12442,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 56.795,
+          "weekly": 58.157,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -12164,13 +12478,13 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.00000002",
-          "completion": "0.000001",
-          "input_cache_read": "0.000000015"
+          "prompt": "0.00000004",
+          "completion": "0.0000005",
+          "input_cache_read": "0.00000003"
         },
         "top_provider": {
           "context_length": 1048576,
-          "max_completion_tokens": 943718,
+          "max_completion_tokens": 393216,
           "is_moderated": false
         },
         "per_request_limits": null,
@@ -12284,7 +12598,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.536,
-          "weekly": 48.452,
+          "weekly": 48.436,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -12415,7 +12729,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.536,
-          "weekly": 47.493,
+          "weekly": 47.476,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -12548,7 +12862,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 47.817,
+          "weekly": 47.8,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -12708,7 +13022,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 51.311,
+          "weekly": 51.295,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -12819,16 +13133,16 @@
         ]
       },
       "pricing": {
-        "prompt": "0.000002",
-        "completion": "0.000012",
-        "input_cache_read": "0.0000002",
-        "input_cache_write": "0.0000025"
+        "prompt": "0.000001",
+        "completion": "0.000005",
+        "input_cache_read": "0.00000005",
+        "input_cache_write": "0.00000125"
       },
       "isFree": false,
       "topProvider": {
         "context_length": 1050000,
         "max_completion_tokens": 128000,
-        "is_moderated": false
+        "is_moderated": true
       },
       "architecture": {
         "modality": "text+image+file->text",
@@ -12845,7 +13159,6 @@
       },
       "supported_parameters": [
         "include_reasoning",
-        "max_completion_tokens",
         "max_tokens",
         "reasoning",
         "reasoning_effort",
@@ -12856,7 +13169,7 @@
         "tools",
         "verbosity"
       ],
-      "knowledge_cutoff": "2026-02-16",
+      "knowledge_cutoff": null,
       "rank": {
         "arenaElo": null,
         "arenaBestRank": null,
@@ -12868,7 +13181,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 50.977,
+          "weekly": 52.8,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -12883,8 +13196,8 @@
         "id": "~openai/gpt-terra-latest",
         "canonical_slug": "~openai/gpt-terra-latest",
         "alias_target": {
-          "name": "OpenAI: GPT-5.6 Terra",
-          "slug": "openai/gpt-5.6-terra"
+          "name": "OpenAI: GPT-6.1 Terra",
+          "slug": "openai/gpt-6.1-terra"
         },
         "hugging_face_id": null,
         "name": "OpenAI: GPT Terra Latest",
@@ -12905,30 +13218,29 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.000002",
-          "completion": "0.000012",
+          "prompt": "0.000001",
+          "completion": "0.000005",
           "web_search": "0.01",
-          "input_cache_read": "0.0000002",
-          "input_cache_write": "0.0000025",
+          "input_cache_read": "0.00000005",
+          "input_cache_write": "0.00000125",
           "overrides": [
             {
               "min_prompt_tokens": 272000,
-              "prompt": "0.000004",
-              "completion": "0.000018",
-              "input_cache_read": "0.0000004",
-              "input_cache_write": "0.000005"
+              "prompt": "0.000002",
+              "completion": "0.0000075",
+              "input_cache_read": "0.0000001",
+              "input_cache_write": "0.0000025"
             }
           ]
         },
         "top_provider": {
           "context_length": 1050000,
           "max_completion_tokens": 128000,
-          "is_moderated": false
+          "is_moderated": true
         },
         "per_request_limits": null,
         "supported_parameters": [
           "include_reasoning",
-          "max_completion_tokens",
           "max_tokens",
           "reasoning",
           "reasoning_effort",
@@ -12939,16 +13251,9 @@
           "tools",
           "verbosity"
         ],
-        "default_parameters": {
-          "temperature": null,
-          "top_p": null,
-          "top_k": null,
-          "frequency_penalty": null,
-          "presence_penalty": null,
-          "repetition_penalty": null
-        },
+        "default_parameters": {},
         "supported_voices": null,
-        "knowledge_cutoff": "2026-02-16",
+        "knowledge_cutoff": null,
         "expiration_date": null,
         "links": {
           "details": "/api/v1/models/~openai/gpt-terra-latest/endpoints"
@@ -13036,7 +13341,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 57.817,
+          "weekly": 57.8,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -13199,7 +13504,7 @@
         "taskScores": {},
         "scores": {
           "top": 46,
-          "weekly": 42.975,
+          "weekly": 42.959,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -13349,7 +13654,7 @@
         "taskScores": {},
         "scores": {
           "top": 46,
-          "weekly": 46.18,
+          "weekly": 46.163,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -13510,7 +13815,7 @@
         "taskScores": {},
         "scores": {
           "top": 56.968,
-          "weekly": 69.612,
+          "weekly": 69.596,
           "leaderboard": 22.92,
           "coding": 57,
           "vision": 0,
@@ -13612,14 +13917,14 @@
         ]
       },
       "pricing": {
-        "prompt": "0.00000002",
-        "completion": "0.000001",
-        "input_cache_read": "0.000000015"
+        "prompt": "0.0000000477",
+        "completion": "0.0000001908",
+        "input_cache_read": "0.000000000954"
       },
       "isFree": false,
       "topProvider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 393216,
         "is_moderated": false
       },
       "architecture": {
@@ -13678,7 +13983,7 @@
         "taskScores": {},
         "scores": {
           "top": 61.513,
-          "weekly": 66.495,
+          "weekly": 69.634,
           "leaderboard": 17.29,
           "coding": 24.7,
           "vision": 0,
@@ -13710,13 +14015,13 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.00000002",
-          "completion": "0.000001",
-          "input_cache_read": "0.000000015"
+          "prompt": "0.0000000477",
+          "completion": "0.0000001908",
+          "input_cache_read": "0.000000000954"
         },
         "top_provider": {
           "context_length": 1048576,
-          "max_completion_tokens": 943718,
+          "max_completion_tokens": 393216,
           "is_moderated": false
         },
         "per_request_limits": null,
@@ -13855,7 +14160,7 @@
         "taskScores": {},
         "scores": {
           "top": 61.513,
-          "weekly": 70.033,
+          "weekly": 70.017,
           "leaderboard": 17.29,
           "coding": 24.7,
           "vision": 0,
@@ -14018,7 +14323,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.765,
-          "weekly": 65.128,
+          "weekly": 65.113,
           "leaderboard": 8.61,
           "coding": 12.3,
           "vision": 0,
@@ -14164,7 +14469,7 @@
         "taskScores": {},
         "scores": {
           "top": 35.093,
-          "weekly": 49.116,
+          "weekly": 49.101,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -14307,7 +14612,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.093,
-          "weekly": 53.042,
+          "weekly": 53.026,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -14461,7 +14766,7 @@
         "taskScores": {},
         "scores": {
           "top": 69.916,
-          "weekly": 68.656,
+          "weekly": 68.642,
           "leaderboard": 44.58,
           "coding": 76.9,
           "vision": 0,
@@ -14632,7 +14937,7 @@
         "taskScores": {},
         "scores": {
           "top": 69.916,
-          "weekly": 70.161,
+          "weekly": 70.147,
           "leaderboard": 44.58,
           "coding": 76.9,
           "vision": 0,
@@ -14795,7 +15100,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 47.576,
+          "weekly": 47.562,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -14950,7 +15255,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 49.081,
+          "weekly": 49.067,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -15119,7 +15424,7 @@
         "taskScores": {},
         "scores": {
           "top": 67.62,
-          "weekly": 70.08,
+          "weekly": 70.067,
           "leaderboard": 39.4,
           "coding": 76.2,
           "vision": 0,
@@ -15280,7 +15585,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 59.018,
+          "weekly": 59.005,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -15544,7 +15849,7 @@
         "taskScores": {},
         "scores": {
           "top": 775.503,
-          "weekly": 71.941,
+          "weekly": 71.928,
           "leaderboard": 298.33,
           "coding": 75.8,
           "vision": 0,
@@ -15933,7 +16238,7 @@
         "taskScores": {},
         "scores": {
           "top": 748.098,
-          "weekly": 69.284,
+          "weekly": 69.271,
           "leaderboard": 284.16,
           "coding": 76.3,
           "vision": 0,
@@ -16331,7 +16636,7 @@
         "taskScores": {},
         "scores": {
           "top": 748.098,
-          "weekly": 70.996,
+          "weekly": 70.983,
           "leaderboard": 284.16,
           "coding": 76.3,
           "vision": 0,
@@ -16716,7 +17021,7 @@
         "taskScores": {},
         "scores": {
           "top": 806.103,
-          "weekly": 68.839,
+          "weekly": 68.827,
           "leaderboard": 313.207,
           "coding": 81.6,
           "vision": 0,
@@ -17090,7 +17395,7 @@
         "taskScores": {},
         "scores": {
           "top": 806.103,
-          "weekly": 70.344,
+          "weekly": 70.332,
           "leaderboard": 313.207,
           "coding": 81.6,
           "vision": 0,
@@ -17363,7 +17668,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.918,
-          "weekly": 63.326,
+          "weekly": 63.314,
           "leaderboard": 10.01,
           "coding": 22.4,
           "vision": 0,
@@ -17474,9 +17779,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042"
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378"
       },
       "isFree": false,
       "topProvider": {
@@ -17531,7 +17836,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 53.627,
+          "weekly": 53.845,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -17562,9 +17867,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.000000834",
-          "completion": "0.000002501",
-          "input_cache_read": "0.000000042",
+          "prompt": "0.0000007506",
+          "completion": "0.0000022509",
+          "input_cache_read": "0.0000000378",
           "overrides": [
             {
               "utc_start": 0,
@@ -17709,7 +18014,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 60.876,
+          "weekly": 60.865,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -17874,7 +18179,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 57.243,
+          "weekly": 57.232,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -18092,7 +18397,7 @@
         "taskScores": {},
         "scores": {
           "top": 772.224,
-          "weekly": 73.854,
+          "weekly": 73.844,
           "leaderboard": 292.985,
           "coding": 71.5,
           "vision": 0,
@@ -18387,7 +18692,7 @@
         "taskScores": {},
         "scores": {
           "top": 772.224,
-          "weekly": 76.11,
+          "weekly": 76.1,
           "leaderboard": 292.985,
           "coding": 71.5,
           "vision": 0,
@@ -18609,7 +18914,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 58.696,
+          "weekly": 58.687,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -18771,7 +19076,7 @@
         "taskScores": {},
         "scores": {
           "top": 64.543,
-          "weekly": 70.317,
+          "weekly": 70.307,
           "leaderboard": 30.86,
           "coding": 65,
           "vision": 0,
@@ -18919,7 +19224,7 @@
         "taskScores": {},
         "scores": {
           "top": 19.567,
-          "weekly": 41.332,
+          "weekly": 41.323,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -19032,7 +19337,7 @@
         "taskScores": {},
         "scores": {
           "top": 27.567,
-          "weekly": 46.219,
+          "weekly": 46.21,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -19163,7 +19468,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 55.197,
+          "weekly": 55.188,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -19311,7 +19616,7 @@
         "taskScores": {},
         "scores": {
           "top": 27.567,
-          "weekly": 46.198,
+          "weekly": 46.189,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -19528,7 +19833,7 @@
         "taskScores": {},
         "scores": {
           "top": 761.893,
-          "weekly": 73.101,
+          "weekly": 73.092,
           "leaderboard": 291.331,
           "coding": 74.8,
           "vision": 0,
@@ -19857,7 +20162,7 @@
         "taskScores": {},
         "scores": {
           "top": 761.893,
-          "weekly": 71.991,
+          "weekly": 71.982,
           "leaderboard": 291.331,
           "coding": 74.8,
           "vision": 0,
@@ -20112,7 +20417,7 @@
         "taskScores": {},
         "scores": {
           "top": 64.11,
-          "weekly": 67.253,
+          "weekly": 67.245,
           "leaderboard": 30.4,
           "coding": 68.1,
           "vision": 0,
@@ -20273,7 +20578,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.546,
-          "weekly": 49.415,
+          "weekly": 49.407,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -20532,7 +20837,7 @@
         "taskScores": {},
         "scores": {
           "top": 754.789,
-          "weekly": 68.485,
+          "weekly": 68.477,
           "leaderboard": 285.345,
           "coding": 71.5,
           "vision": 0,
@@ -20930,7 +21235,7 @@
         "taskScores": {},
         "scores": {
           "top": 754.789,
-          "weekly": 69.99,
+          "weekly": 69.982,
           "leaderboard": 285.345,
           "coding": 71.5,
           "vision": 0,
@@ -21200,7 +21505,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 53.506,
+          "weekly": 53.498,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -21348,7 +21653,7 @@
         "taskScores": {},
         "scores": {
           "top": 66.073,
-          "weekly": 67.336,
+          "weekly": 67.328,
           "leaderboard": 35.12,
           "coding": 71.9,
           "vision": 0,
@@ -21510,7 +21815,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 53.171,
+          "weekly": 53.163,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -21673,7 +21978,7 @@
         "taskScores": {},
         "scores": {
           "top": 64.903,
-          "weekly": 68.183,
+          "weekly": 68.175,
           "leaderboard": 32.08,
           "coding": 68.8,
           "vision": 0,
@@ -22046,7 +22351,7 @@
         "taskScores": {},
         "scores": {
           "top": 753.414,
-          "weekly": 69.095,
+          "weekly": 69.087,
           "leaderboard": 288.737,
           "coding": 76.8,
           "vision": 0,
@@ -22343,7 +22648,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.056,
-          "weekly": 59.586,
+          "weekly": 59.579,
           "leaderboard": 6.65,
           "coding": 7.7,
           "vision": 0,
@@ -22507,7 +22812,7 @@
         "taskScores": {},
         "scores": {
           "top": 50.602,
-          "weekly": 52.728,
+          "weekly": 52.72,
           "leaderboard": 6.65,
           "coding": 7.7,
           "vision": 0,
@@ -22671,7 +22976,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.963,
-          "weekly": 63.873,
+          "weekly": 63.865,
           "leaderboard": 11.71,
           "coding": 26.8,
           "vision": 0,
@@ -22821,7 +23126,7 @@
         "taskScores": {},
         "scores": {
           "top": 49.87,
-          "weekly": 48.524,
+          "weekly": 48.517,
           "leaderboard": 11.71,
           "coding": 26.8,
           "vision": 0,
@@ -22954,7 +23259,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.093,
-          "weekly": 46.387,
+          "weekly": 46.38,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -23149,7 +23454,7 @@
         "taskScores": {},
         "scores": {
           "top": 699.844,
-          "weekly": 67.757,
+          "weekly": 67.749,
           "leaderboard": 257.296,
           "coding": 52.7,
           "vision": 0,
@@ -23382,7 +23687,7 @@
         "taskScores": {},
         "scores": {
           "top": 679.638,
-          "weekly": 61.957,
+          "weekly": 61.949,
           "leaderboard": 244.35,
           "coding": 49,
           "vision": 0,
@@ -23688,7 +23993,7 @@
         "taskScores": {},
         "scores": {
           "top": 736.53,
-          "weekly": 67.906,
+          "weekly": 67.899,
           "leaderboard": 278.775,
           "coding": 72.2,
           "vision": 0,
@@ -23913,8 +24218,8 @@
         ]
       },
       "pricing": {
-        "prompt": "0.0000000475",
-        "completion": "0.0000001568",
+        "prompt": "0.0000000422",
+        "completion": "0.0000001694",
         "input_cache_read": "0.000000028"
       },
       "isFree": false,
@@ -23970,7 +24275,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 59.15,
+          "weekly": 59.067,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -24005,8 +24310,8 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.0000000475",
-          "completion": "0.0000001568",
+          "prompt": "0.0000000422",
+          "completion": "0.0000001694",
           "input_cache_read": "0.000000028"
         },
         "top_provider": {
@@ -24077,9 +24382,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.00000044",
-        "completion": "0.00000132",
-        "input_cache_read": "0.000000014"
+        "prompt": "0.00000004444",
+        "completion": "0.00000013332",
+        "input_cache_read": "0.000000001414"
       },
       "isFree": false,
       "topProvider": {
@@ -24199,7 +24504,7 @@
         "taskScores": {},
         "scores": {
           "top": 721.437,
-          "weekly": 68.171,
+          "weekly": 73.143,
           "leaderboard": 269.845,
           "coding": 69.1,
           "vision": 0,
@@ -24230,9 +24535,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.00000044",
-          "completion": "0.00000132",
-          "input_cache_read": "0.000000014"
+          "prompt": "0.00000004444",
+          "completion": "0.00000013332",
+          "input_cache_read": "0.000000001414"
         },
         "top_provider": {
           "context_length": 1048576,
@@ -24430,7 +24735,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.308,
-          "weekly": 58.864,
+          "weekly": 58.858,
           "leaderboard": 23.28,
           "coding": 52.9,
           "vision": 0,
@@ -24603,7 +24908,7 @@
         "taskScores": {},
         "scores": {
           "top": 53.813,
-          "weekly": 53.447,
+          "weekly": 53.44,
           "leaderboard": 23.28,
           "coding": 52.9,
           "vision": 0,
@@ -24765,7 +25070,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 59.608,
+          "weekly": 59.602,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -25056,7 +25361,7 @@
         "taskScores": {},
         "scores": {
           "top": 777.543,
-          "weekly": 68.517,
+          "weekly": 68.511,
           "leaderboard": 300.925,
           "coding": 78,
           "vision": 0,
@@ -25460,7 +25765,7 @@
         "taskScores": {},
         "scores": {
           "top": 777.543,
-          "weekly": 70.022,
+          "weekly": 70.016,
           "leaderboard": 300.925,
           "coding": 78,
           "vision": 0,
@@ -25747,7 +26052,7 @@
         "taskScores": {},
         "scores": {
           "top": 57.123,
-          "weekly": 68.986,
+          "weekly": 68.98,
           "leaderboard": 19.13,
           "coding": 50.6,
           "vision": 0,
@@ -25888,7 +26193,7 @@
         "taskScores": {},
         "scores": {
           "top": 46.103,
-          "weekly": 52.385,
+          "weekly": 52.379,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -26008,7 +26313,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.093,
-          "weekly": 43.036,
+          "weekly": 43.031,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -26264,7 +26569,7 @@
         "taskScores": {},
         "scores": {
           "top": 727.087,
-          "weekly": 65.874,
+          "weekly": 65.869,
           "leaderboard": 271.733,
           "coding": 69.2,
           "vision": 0,
@@ -26670,7 +26975,7 @@
         "taskScores": {},
         "scores": {
           "top": 727.087,
-          "weekly": 67.38,
+          "weekly": 67.374,
           "leaderboard": 271.733,
           "coding": 69.2,
           "vision": 0,
@@ -26963,7 +27268,7 @@
         "taskScores": {},
         "scores": {
           "top": 60.763,
-          "weekly": 62.185,
+          "weekly": 62.179,
           "leaderboard": 20.47,
           "coding": 49.3,
           "vision": 0,
@@ -27142,7 +27447,7 @@
         "taskScores": {},
         "scores": {
           "top": 60.763,
-          "weekly": 63.69,
+          "weekly": 63.684,
           "leaderboard": 20.47,
           "coding": 49.3,
           "vision": 0,
@@ -27315,7 +27620,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.833,
-          "weekly": 56.286,
+          "weekly": 56.281,
           "leaderboard": 17.9,
           "coding": 45.3,
           "vision": 0,
@@ -27539,7 +27844,7 @@
         "taskScores": {},
         "scores": {
           "top": 693.398,
-          "weekly": 55.976,
+          "weekly": 55.971,
           "leaderboard": 255.91,
           "coding": 52.1,
           "vision": 0,
@@ -27839,7 +28144,7 @@
         "taskScores": {},
         "scores": {
           "top": 694.903,
-          "weekly": 52.987,
+          "weekly": 52.982,
           "leaderboard": 255.91,
           "coding": 52.1,
           "vision": 0,
@@ -28079,7 +28384,7 @@
         "taskScores": {},
         "scores": {
           "top": 55.505,
-          "weekly": 48.985,
+          "weekly": 48.98,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -28178,9 +28483,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.00000018",
+        "prompt": "0.00000015",
         "completion": "0.00002",
-        "input_cache_read": "0.00000017"
+        "input_cache_read": "0.00000014"
       },
       "isFree": false,
       "topProvider": {
@@ -28365,7 +28670,7 @@
         "taskScores": {},
         "scores": {
           "top": 769.274,
-          "weekly": 66.392,
+          "weekly": 66.39,
           "leaderboard": 293.446,
           "coding": 76.2,
           "vision": 0,
@@ -28398,9 +28703,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.00000018",
+          "prompt": "0.00000015",
           "completion": "0.00002",
-          "input_cache_read": "0.00000017"
+          "input_cache_read": "0.00000014"
         },
         "top_provider": {
           "context_length": 1048576,
@@ -28790,7 +29095,7 @@
         "taskScores": {},
         "scores": {
           "top": 769.274,
-          "weekly": 67.236,
+          "weekly": 67.231,
           "leaderboard": 293.446,
           "coding": 76.2,
           "vision": 0,
@@ -29213,7 +29518,7 @@
         "taskScores": {},
         "scores": {
           "top": 718.285,
-          "weekly": 65.255,
+          "weekly": 65.25,
           "leaderboard": 268.564,
           "coding": 71.3,
           "vision": 0,
@@ -29495,7 +29800,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 54.661,
+          "weekly": 54.656,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -29657,7 +29962,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 56.166,
+          "weekly": 56.161,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -29826,7 +30131,7 @@
         "taskScores": {},
         "scores": {
           "top": 65.296,
-          "weekly": 69.581,
+          "weekly": 69.576,
           "leaderboard": 33.25,
           "coding": 71.4,
           "vision": 0,
@@ -30004,7 +30309,7 @@
         "taskScores": {},
         "scores": {
           "top": 65.296,
-          "weekly": 71.086,
+          "weekly": 71.081,
           "leaderboard": 33.25,
           "coding": 71.4,
           "vision": 0,
@@ -30173,7 +30478,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 49.661,
+          "weekly": 49.656,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -30335,7 +30640,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 51.166,
+          "weekly": 51.161,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -30504,7 +30809,7 @@
         "taskScores": {},
         "scores": {
           "top": 66.736,
-          "weekly": 66.501,
+          "weekly": 66.496,
           "leaderboard": 37.14,
           "coding": 76.7,
           "vision": 0,
@@ -30682,7 +30987,7 @@
         "taskScores": {},
         "scores": {
           "top": 66.736,
-          "weekly": 68.006,
+          "weekly": 68.001,
           "leaderboard": 37.14,
           "coding": 76.7,
           "vision": 0,
@@ -30851,7 +31156,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 48.49,
+          "weekly": 48.485,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -31014,7 +31319,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 49.995,
+          "weekly": 49.991,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -31185,7 +31490,7 @@
         "taskScores": {},
         "scores": {
           "top": 68.206,
-          "weekly": 67.29,
+          "weekly": 67.285,
           "leaderboard": 40.64,
           "coding": 77.4,
           "vision": 0,
@@ -31364,7 +31669,7 @@
         "taskScores": {},
         "scores": {
           "top": 68.206,
-          "weekly": 68.795,
+          "weekly": 68.791,
           "leaderboard": 40.64,
           "coding": 77.4,
           "vision": 0,
@@ -31671,7 +31976,7 @@
         "taskScores": {},
         "scores": {
           "top": 735.654,
-          "weekly": 66.387,
+          "weekly": 66.382,
           "leaderboard": 278.589,
           "coding": 72.4,
           "vision": 0,
@@ -31961,7 +32266,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.495,
-          "weekly": 50.867,
+          "weekly": 50.862,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -32116,7 +32421,7 @@
         "taskScores": {},
         "scores": {
           "top": 49.588,
-          "weekly": 53.761,
+          "weekly": 53.757,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -32240,7 +32545,7 @@
         "taskScores": {},
         "scores": {
           "top": 49.588,
-          "weekly": 50.601,
+          "weekly": 50.596,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -32321,9 +32626,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033"
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625"
       },
       "isFree": false,
       "topProvider": {
@@ -32421,7 +32726,7 @@
         "taskScores": {},
         "scores": {
           "top": 687.718,
-          "weekly": 56.262,
+          "weekly": 57.278,
           "leaderboard": 231.5,
           "coding": 0,
           "vision": 0,
@@ -32452,9 +32757,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.000000132",
-          "completion": "0.000000528",
-          "input_cache_read": "0.000000033",
+          "prompt": "0.0000000825",
+          "completion": "0.00000033",
+          "input_cache_read": "0.000000020625",
           "overrides": [
             {
               "utc_start": 0,
@@ -32630,7 +32935,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.093,
-          "weekly": 53.041,
+          "weekly": 53.037,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -32750,7 +33055,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.093,
-          "weekly": 42.813,
+          "weekly": 42.808,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -33014,7 +33319,7 @@
         "taskScores": {},
         "scores": {
           "top": 732.518,
-          "weekly": 65.183,
+          "weekly": 65.179,
           "leaderboard": 276.457,
           "coding": 71.5,
           "vision": 0,
@@ -33432,7 +33737,7 @@
         "taskScores": {},
         "scores": {
           "top": 732.518,
-          "weekly": 66.688,
+          "weekly": 66.684,
           "leaderboard": 276.457,
           "coding": 71.5,
           "vision": 0,
@@ -33711,7 +34016,7 @@
         "taskScores": {},
         "scores": {
           "top": 40.082,
-          "weekly": 48.083,
+          "weekly": 48.079,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -33846,7 +34151,7 @@
         "taskScores": {},
         "scores": {
           "top": 46,
-          "weekly": 41.515,
+          "weekly": 41.511,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -33997,7 +34302,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.588,
-          "weekly": 46.46,
+          "weekly": 46.456,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -34141,7 +34446,7 @@
         "taskScores": {},
         "scores": {
           "top": 49.588,
-          "weekly": 49.45,
+          "weekly": 49.446,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -34288,7 +34593,7 @@
         "taskScores": {},
         "scores": {
           "top": 46.011,
-          "weekly": 46.632,
+          "weekly": 46.628,
           "leaderboard": 10.58,
           "coding": 36.5,
           "vision": 0,
@@ -34564,7 +34869,7 @@
         "taskScores": {},
         "scores": {
           "top": 732.05,
-          "weekly": 64.412,
+          "weekly": 64.408,
           "leaderboard": 273.32,
           "coding": 68.8,
           "vision": 0,
@@ -34826,7 +35131,7 @@
         "taskScores": {},
         "scores": {
           "top": 30,
-          "weekly": 30.637,
+          "weekly": 30.634,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -35079,7 +35384,7 @@
         "taskScores": {},
         "scores": {
           "top": 708.348,
-          "weekly": 62.43,
+          "weekly": 62.427,
           "leaderboard": 260.327,
           "coding": 60.8,
           "vision": 0,
@@ -35352,7 +35657,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 46.219,
+          "weekly": 46.216,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -35638,7 +35943,7 @@
         "taskScores": {},
         "scores": {
           "top": 773.338,
-          "weekly": 66.057,
+          "weekly": 66.054,
           "leaderboard": 298.537,
           "coding": 76.5,
           "vision": 0,
@@ -36061,7 +36366,7 @@
         "taskScores": {},
         "scores": {
           "top": 773.338,
-          "weekly": 67.562,
+          "weekly": 67.559,
           "leaderboard": 298.537,
           "coding": 76.5,
           "vision": 0,
@@ -36348,7 +36653,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.588,
-          "weekly": 45.059,
+          "weekly": 45.056,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -36484,7 +36789,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.536,
-          "weekly": 36.564,
+          "weekly": 36.561,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -36689,7 +36994,7 @@
         "taskScores": {},
         "scores": {
           "top": 676.506,
-          "weekly": 61.841,
+          "weekly": 61.838,
           "leaderboard": 245.885,
           "coding": 49.3,
           "vision": 0,
@@ -36968,7 +37273,7 @@
         "taskScores": {},
         "scores": {
           "top": 671.414,
-          "weekly": 51.721,
+          "weekly": 51.718,
           "leaderboard": 245.885,
           "coding": 49.3,
           "vision": 0,
@@ -37248,7 +37553,7 @@
         "taskScores": {},
         "scores": {
           "top": 742.804,
-          "weekly": 64.121,
+          "weekly": 64.117,
           "leaderboard": 270.955,
           "coding": 55.9,
           "vision": 0,
@@ -37531,7 +37836,7 @@
         "taskScores": {},
         "scores": {
           "top": 739.896,
-          "weekly": 64.838,
+          "weekly": 64.835,
           "leaderboard": 270.955,
           "coding": 55.9,
           "vision": 0,
@@ -37872,7 +38177,7 @@
         "taskScores": {},
         "scores": {
           "top": 708.401,
-          "weekly": 65.839,
+          "weekly": 65.836,
           "leaderboard": 261.041,
           "coding": 58.6,
           "vision": 0,
@@ -38223,7 +38528,7 @@
         "taskScores": {},
         "scores": {
           "top": 691.918,
-          "weekly": 62.166,
+          "weekly": 62.163,
           "leaderboard": 248.51,
           "coding": 39.6,
           "vision": 0,
@@ -38614,7 +38919,7 @@
         "taskScores": {},
         "scores": {
           "top": 749.042,
-          "weekly": 64.346,
+          "weekly": 64.343,
           "leaderboard": 284.873,
           "coding": 74.3,
           "vision": 0,
@@ -39102,7 +39407,7 @@
         "taskScores": {},
         "scores": {
           "top": 749.042,
-          "weekly": 65.851,
+          "weekly": 65.848,
           "leaderboard": 284.873,
           "coding": 74.3,
           "vision": 0,
@@ -39550,7 +39855,7 @@
         "taskScores": {},
         "scores": {
           "top": 721.621,
-          "weekly": 62.915,
+          "weekly": 62.912,
           "leaderboard": 266.803,
           "coding": 66,
           "vision": 0,
@@ -39834,7 +40139,7 @@
         "taskScores": {},
         "scores": {
           "top": 59.201,
-          "weekly": 63.457,
+          "weekly": 63.455,
           "leaderboard": 24.19,
           "coding": 51.5,
           "vision": 0,
@@ -40171,7 +40476,7 @@
         "taskScores": {},
         "scores": {
           "top": 720.524,
-          "weekly": 63.289,
+          "weekly": 63.286,
           "leaderboard": 262.19,
           "coding": 33.6,
           "vision": 0,
@@ -40676,7 +40981,7 @@
         "taskScores": {},
         "scores": {
           "top": 720.524,
-          "weekly": 64.794,
+          "weekly": 64.791,
           "leaderboard": 262.19,
           "coding": 33.6,
           "vision": 0,
@@ -41002,7 +41307,7 @@
         "taskScores": {},
         "scores": {
           "top": 30.577,
-          "weekly": 41.823,
+          "weekly": 41.821,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -41148,7 +41453,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 53.665,
+          "weekly": 53.663,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -41314,7 +41619,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 55.17,
+          "weekly": 55.168,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -41468,7 +41773,7 @@
         "taskScores": {},
         "scores": {
           "top": 44.01,
-          "weekly": 41.148,
+          "weekly": 41.146,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -41775,7 +42080,7 @@
         "taskScores": {},
         "scores": {
           "top": 642.677,
-          "weekly": 61.931,
+          "weekly": 61.929,
           "leaderboard": 232.998,
           "coding": 42.2,
           "vision": 0,
@@ -42278,7 +42583,7 @@
         "taskScores": {},
         "scores": {
           "top": 642.677,
-          "weekly": 62.416,
+          "weekly": 62.413,
           "leaderboard": 232.998,
           "coding": 42.2,
           "vision": 0,
@@ -42619,7 +42924,7 @@
         "taskScores": {},
         "scores": {
           "top": 55.353,
-          "weekly": 55.749,
+          "weekly": 55.746,
           "leaderboard": 14.63,
           "coding": 46.9,
           "vision": 0,
@@ -42786,7 +43091,7 @@
         "taskScores": {},
         "scores": {
           "top": 55.353,
-          "weekly": 57.254,
+          "weekly": 57.251,
           "leaderboard": 14.63,
           "coding": 46.9,
           "vision": 0,
@@ -42950,7 +43255,7 @@
         "taskScores": {},
         "scores": {
           "top": 46.131,
-          "weekly": 46.443,
+          "weekly": 46.441,
           "leaderboard": 8.59,
           "coding": 13.8,
           "vision": 0,
@@ -43100,7 +43405,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 55.933,
+          "weekly": 55.93,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -43261,7 +43566,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.01,
-          "weekly": 51.223,
+          "weekly": 51.22,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -43424,7 +43729,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 49.428,
+          "weekly": 49.425,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -43538,9 +43843,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.00000018",
+        "prompt": "0.00000015",
         "completion": "0.00002",
-        "input_cache_read": "0.00000017"
+        "input_cache_read": "0.00000014"
       },
       "isFree": false,
       "topProvider": {
@@ -43597,7 +43902,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 48.299,
+          "weekly": 48.3,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -43634,9 +43939,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.00000018",
+          "prompt": "0.00000015",
           "completion": "0.00002",
-          "input_cache_read": "0.00000017"
+          "input_cache_read": "0.00000014"
         },
         "top_provider": {
           "context_length": 1048576,
@@ -43769,7 +44074,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 51.557,
+          "weekly": 51.555,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -43925,7 +44230,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 49.428,
+          "weekly": 49.425,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -44081,7 +44386,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 53.209,
+          "weekly": 53.206,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -44235,7 +44540,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 54.229,
+          "weekly": 54.227,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -44337,8 +44642,8 @@
       },
       "pricing": {
         "prompt": "0.0000001",
-        "completion": "0.00000095",
-        "input_cache_read": "0.00000005"
+        "completion": "0.0000009",
+        "input_cache_read": "0.00000003"
       },
       "isFree": false,
       "topProvider": {
@@ -44400,7 +44705,7 @@
         "taskScores": {},
         "scores": {
           "top": 56.553,
-          "weekly": 61.994,
+          "weekly": 62.097,
           "leaderboard": 16.93,
           "coding": 41.9,
           "vision": 0,
@@ -44434,8 +44739,8 @@
         },
         "pricing": {
           "prompt": "0.0000001",
-          "completion": "0.00000095",
-          "input_cache_read": "0.00000005"
+          "completion": "0.0000009",
+          "input_cache_read": "0.00000003"
         },
         "top_provider": {
           "context_length": 262144,
@@ -44572,7 +44877,7 @@
         "taskScores": {},
         "scores": {
           "top": 57.513,
-          "weekly": 60.647,
+          "weekly": 60.644,
           "leaderboard": 20.35,
           "coding": 53.7,
           "vision": 0,
@@ -44728,7 +45033,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 43.195,
+          "weekly": 43.193,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -44880,7 +45185,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 44.701,
+          "weekly": 44.698,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -45190,7 +45495,7 @@
         "taskScores": {},
         "scores": {
           "top": 709.074,
-          "weekly": 62.446,
+          "weekly": 62.444,
           "leaderboard": 268.351,
           "coding": 74.9,
           "vision": 0,
@@ -45661,7 +45966,7 @@
         "taskScores": {},
         "scores": {
           "top": 709.074,
-          "weekly": 63.951,
+          "weekly": 63.949,
           "leaderboard": 268.351,
           "coding": 74.9,
           "vision": 0,
@@ -45927,9 +46232,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.00000095526",
-        "completion": "0.00000191052",
-        "input_cache_read": "0.000000079605"
+        "prompt": "0.000000716532",
+        "completion": "0.000001433064",
+        "input_cache_read": "0.000000059711"
       },
       "isFree": false,
       "topProvider": {
@@ -46069,7 +46374,7 @@
         "taskScores": {},
         "scores": {
           "top": 696.223,
-          "weekly": 64.677,
+          "weekly": 65.299,
           "leaderboard": 257.402,
           "coding": 59.4,
           "vision": 0,
@@ -46100,9 +46405,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.00000095526",
-          "completion": "0.00000191052",
-          "input_cache_read": "0.000000079605"
+          "prompt": "0.000000716532",
+          "completion": "0.000001433064",
+          "input_cache_read": "0.000000059711"
         },
         "top_provider": {
           "context_length": 1024000,
@@ -46380,7 +46685,7 @@
         "taskScores": {},
         "scores": {
           "top": 703.41,
-          "weekly": 67.383,
+          "weekly": 67.38,
           "leaderboard": 255.73,
           "coding": 52,
           "vision": 0,
@@ -46598,7 +46903,7 @@
         "taskScores": {},
         "scores": {
           "top": 50.683,
-          "weekly": 59.455,
+          "weekly": 59.453,
           "leaderboard": 23.59,
           "coding": 58.8,
           "vision": 0,
@@ -46814,7 +47119,7 @@
         "taskScores": {},
         "scores": {
           "top": 741.225,
-          "weekly": 65.392,
+          "weekly": 65.39,
           "leaderboard": 271.245,
           "coding": 60.2,
           "vision": 0,
@@ -47091,7 +47396,7 @@
         "taskScores": {},
         "scores": {
           "top": 735.152,
-          "weekly": 65.752,
+          "weekly": 65.75,
           "leaderboard": 266.215,
           "coding": 56.8,
           "vision": 0,
@@ -47303,7 +47608,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.173,
-          "weekly": 41.982,
+          "weekly": 41.98,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -47457,7 +47762,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 47.89,
+          "weekly": 47.887,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -47616,7 +47921,7 @@
         "taskScores": {},
         "scores": {
           "top": 55.505,
-          "weekly": 48.283,
+          "weekly": 48.28,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -47936,7 +48241,7 @@
         "taskScores": {},
         "scores": {
           "top": 720.718,
-          "weekly": 62.542,
+          "weekly": 62.54,
           "leaderboard": 265.635,
           "coding": 61.8,
           "vision": 0,
@@ -48259,7 +48564,7 @@
         "taskScores": {},
         "scores": {
           "top": 66.21,
-          "weekly": 63.658,
+          "weekly": 63.656,
           "leaderboard": 35.85,
           "coding": 73.6,
           "vision": 0,
@@ -48423,7 +48728,7 @@
         "taskScores": {},
         "scores": {
           "top": 66.21,
-          "weekly": 65.163,
+          "weekly": 65.161,
           "leaderboard": 35.85,
           "coding": 73.6,
           "vision": 0,
@@ -48746,7 +49051,7 @@
         "taskScores": {},
         "scores": {
           "top": 728.787,
-          "weekly": 61.342,
+          "weekly": 61.34,
           "leaderboard": 267.632,
           "coding": 55.8,
           "vision": 0,
@@ -49011,9 +49316,9 @@
         ]
       },
       "pricing": {
-        "prompt": "0.00000009",
-        "completion": "0.0000003",
-        "input_cache_read": "0.00000005"
+        "prompt": "0.0000000765",
+        "completion": "0.000000255",
+        "input_cache_read": "0.0000000425"
       },
       "isFree": false,
       "topProvider": {
@@ -49075,7 +49380,7 @@
         "taskScores": {},
         "scores": {
           "top": 56.103,
-          "weekly": 63.425,
+          "weekly": 63.776,
           "leaderboard": 15.62,
           "coding": 39.3,
           "vision": 0,
@@ -49108,9 +49413,9 @@
           "instruct_type": null
         },
         "pricing": {
-          "prompt": "0.00000009",
-          "completion": "0.0000003",
-          "input_cache_read": "0.00000005"
+          "prompt": "0.0000000765",
+          "completion": "0.000000255",
+          "input_cache_read": "0.0000000425"
         },
         "top_provider": {
           "context_length": 262144,
@@ -49237,7 +49542,7 @@
         "taskScores": {},
         "scores": {
           "top": 56.103,
-          "weekly": 54.875,
+          "weekly": 54.873,
           "leaderboard": 15.62,
           "coding": 39.3,
           "vision": 0,
@@ -49398,7 +49703,7 @@
         "taskScores": {},
         "scores": {
           "top": 55.503,
-          "weekly": 61.685,
+          "weekly": 61.683,
           "leaderboard": 14.63,
           "coding": 43.4,
           "vision": 0,
@@ -49562,7 +49867,7 @@
         "taskScores": {},
         "scores": {
           "top": 55.503,
-          "weekly": 54.071,
+          "weekly": 54.069,
           "leaderboard": 14.63,
           "coding": 43.4,
           "vision": 0,
@@ -49781,7 +50086,7 @@
         "taskScores": {},
         "scores": {
           "top": 722.994,
-          "weekly": 63.71,
+          "weekly": 63.708,
           "leaderboard": 264.675,
           "coding": 54.5,
           "vision": 0,
@@ -50156,7 +50461,7 @@
         "taskScores": {},
         "scores": {
           "top": 691.866,
-          "weekly": 60.511,
+          "weekly": 60.509,
           "leaderboard": 247.098,
           "coding": 23.5,
           "vision": 0,
@@ -50387,267 +50692,6 @@
       }
     },
     {
-      "id": "arcee-ai/trinity-large-thinking",
-      "slug": "arcee-ai-trinity-large-thinking",
-      "canonical_slug": "arcee-ai/trinity-large-thinking",
-      "hugging_face_id": "arcee-ai/Trinity-Large-Thinking",
-      "name": "Arcee AI: Trinity Large Thinking",
-      "description": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7...",
-      "created": 1775058318,
-      "context_length": 262144,
-      "modality": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "pricing": {
-        "prompt": "0.00000025",
-        "completion": "0.0000008",
-        "input_cache_read": "0.00000006"
-      },
-      "isFree": false,
-      "topProvider": {
-        "context_length": 262144,
-        "max_completion_tokens": 80000,
-        "is_moderated": false
-      },
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
-      ],
-      "benchmarks": {
-        "design_arena": [
-          {
-            "arena": "models",
-            "category": "3d",
-            "elo": 1077,
-            "win_rate": 41.3,
-            "rank": 97
-          },
-          {
-            "arena": "models",
-            "category": "asciiart",
-            "elo": 1038,
-            "win_rate": 37.1,
-            "rank": 68
-          },
-          {
-            "arena": "models",
-            "category": "codecategories",
-            "elo": 1116,
-            "win_rate": 40.1,
-            "rank": 100
-          },
-          {
-            "arena": "models",
-            "category": "dataviz",
-            "elo": 1098,
-            "win_rate": 39.3,
-            "rank": 101
-          },
-          {
-            "arena": "models",
-            "category": "gamedev",
-            "elo": 1079,
-            "win_rate": 38.4,
-            "rank": 107
-          },
-          {
-            "arena": "models",
-            "category": "svg",
-            "elo": 1015,
-            "win_rate": 35.2,
-            "rank": 85
-          },
-          {
-            "arena": "models",
-            "category": "uicomponent",
-            "elo": 1040,
-            "win_rate": 32.6,
-            "rank": 110
-          },
-          {
-            "arena": "models",
-            "category": "website",
-            "elo": 1137,
-            "win_rate": 41.3,
-            "rank": 100
-          }
-        ],
-        "artificial_analysis": {
-          "intelligence_index": 10.8,
-          "coding_index": 25.8,
-          "agentic_index": 1
-        }
-      },
-      "knowledge_cutoff": null,
-      "rank": {
-        "arenaElo": 1075,
-        "arenaBestRank": 68,
-        "arenaBestCategory": "asciiart",
-        "arenaBestRankValue": 68,
-        "aaIntelligence": 10.8,
-        "aaCoding": 25.8,
-        "aaAgentic": 1,
-        "taskScores": {},
-        "scores": {
-          "top": 637.583,
-          "weekly": 52.905,
-          "leaderboard": 225.14,
-          "coding": 25.8,
-          "vision": 0,
-          "reasoning": 1,
-          "chat": 235.8,
-          "math": 0,
-          "instruction": 0,
-          "aider": 0
-        }
-      },
-      "raw": {
-        "id": "arcee-ai/trinity-large-thinking",
-        "canonical_slug": "arcee-ai/trinity-large-thinking",
-        "hugging_face_id": "arcee-ai/Trinity-Large-Thinking",
-        "name": "Arcee AI: Trinity Large Thinking",
-        "created": 1775058318,
-        "description": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7...",
-        "context_length": 262144,
-        "architecture": {
-          "modality": "text->text",
-          "input_modalities": [
-            "text"
-          ],
-          "output_modalities": [
-            "text"
-          ],
-          "tokenizer": "Other",
-          "instruct_type": null
-        },
-        "pricing": {
-          "prompt": "0.00000025",
-          "completion": "0.0000008",
-          "input_cache_read": "0.00000006"
-        },
-        "top_provider": {
-          "context_length": 262144,
-          "max_completion_tokens": 80000,
-          "is_moderated": false
-        },
-        "per_request_limits": null,
-        "supported_parameters": [
-          "include_reasoning",
-          "max_tokens",
-          "reasoning",
-          "temperature",
-          "tool_choice",
-          "tools",
-          "top_k",
-          "top_p"
-        ],
-        "default_parameters": {
-          "temperature": 0.3,
-          "top_p": 0.8,
-          "top_k": null,
-          "frequency_penalty": null,
-          "presence_penalty": null,
-          "repetition_penalty": null
-        },
-        "supported_voices": null,
-        "knowledge_cutoff": null,
-        "expiration_date": "2026-10-26",
-        "links": {
-          "details": "/api/v1/models/arcee-ai/trinity-large-thinking/endpoints"
-        },
-        "benchmarks": {
-          "design_arena": [
-            {
-              "arena": "models",
-              "category": "3d",
-              "elo": 1077,
-              "win_rate": 41.3,
-              "rank": 97
-            },
-            {
-              "arena": "models",
-              "category": "asciiart",
-              "elo": 1038,
-              "win_rate": 37.1,
-              "rank": 68
-            },
-            {
-              "arena": "models",
-              "category": "codecategories",
-              "elo": 1116,
-              "win_rate": 40.1,
-              "rank": 100
-            },
-            {
-              "arena": "models",
-              "category": "dataviz",
-              "elo": 1098,
-              "win_rate": 39.3,
-              "rank": 101
-            },
-            {
-              "arena": "models",
-              "category": "gamedev",
-              "elo": 1079,
-              "win_rate": 38.4,
-              "rank": 107
-            },
-            {
-              "arena": "models",
-              "category": "svg",
-              "elo": 1015,
-              "win_rate": 35.2,
-              "rank": 85
-            },
-            {
-              "arena": "models",
-              "category": "uicomponent",
-              "elo": 1040,
-              "win_rate": 32.6,
-              "rank": 110
-            },
-            {
-              "arena": "models",
-              "category": "website",
-              "elo": 1137,
-              "win_rate": 41.3,
-              "rank": 100
-            }
-          ],
-          "artificial_analysis": {
-            "intelligence_index": 10.8,
-            "coding_index": 25.8,
-            "agentic_index": 1
-          }
-        },
-        "reasoning": {
-          "mandatory": true
-        }
-      }
-    },
-    {
       "id": "x-ai/grok-4.20-multi-agent",
       "slug": "x-ai-grok-4-20-multi-agent",
       "canonical_slug": "x-ai/grok-4.20-multi-agent-20260309",
@@ -50714,7 +50758,7 @@
         "taskScores": {},
         "scores": {
           "top": 47.505,
-          "weekly": 45.817,
+          "weekly": 45.815,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -50981,7 +51025,7 @@
         "taskScores": {},
         "scores": {
           "top": 698.858,
-          "weekly": 62.097,
+          "weekly": 62.095,
           "leaderboard": 249.133,
           "coding": 25.7,
           "vision": 0,
@@ -51235,7 +51279,7 @@
         "taskScores": {},
         "scores": {
           "top": 38.103,
-          "weekly": 36.178,
+          "weekly": 36.176,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -51361,7 +51405,7 @@
         "taskScores": {},
         "scores": {
           "top": 38.103,
-          "weekly": 36.178,
+          "weekly": 36.176,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -51495,7 +51539,7 @@
         "taskScores": {},
         "scores": {
           "top": 29.072,
-          "weekly": 46.133,
+          "weekly": 46.131,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -51705,7 +51749,7 @@
         "taskScores": {},
         "scores": {
           "top": 716.022,
-          "weekly": 62.868,
+          "weekly": 62.866,
           "leaderboard": 260.72,
           "coding": 52.6,
           "vision": 0,
@@ -51923,7 +51967,7 @@
         "taskScores": {},
         "scores": {
           "top": 58.22,
-          "weekly": 62.097,
+          "weekly": 62.096,
           "leaderboard": 20.1,
           "coding": 56.1,
           "vision": 0,
@@ -52090,7 +52134,7 @@
         "taskScores": {},
         "scores": {
           "top": 58.22,
-          "weekly": 63.603,
+          "weekly": 63.601,
           "leaderboard": 20.1,
           "coding": 56.1,
           "vision": 0,
@@ -52257,7 +52301,7 @@
         "taskScores": {},
         "scores": {
           "top": 59.24,
-          "weekly": 60.663,
+          "weekly": 60.662,
           "leaderboard": 22.48,
           "coding": 56.1,
           "vision": 0,
@@ -52424,7 +52468,7 @@
         "taskScores": {},
         "scores": {
           "top": 59.24,
-          "weekly": 62.169,
+          "weekly": 62.167,
           "leaderboard": 22.48,
           "coding": 56.1,
           "vision": 0,
@@ -52593,7 +52637,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.483,
-          "weekly": 59.766,
+          "weekly": 59.765,
           "leaderboard": 10.57,
           "coding": 26.6,
           "vision": 0,
@@ -52628,174 +52672,6 @@
           "prompt": "0.00000015",
           "completion": "0.0000006",
           "input_cache_read": "0.000000015"
-        },
-        "top_provider": {
-          "context_length": 262144,
-          "max_completion_tokens": 209715,
-          "is_moderated": false
-        },
-        "per_request_limits": null,
-        "supported_parameters": [
-          "frequency_penalty",
-          "include_reasoning",
-          "max_tokens",
-          "presence_penalty",
-          "reasoning",
-          "reasoning_effort",
-          "response_format",
-          "seed",
-          "stop",
-          "structured_outputs",
-          "temperature",
-          "tool_choice",
-          "tools",
-          "top_p"
-        ],
-        "default_parameters": {
-          "temperature": null,
-          "top_p": null,
-          "top_k": null,
-          "frequency_penalty": null,
-          "presence_penalty": null,
-          "repetition_penalty": null
-        },
-        "supported_voices": null,
-        "knowledge_cutoff": null,
-        "expiration_date": null,
-        "links": {
-          "details": "/api/v1/models/mistralai/mistral-small-2603/endpoints"
-        },
-        "benchmarks": {
-          "design_arena": [],
-          "artificial_analysis": {
-            "intelligence_index": 11.3,
-            "coding_index": 26.6,
-            "agentic_index": 0.8
-          }
-        },
-        "reasoning": {
-          "mandatory": false,
-          "default_enabled": false,
-          "supported_efforts": [
-            "high",
-            "none"
-          ],
-          "default_effort": "high"
-        }
-      }
-    },
-    {
-      "id": "mistralai/mistral-small-2603:batch",
-      "slug": "mistralai-mistral-small-2603-batch",
-      "canonical_slug": "mistralai/mistral-small-2603",
-      "hugging_face_id": "mistralai/Mistral-Small-4-119B-2603",
-      "name": "Mistral: Mistral Small 4 (batch)",
-      "description": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from...",
-      "created": 1773695685,
-      "context_length": 262144,
-      "modality": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.0000003",
-        "input_cache_read": "0.0000000075"
-      },
-      "isFree": false,
-      "topProvider": {
-        "context_length": 262144,
-        "max_completion_tokens": 209715,
-        "is_moderated": false
-      },
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Mistral",
-        "instruct_type": null
-      },
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "max_tokens",
-        "presence_penalty",
-        "reasoning",
-        "reasoning_effort",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "benchmarks": {
-        "design_arena": [],
-        "artificial_analysis": {
-          "intelligence_index": 11.3,
-          "coding_index": 26.6,
-          "agentic_index": 0.8
-        }
-      },
-      "knowledge_cutoff": null,
-      "rank": {
-        "arenaElo": null,
-        "arenaBestRank": null,
-        "arenaBestCategory": null,
-        "arenaBestRankValue": null,
-        "aaIntelligence": 11.3,
-        "aaCoding": 26.6,
-        "aaAgentic": 0.8,
-        "taskScores": {},
-        "scores": {
-          "top": 54.483,
-          "weekly": 61.272,
-          "leaderboard": 10.57,
-          "coding": 26.6,
-          "vision": 0,
-          "reasoning": 0.8,
-          "chat": 26.3,
-          "math": 0,
-          "instruction": 0,
-          "aider": 0
-        }
-      },
-      "raw": {
-        "id": "mistralai/mistral-small-2603:batch",
-        "canonical_slug": "mistralai/mistral-small-2603",
-        "hugging_face_id": "mistralai/Mistral-Small-4-119B-2603",
-        "name": "Mistral: Mistral Small 4 (batch)",
-        "created": 1773695685,
-        "description": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from...",
-        "context_length": 262144,
-        "architecture": {
-          "modality": "text+image->text",
-          "input_modalities": [
-            "text",
-            "image"
-          ],
-          "output_modalities": [
-            "text"
-          ],
-          "tokenizer": "Mistral",
-          "instruct_type": null
-        },
-        "pricing": {
-          "prompt": "0.000000075",
-          "completion": "0.0000003",
-          "input_cache_read": "0.0000000075"
         },
         "top_provider": {
           "context_length": 262144,
@@ -52979,7 +52855,7 @@
         "taskScores": {},
         "scores": {
           "top": 738.659,
-          "weekly": 61.676,
+          "weekly": 61.675,
           "leaderboard": 265.945,
           "coding": 26.6,
           "vision": 0,
@@ -53197,7 +53073,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.933,
-          "weekly": 57.563,
+          "weekly": 57.562,
           "leaderboard": 12.73,
           "coding": 37.7,
           "vision": 0,
@@ -53366,7 +53242,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.933,
-          "weekly": 53.215,
+          "weekly": 53.213,
           "leaderboard": 12.73,
           "coding": 37.7,
           "vision": 0,
@@ -53522,7 +53398,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 52.835,
+          "weekly": 52.833,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -53696,7 +53572,7 @@
         "taskScores": {},
         "scores": {
           "top": 55.083,
-          "weekly": 61.8,
+          "weekly": 61.798,
           "leaderboard": 11.66,
           "coding": 23.5,
           "vision": 0,
@@ -53853,7 +53729,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 42.966,
+          "weekly": 42.964,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -54006,7 +53882,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.106,
-          "weekly": 44.471,
+          "weekly": 44.469,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -54260,7 +54136,7 @@
         "taskScores": {},
         "scores": {
           "top": 698.348,
-          "weekly": 63.961,
+          "weekly": 63.96,
           "leaderboard": 264.425,
           "coding": 71.1,
           "vision": 0,
@@ -54619,7 +54495,7 @@
         "taskScores": {},
         "scores": {
           "top": 698.348,
-          "weekly": 65.467,
+          "weekly": 65.465,
           "leaderboard": 264.425,
           "coding": 71.1,
           "vision": 0,
@@ -54939,7 +54815,7 @@
         "taskScores": {},
         "scores": {
           "top": 602.364,
-          "weekly": 58.892,
+          "weekly": 58.891,
           "leaderboard": 210.52,
           "coding": 31.1,
           "vision": 0,
@@ -55222,7 +55098,7 @@
         "taskScores": {},
         "scores": {
           "top": 646.802,
-          "weekly": 59.591,
+          "weekly": 59.59,
           "leaderboard": 228.215,
           "coding": 34.7,
           "vision": 0,
@@ -55447,7 +55323,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 56.055,
+          "weekly": 56.053,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -55624,7 +55500,7 @@
         "taskScores": {},
         "scores": {
           "top": 736.382,
-          "weekly": 45.829,
+          "weekly": 45.827,
           "leaderboard": 253.2,
           "coding": 0,
           "vision": 0,
@@ -55814,7 +55690,7 @@
         "taskScores": {},
         "scores": {
           "top": 56.883,
-          "weekly": 61.982,
+          "weekly": 61.98,
           "leaderboard": 13.51,
           "coding": 19.3,
           "vision": 0,
@@ -55989,7 +55865,7 @@
         "taskScores": {},
         "scores": {
           "top": 57.963,
-          "weekly": 61.778,
+          "weekly": 61.777,
           "leaderboard": 16.03,
           "coding": 22.9,
           "vision": 0,
@@ -56163,7 +56039,7 @@
         "taskScores": {},
         "scores": {
           "top": 56.403,
-          "weekly": 59.78,
+          "weekly": 59.779,
           "leaderboard": 16.72,
           "coding": 43.3,
           "vision": 0,
@@ -56323,7 +56199,7 @@
         "taskScores": {},
         "scores": {
           "top": 54,
-          "weekly": 56.987,
+          "weekly": 56.985,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -56470,7 +56346,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 48.815,
+          "weekly": 48.814,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -56733,7 +56609,7 @@
         "taskScores": {},
         "scores": {
           "top": 667.606,
-          "weekly": 61.556,
+          "weekly": 61.554,
           "leaderboard": 243.058,
           "coding": 32.5,
           "vision": 0,
@@ -56978,7 +56854,7 @@
         "taskScores": {},
         "scores": {
           "top": 49.588,
-          "weekly": 52.638,
+          "weekly": 52.636,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -57282,7 +57158,7 @@
         "taskScores": {},
         "scores": {
           "top": 705.013,
-          "weekly": 60.673,
+          "weekly": 60.671,
           "leaderboard": 261.125,
           "coding": 68.8,
           "vision": 0,
@@ -57780,7 +57656,7 @@
         "taskScores": {},
         "scores": {
           "top": 705.013,
-          "weekly": 62.178,
+          "weekly": 62.176,
           "leaderboard": 261.125,
           "coding": 68.8,
           "vision": 0,
@@ -58216,7 +58092,7 @@
         "taskScores": {},
         "scores": {
           "top": 738.784,
-          "weekly": 60.28,
+          "weekly": 60.278,
           "leaderboard": 273.099,
           "coding": 63,
           "vision": 0,
@@ -58581,7 +58457,7 @@
         "taskScores": {},
         "scores": {
           "top": 738.784,
-          "weekly": 61.785,
+          "weekly": 61.784,
           "leaderboard": 273.099,
           "coding": 63,
           "vision": 0,
@@ -58900,7 +58776,7 @@
         "taskScores": {},
         "scores": {
           "top": 677.906,
-          "weekly": 53.211,
+          "weekly": 53.21,
           "leaderboard": 226.875,
           "coding": 0,
           "vision": 0,
@@ -59177,7 +59053,7 @@
         "taskScores": {},
         "scores": {
           "top": 696.77,
-          "weekly": 60.007,
+          "weekly": 60.006,
           "leaderboard": 247.437,
           "coding": 21.4,
           "vision": 0,
@@ -59448,7 +59324,7 @@
         "taskScores": {},
         "scores": {
           "top": 706.004,
-          "weekly": 62.738,
+          "weekly": 62.737,
           "leaderboard": 251.817,
           "coding": 22.8,
           "vision": 0,
@@ -59757,7 +59633,7 @@
         "taskScores": {},
         "scores": {
           "top": 706.615,
-          "weekly": 62.539,
+          "weekly": 62.538,
           "leaderboard": 255.053,
           "coding": 27.9,
           "vision": 0,
@@ -60112,7 +59988,7 @@
         "taskScores": {},
         "scores": {
           "top": 740.424,
-          "weekly": 59.846,
+          "weekly": 59.844,
           "leaderboard": 268.459,
           "coding": 31.9,
           "vision": 0,
@@ -60479,7 +60355,7 @@
         "taskScores": {},
         "scores": {
           "top": 740.424,
-          "weekly": 61.351,
+          "weekly": 61.349,
           "leaderboard": 268.459,
           "coding": 31.9,
           "vision": 0,
@@ -60745,7 +60621,7 @@
         "taskScores": {},
         "scores": {
           "top": 45.853,
-          "weekly": 52.33,
+          "weekly": 52.329,
           "leaderboard": 10.06,
           "coding": 36.2,
           "vision": 0,
@@ -60899,7 +60775,7 @@
         "taskScores": {},
         "scores": {
           "top": 50.505,
-          "weekly": 47.955,
+          "weekly": 47.953,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -61044,7 +60920,7 @@
         "taskScores": {},
         "scores": {
           "top": 48.193,
-          "weekly": 57.242,
+          "weekly": 57.241,
           "leaderboard": 11.9,
           "coding": 17,
           "vision": 0,
@@ -61296,7 +61172,7 @@
         "taskScores": {},
         "scores": {
           "top": 709.258,
-          "weekly": 61.458,
+          "weekly": 61.457,
           "leaderboard": 257.899,
           "coding": 46.8,
           "vision": 0,
@@ -61553,7 +61429,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.928,
-          "weekly": 58.188,
+          "weekly": 58.187,
           "leaderboard": 7.08,
           "coding": 16.2,
           "vision": 0,
@@ -61619,7 +61495,7 @@
         },
         "supported_voices": null,
         "knowledge_cutoff": null,
-        "expiration_date": null,
+        "expiration_date": "2026-10-30",
         "links": {
           "details": "/api/v1/models/upstage/solar-pro-3/endpoints"
         },
@@ -61701,7 +61577,7 @@
         "taskScores": {},
         "scores": {
           "top": 24.082,
-          "weekly": 35.552,
+          "weekly": 35.55,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -61817,7 +61693,7 @@
         "taskScores": {},
         "scores": {
           "top": 30.085,
-          "weekly": 32.328,
+          "weekly": 32.327,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -61947,7 +61823,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.536,
-          "weekly": 42.936,
+          "weekly": 42.935,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -62093,7 +61969,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.536,
-          "weekly": 46.035,
+          "weekly": 46.034,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -62295,7 +62171,7 @@
         "taskScores": {},
         "scores": {
           "top": 682.132,
-          "weekly": 62.064,
+          "weekly": 62.062,
           "leaderboard": 238.487,
           "coding": 14.9,
           "vision": 0,
@@ -62540,7 +62416,7 @@
         "taskScores": {},
         "scores": {
           "top": 660.06,
-          "weekly": 59.818,
+          "weekly": 59.817,
           "leaderboard": 237.95,
           "coding": 28.5,
           "vision": 0,
@@ -62729,7 +62605,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 56.471,
+          "weekly": 56.47,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -62874,7 +62750,7 @@
         "taskScores": {},
         "scores": {
           "top": 51.093,
-          "weekly": 52.581,
+          "weekly": 52.579,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -63071,7 +62947,7 @@
         "taskScores": {},
         "scores": {
           "top": 704.334,
-          "weekly": 61.819,
+          "weekly": 61.818,
           "leaderboard": 250.087,
           "coding": 20.9,
           "vision": 0,
@@ -63360,7 +63236,7 @@
         "taskScores": {},
         "scores": {
           "top": 691.229,
-          "weekly": 61.21,
+          "weekly": 61.209,
           "leaderboard": 250.62,
           "coding": 45.3,
           "vision": 0,
@@ -63701,7 +63577,7 @@
         "taskScores": {},
         "scores": {
           "top": 675.701,
-          "weekly": 62.125,
+          "weekly": 62.124,
           "leaderboard": 241.577,
           "coding": 26.3,
           "vision": 0,
@@ -64051,7 +63927,7 @@
         "taskScores": {},
         "scores": {
           "top": 675.701,
-          "weekly": 63.63,
+          "weekly": 63.629,
           "leaderboard": 241.577,
           "coding": 26.3,
           "vision": 0,
@@ -64311,7 +64187,7 @@
         "taskScores": {},
         "scores": {
           "top": 53.763,
-          "weekly": 60.492,
+          "weekly": 60.491,
           "leaderboard": 7.67,
           "coding": 14.4,
           "vision": 0,
@@ -64458,7 +64334,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.536,
-          "weekly": 42.321,
+          "weekly": 42.32,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -64589,7 +64465,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.01,
-          "weekly": 42.925,
+          "weekly": 42.924,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -64731,7 +64607,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.01,
-          "weekly": 44.43,
+          "weekly": 44.429,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -64975,7 +64851,7 @@
         "taskScores": {},
         "scores": {
           "top": 684.365,
-          "weekly": 60.481,
+          "weekly": 60.48,
           "leaderboard": 247.911,
           "coding": 30.4,
           "vision": 0,
@@ -65325,7 +65201,7 @@
         "taskScores": {},
         "scores": {
           "top": 684.365,
-          "weekly": 61.986,
+          "weekly": 61.985,
           "leaderboard": 247.911,
           "coding": 30.4,
           "vision": 0,
@@ -65581,7 +65457,7 @@
         "taskScores": {},
         "scores": {
           "top": 45.673,
-          "weekly": 49.843,
+          "weekly": 49.842,
           "leaderboard": 9.15,
           "coding": 31.3,
           "vision": 0,
@@ -65717,7 +65593,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.041,
-          "weekly": 45.292,
+          "weekly": 45.291,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -65859,7 +65735,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.948,
-          "weekly": 58.386,
+          "weekly": 58.385,
           "leaderboard": 7.84,
           "coding": 11.2,
           "vision": 0,
@@ -65993,7 +65869,7 @@
         "taskScores": {},
         "scores": {
           "top": 25.536,
-          "weekly": 29.788,
+          "weekly": 29.787,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -66112,7 +65988,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.01,
-          "weekly": 49.036,
+          "weekly": 49.035,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -66267,7 +66143,7 @@
         "taskScores": {},
         "scores": {
           "top": 50.02,
-          "weekly": 51.411,
+          "weekly": 51.41,
           "leaderboard": 11.68,
           "coding": 23,
           "vision": 0,
@@ -66448,7 +66324,7 @@
         "taskScores": {},
         "scores": {
           "top": 618.13,
-          "weekly": 52.676,
+          "weekly": 52.675,
           "leaderboard": 214.09,
           "coding": 14.4,
           "vision": 0,
@@ -66656,7 +66532,7 @@
         "taskScores": {},
         "scores": {
           "top": 613.03,
-          "weekly": 53.101,
+          "weekly": 53.1,
           "leaderboard": 211.47,
           "coding": 9.7,
           "vision": 0,
@@ -66691,214 +66567,6 @@
           "prompt": "0.00000015",
           "completion": "0.00000015",
           "input_cache_read": "0.000000015"
-        },
-        "top_provider": {
-          "context_length": 262144,
-          "max_completion_tokens": 209715,
-          "is_moderated": false
-        },
-        "per_request_limits": null,
-        "supported_parameters": [
-          "frequency_penalty",
-          "max_tokens",
-          "presence_penalty",
-          "response_format",
-          "seed",
-          "stop",
-          "structured_outputs",
-          "temperature",
-          "tool_choice",
-          "tools",
-          "top_p"
-        ],
-        "default_parameters": {
-          "temperature": 0.3,
-          "top_p": null,
-          "frequency_penalty": null
-        },
-        "supported_voices": null,
-        "knowledge_cutoff": null,
-        "expiration_date": null,
-        "links": {
-          "details": "/api/v1/models/mistralai/ministral-8b-2512/endpoints"
-        },
-        "benchmarks": {
-          "design_arena": [
-            {
-              "arena": "models",
-              "category": "3d",
-              "elo": 1027,
-              "win_rate": 46.2,
-              "rank": 110
-            },
-            {
-              "arena": "models",
-              "category": "codecategories",
-              "elo": 1053,
-              "win_rate": 42.9,
-              "rank": 117
-            },
-            {
-              "arena": "models",
-              "category": "gamedev",
-              "elo": 990,
-              "win_rate": 38.7,
-              "rank": 125
-            },
-            {
-              "arena": "models",
-              "category": "website",
-              "elo": 1063,
-              "win_rate": 42.9,
-              "rank": 118
-            }
-          ],
-          "artificial_analysis": {
-            "intelligence_index": 5.5,
-            "coding_index": 9.7,
-            "agentic_index": 0.6
-          }
-        }
-      }
-    },
-    {
-      "id": "mistralai/ministral-8b-2512:batch",
-      "slug": "mistralai-ministral-8b-2512-batch",
-      "canonical_slug": "mistralai/ministral-8b-2512",
-      "hugging_face_id": "mistralai/Ministral-3-8B-Instruct-2512",
-      "name": "Mistral: Ministral 3 8B 2512 (batch)",
-      "description": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities.",
-      "created": 1764681654,
-      "context_length": 262144,
-      "modality": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.000000075",
-        "input_cache_read": "0.0000000075"
-      },
-      "isFree": false,
-      "topProvider": {
-        "context_length": 262144,
-        "max_completion_tokens": 209715,
-        "is_moderated": false
-      },
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Mistral",
-        "instruct_type": null
-      },
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "benchmarks": {
-        "design_arena": [
-          {
-            "arena": "models",
-            "category": "3d",
-            "elo": 1027,
-            "win_rate": 46.2,
-            "rank": 110
-          },
-          {
-            "arena": "models",
-            "category": "codecategories",
-            "elo": 1053,
-            "win_rate": 42.9,
-            "rank": 117
-          },
-          {
-            "arena": "models",
-            "category": "gamedev",
-            "elo": 990,
-            "win_rate": 38.7,
-            "rank": 125
-          },
-          {
-            "arena": "models",
-            "category": "website",
-            "elo": 1063,
-            "win_rate": 42.9,
-            "rank": 118
-          }
-        ],
-        "artificial_analysis": {
-          "intelligence_index": 5.5,
-          "coding_index": 9.7,
-          "agentic_index": 0.6
-        }
-      },
-      "knowledge_cutoff": null,
-      "rank": {
-        "arenaElo": 1033.25,
-        "arenaBestRank": 110,
-        "arenaBestCategory": "3d",
-        "arenaBestRankValue": 110,
-        "aaIntelligence": 5.5,
-        "aaCoding": 9.7,
-        "aaAgentic": 0.6,
-        "taskScores": {},
-        "scores": {
-          "top": 613.03,
-          "weekly": 54.606,
-          "leaderboard": 211.47,
-          "coding": 9.7,
-          "vision": 0,
-          "reasoning": 0.6,
-          "chat": 222.15,
-          "math": 0,
-          "instruction": 0,
-          "aider": 0
-        }
-      },
-      "raw": {
-        "id": "mistralai/ministral-8b-2512:batch",
-        "canonical_slug": "mistralai/ministral-8b-2512",
-        "hugging_face_id": "mistralai/Ministral-3-8B-Instruct-2512",
-        "name": "Mistral: Ministral 3 8B 2512 (batch)",
-        "created": 1764681654,
-        "description": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities.",
-        "context_length": 262144,
-        "architecture": {
-          "modality": "text+image->text",
-          "input_modalities": [
-            "text",
-            "image"
-          ],
-          "output_modalities": [
-            "text"
-          ],
-          "tokenizer": "Mistral",
-          "instruct_type": null
-        },
-        "pricing": {
-          "prompt": "0.000000075",
-          "completion": "0.000000075",
-          "input_cache_read": "0.0000000075"
         },
         "top_provider": {
           "context_length": 262144,
@@ -67072,7 +66740,7 @@
         "taskScores": {},
         "scores": {
           "top": 585.19,
-          "weekly": 53.701,
+          "weekly": 53.7,
           "leaderboard": 200.99,
           "coding": 4.8,
           "vision": 0,
@@ -67309,7 +66977,7 @@
         "taskScores": {},
         "scores": {
           "top": 648.683,
-          "weekly": 50.5,
+          "weekly": 50.498,
           "leaderboard": 227.72,
           "coding": 20.1,
           "vision": 0,
@@ -67345,272 +67013,6 @@
           "prompt": "0.0000005",
           "completion": "0.0000015",
           "input_cache_read": "0.00000005"
-        },
-        "top_provider": {
-          "context_length": 262144,
-          "max_completion_tokens": 209715,
-          "is_moderated": false
-        },
-        "per_request_limits": null,
-        "supported_parameters": [
-          "frequency_penalty",
-          "max_tokens",
-          "presence_penalty",
-          "response_format",
-          "seed",
-          "stop",
-          "structured_outputs",
-          "temperature",
-          "tool_choice",
-          "tools",
-          "top_p"
-        ],
-        "default_parameters": {
-          "temperature": 0.0645,
-          "top_p": null,
-          "frequency_penalty": null
-        },
-        "supported_voices": null,
-        "knowledge_cutoff": null,
-        "expiration_date": null,
-        "links": {
-          "details": "/api/v1/models/mistralai/mistral-large-2512/endpoints"
-        },
-        "benchmarks": {
-          "design_arena": [
-            {
-              "arena": "models",
-              "category": "3d",
-              "elo": 1096,
-              "win_rate": 46.9,
-              "rank": 90
-            },
-            {
-              "arena": "models",
-              "category": "asciiart",
-              "elo": 1066,
-              "win_rate": 40.3,
-              "rank": 66
-            },
-            {
-              "arena": "models",
-              "category": "codecategories",
-              "elo": 1140,
-              "win_rate": 47.6,
-              "rank": 94
-            },
-            {
-              "arena": "models",
-              "category": "dataviz",
-              "elo": 1136,
-              "win_rate": 45.7,
-              "rank": 88
-            },
-            {
-              "arena": "models",
-              "category": "gamedev",
-              "elo": 1080,
-              "win_rate": 41.5,
-              "rank": 106
-            },
-            {
-              "arena": "models",
-              "category": "svg",
-              "elo": 991,
-              "win_rate": 38,
-              "rank": 88
-            },
-            {
-              "arena": "models",
-              "category": "uicomponent",
-              "elo": 1097,
-              "win_rate": 43,
-              "rank": 95
-            },
-            {
-              "arena": "models",
-              "category": "website",
-              "elo": 1162,
-              "win_rate": 49.5,
-              "rank": 86
-            }
-          ],
-          "artificial_analysis": {
-            "intelligence_index": 9.3,
-            "coding_index": 20.1,
-            "agentic_index": 1
-          }
-        }
-      }
-    },
-    {
-      "id": "mistralai/mistral-large-2512:batch",
-      "slug": "mistralai-mistral-large-2512-batch",
-      "canonical_slug": "mistralai/mistral-large-2512",
-      "hugging_face_id": "",
-      "name": "Mistral: Mistral Large 3 2512 (batch)",
-      "description": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
-      "created": 1764624472,
-      "context_length": 262144,
-      "modality": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "pricing": {
-        "prompt": "0.00000025",
-        "completion": "0.00000075",
-        "input_cache_read": "0.000000025"
-      },
-      "isFree": false,
-      "topProvider": {
-        "context_length": 262144,
-        "max_completion_tokens": 209715,
-        "is_moderated": false
-      },
-      "architecture": {
-        "modality": "text+image+file->text",
-        "input_modalities": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Mistral",
-        "instruct_type": null
-      },
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "benchmarks": {
-        "design_arena": [
-          {
-            "arena": "models",
-            "category": "3d",
-            "elo": 1096,
-            "win_rate": 46.9,
-            "rank": 90
-          },
-          {
-            "arena": "models",
-            "category": "asciiart",
-            "elo": 1066,
-            "win_rate": 40.3,
-            "rank": 66
-          },
-          {
-            "arena": "models",
-            "category": "codecategories",
-            "elo": 1140,
-            "win_rate": 47.6,
-            "rank": 94
-          },
-          {
-            "arena": "models",
-            "category": "dataviz",
-            "elo": 1136,
-            "win_rate": 45.7,
-            "rank": 88
-          },
-          {
-            "arena": "models",
-            "category": "gamedev",
-            "elo": 1080,
-            "win_rate": 41.5,
-            "rank": 106
-          },
-          {
-            "arena": "models",
-            "category": "svg",
-            "elo": 991,
-            "win_rate": 38,
-            "rank": 88
-          },
-          {
-            "arena": "models",
-            "category": "uicomponent",
-            "elo": 1097,
-            "win_rate": 43,
-            "rank": 95
-          },
-          {
-            "arena": "models",
-            "category": "website",
-            "elo": 1162,
-            "win_rate": 49.5,
-            "rank": 86
-          }
-        ],
-        "artificial_analysis": {
-          "intelligence_index": 9.3,
-          "coding_index": 20.1,
-          "agentic_index": 1
-        }
-      },
-      "knowledge_cutoff": null,
-      "rank": {
-        "arenaElo": 1096,
-        "arenaBestRank": 66,
-        "arenaBestCategory": "asciiart",
-        "arenaBestRankValue": 66,
-        "aaIntelligence": 9.3,
-        "aaCoding": 20.1,
-        "aaAgentic": 1,
-        "taskScores": {},
-        "scores": {
-          "top": 648.683,
-          "weekly": 52.005,
-          "leaderboard": 227.72,
-          "coding": 20.1,
-          "vision": 0,
-          "reasoning": 1,
-          "chat": 238.5,
-          "math": 0,
-          "instruction": 0,
-          "aider": 0
-        }
-      },
-      "raw": {
-        "id": "mistralai/mistral-large-2512:batch",
-        "canonical_slug": "mistralai/mistral-large-2512",
-        "hugging_face_id": "",
-        "name": "Mistral: Mistral Large 3 2512 (batch)",
-        "created": 1764624472,
-        "description": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
-        "context_length": 262144,
-        "architecture": {
-          "modality": "text+image+file->text",
-          "input_modalities": [
-            "text",
-            "image",
-            "file"
-          ],
-          "output_modalities": [
-            "text"
-          ],
-          "tokenizer": "Mistral",
-          "instruct_type": null
-        },
-        "pricing": {
-          "prompt": "0.00000025",
-          "completion": "0.00000075",
-          "input_cache_read": "0.000000025"
         },
         "top_provider": {
           "context_length": 262144,
@@ -67846,7 +67248,7 @@
         "taskScores": {},
         "scores": {
           "top": 675.822,
-          "weekly": 63.658,
+          "weekly": 63.657,
           "leaderboard": 244.67,
           "coding": 44.2,
           "vision": 0,
@@ -68155,7 +67557,7 @@
         "taskScores": {},
         "scores": {
           "top": 721.527,
-          "weekly": 58.522,
+          "weekly": 58.521,
           "leaderboard": 261.203,
           "coding": 29.1,
           "vision": 0,
@@ -68480,7 +67882,7 @@
         "taskScores": {},
         "scores": {
           "top": 721.527,
-          "weekly": 60.027,
+          "weekly": 60.026,
           "leaderboard": 261.203,
           "coding": 29.1,
           "vision": 0,
@@ -68743,7 +68145,7 @@
         "taskScores": {},
         "scores": {
           "top": 724.97,
-          "weekly": 42.527,
+          "weekly": 42.526,
           "leaderboard": 249.05,
           "coding": 0,
           "vision": 0,
@@ -68984,7 +68386,7 @@
         "taskScores": {},
         "scores": {
           "top": 693.364,
-          "weekly": 58.865,
+          "weekly": 58.864,
           "leaderboard": 252.755,
           "coding": 49.4,
           "vision": 0,
@@ -69264,7 +68666,7 @@
         "taskScores": {},
         "scores": {
           "top": 693.364,
-          "weekly": 60.371,
+          "weekly": 60.37,
           "leaderboard": 252.755,
           "coding": 49.4,
           "vision": 0,
@@ -69542,7 +68944,7 @@
         "taskScores": {},
         "scores": {
           "top": 690.864,
-          "weekly": 58.465,
+          "weekly": 58.464,
           "leaderboard": 246.315,
           "coding": 23.7,
           "vision": 0,
@@ -69817,7 +69219,7 @@
         "taskScores": {},
         "scores": {
           "top": 644.568,
-          "weekly": 60.64,
+          "weekly": 60.639,
           "leaderboard": 227.53,
           "coding": 20.4,
           "vision": 0,
@@ -70048,7 +69450,7 @@
         "taskScores": {},
         "scores": {
           "top": 669.843,
-          "weekly": 60.568,
+          "weekly": 60.567,
           "leaderboard": 238,
           "coding": 22,
           "vision": 0,
@@ -70221,7 +69623,7 @@
         "taskScores": {},
         "scores": {
           "top": 500.01,
-          "weekly": 40.012,
+          "weekly": 40.011,
           "leaderboard": 173.44,
           "coding": 9.2,
           "vision": 0,
@@ -70364,7 +69766,7 @@
         "taskScores": {},
         "scores": {
           "top": 34.505,
-          "weekly": 35.933,
+          "weekly": 35.932,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -70501,7 +69903,7 @@
         "taskScores": {},
         "scores": {
           "top": 38.577,
-          "weekly": 50.199,
+          "weekly": 50.198,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -70635,7 +70037,7 @@
         "taskScores": {},
         "scores": {
           "top": 49.588,
-          "weekly": 56.337,
+          "weekly": 56.336,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -70828,7 +70230,7 @@
         "taskScores": {},
         "scores": {
           "top": 673.394,
-          "weekly": 61.107,
+          "weekly": 61.106,
           "leaderboard": 237.477,
           "coding": 18.6,
           "vision": 0,
@@ -71035,7 +70437,7 @@
         "taskScores": {},
         "scores": {
           "top": 35.116,
-          "weekly": 48.674,
+          "weekly": 48.673,
           "leaderboard": 3.57,
           "coding": 5.1,
           "vision": 0,
@@ -71206,7 +70608,7 @@
         "taskScores": {},
         "scores": {
           "top": 695.76,
-          "weekly": 44.913,
+          "weekly": 44.912,
           "leaderboard": 237,
           "coding": 0,
           "vision": 0,
@@ -71717,7 +71119,7 @@
         "taskScores": {},
         "scores": {
           "top": 659.269,
-          "weekly": 58.552,
+          "weekly": 58.551,
           "leaderboard": 235.745,
           "coding": 43.9,
           "vision": 0,
@@ -71939,7 +71341,7 @@
         "taskScores": {},
         "scores": {
           "top": 45.283,
-          "weekly": 51.095,
+          "weekly": 51.094,
           "leaderboard": 5.11,
           "coding": 7.3,
           "vision": 0,
@@ -72114,7 +71516,7 @@
         "taskScores": {},
         "scores": {
           "top": 697.227,
-          "weekly": 41.67,
+          "weekly": 41.669,
           "leaderboard": 237.533,
           "coding": 0,
           "vision": 0,
@@ -72305,7 +71707,7 @@
         "taskScores": {},
         "scores": {
           "top": 675.727,
-          "weekly": 39.925,
+          "weekly": 39.924,
           "leaderboard": 234.6,
           "coding": 0,
           "vision": 0,
@@ -72635,7 +72037,7 @@
         "taskScores": {},
         "scores": {
           "top": 45.463,
-          "weekly": 51.944,
+          "weekly": 51.943,
           "leaderboard": 5.53,
           "coding": 7.9,
           "vision": 0,
@@ -72784,7 +72186,7 @@
         "taskScores": {},
         "scores": {
           "top": 52.01,
-          "weekly": 43.507,
+          "weekly": 43.506,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -73155,7 +72557,7 @@
         "taskScores": {},
         "scores": {
           "top": 676.807,
-          "weekly": 59.35,
+          "weekly": 59.349,
           "leaderboard": 243.239,
           "coding": 45.8,
           "vision": 0,
@@ -73804,7 +73206,7 @@
         "taskScores": {},
         "scores": {
           "top": 689.46,
-          "weekly": 57.654,
+          "weekly": 57.653,
           "leaderboard": 248.518,
           "coding": 52.1,
           "vision": 0,
@@ -74099,7 +73501,7 @@
         "taskScores": {},
         "scores": {
           "top": 681.974,
-          "weekly": 61.622,
+          "weekly": 61.621,
           "leaderboard": 239.591,
           "coding": 16.6,
           "vision": 0,
@@ -74293,7 +73695,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.588,
-          "weekly": 42.624,
+          "weekly": 42.623,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -74556,7 +73958,7 @@
         "taskScores": {},
         "scores": {
           "top": 46.063,
-          "weekly": 50.472,
+          "weekly": 50.471,
           "leaderboard": 6.93,
           "coding": 9.9,
           "vision": 0,
@@ -74760,7 +74162,7 @@
         "taskScores": {},
         "scores": {
           "top": 685.991,
-          "weekly": 59.532,
+          "weekly": 59.531,
           "leaderboard": 244.339,
           "coding": 43.5,
           "vision": 0,
@@ -75118,7 +74520,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.453,
-          "weekly": 57.939,
+          "weekly": 57.938,
           "leaderboard": 9.58,
           "coding": 17.4,
           "vision": 0,
@@ -75278,7 +74680,7 @@
         "taskScores": {},
         "scores": {
           "top": 45.973,
-          "weekly": 51.573,
+          "weekly": 51.572,
           "leaderboard": 6.72,
           "coding": 9.6,
           "vision": 0,
@@ -75442,7 +74844,7 @@
         "taskScores": {},
         "scores": {
           "top": 653.508,
-          "weekly": 51.761,
+          "weekly": 51.76,
           "leaderboard": 231.01,
           "coding": 15.3,
           "vision": 0,
@@ -76071,7 +75473,7 @@
         "taskScores": {},
         "scores": {
           "top": 637.454,
-          "weekly": 49.838,
+          "weekly": 49.837,
           "leaderboard": 224.165,
           "coding": 20.5,
           "vision": 0,
@@ -76107,270 +75509,6 @@
           "prompt": "0.0000004",
           "completion": "0.000002",
           "input_cache_read": "0.00000004"
-        },
-        "top_provider": {
-          "context_length": 131072,
-          "max_completion_tokens": 104857,
-          "is_moderated": false
-        },
-        "per_request_limits": null,
-        "supported_parameters": [
-          "frequency_penalty",
-          "max_tokens",
-          "presence_penalty",
-          "response_format",
-          "seed",
-          "stop",
-          "structured_outputs",
-          "temperature",
-          "tool_choice",
-          "tools",
-          "top_p"
-        ],
-        "default_parameters": {
-          "temperature": 0.3
-        },
-        "supported_voices": null,
-        "knowledge_cutoff": "2025-06-30",
-        "expiration_date": null,
-        "links": {
-          "details": "/api/v1/models/mistralai/mistral-medium-3.1/endpoints"
-        },
-        "benchmarks": {
-          "design_arena": [
-            {
-              "arena": "models",
-              "category": "3d",
-              "elo": 1078,
-              "win_rate": 44.6,
-              "rank": 96
-            },
-            {
-              "arena": "models",
-              "category": "asciiart",
-              "elo": 995,
-              "win_rate": 30.8,
-              "rank": 70
-            },
-            {
-              "arena": "models",
-              "category": "codecategories",
-              "elo": 1120,
-              "win_rate": 45.1,
-              "rank": 99
-            },
-            {
-              "arena": "models",
-              "category": "dataviz",
-              "elo": 1144,
-              "win_rate": 47.2,
-              "rank": 84
-            },
-            {
-              "arena": "models",
-              "category": "gamedev",
-              "elo": 1074,
-              "win_rate": 40.8,
-              "rank": 108
-            },
-            {
-              "arena": "models",
-              "category": "svg",
-              "elo": 991,
-              "win_rate": 38.2,
-              "rank": 89
-            },
-            {
-              "arena": "models",
-              "category": "uicomponent",
-              "elo": 1094,
-              "win_rate": 43.6,
-              "rank": 97
-            },
-            {
-              "arena": "models",
-              "category": "website",
-              "elo": 1131,
-              "win_rate": 46,
-              "rank": 101
-            }
-          ],
-          "artificial_analysis": {
-            "intelligence_index": 9.2,
-            "coding_index": 20.5,
-            "agentic_index": 1.9
-          }
-        }
-      }
-    },
-    {
-      "id": "mistralai/mistral-medium-3.1:batch",
-      "slug": "mistralai-mistral-medium-3-1-batch",
-      "canonical_slug": "mistralai/mistral-medium-3.1",
-      "hugging_face_id": "",
-      "name": "Mistral: Mistral Medium 3.1 (batch)",
-      "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances...",
-      "created": 1755095639,
-      "context_length": 131072,
-      "modality": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "pricing": {
-        "prompt": "0.0000002",
-        "completion": "0.000001",
-        "input_cache_read": "0.00000002"
-      },
-      "isFree": false,
-      "topProvider": {
-        "context_length": 131072,
-        "max_completion_tokens": 104857,
-        "is_moderated": false
-      },
-      "architecture": {
-        "modality": "text+image+file->text",
-        "input_modalities": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Mistral",
-        "instruct_type": null
-      },
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "benchmarks": {
-        "design_arena": [
-          {
-            "arena": "models",
-            "category": "3d",
-            "elo": 1078,
-            "win_rate": 44.6,
-            "rank": 96
-          },
-          {
-            "arena": "models",
-            "category": "asciiart",
-            "elo": 995,
-            "win_rate": 30.8,
-            "rank": 70
-          },
-          {
-            "arena": "models",
-            "category": "codecategories",
-            "elo": 1120,
-            "win_rate": 45.1,
-            "rank": 99
-          },
-          {
-            "arena": "models",
-            "category": "dataviz",
-            "elo": 1144,
-            "win_rate": 47.2,
-            "rank": 84
-          },
-          {
-            "arena": "models",
-            "category": "gamedev",
-            "elo": 1074,
-            "win_rate": 40.8,
-            "rank": 108
-          },
-          {
-            "arena": "models",
-            "category": "svg",
-            "elo": 991,
-            "win_rate": 38.2,
-            "rank": 89
-          },
-          {
-            "arena": "models",
-            "category": "uicomponent",
-            "elo": 1094,
-            "win_rate": 43.6,
-            "rank": 97
-          },
-          {
-            "arena": "models",
-            "category": "website",
-            "elo": 1131,
-            "win_rate": 46,
-            "rank": 101
-          }
-        ],
-        "artificial_analysis": {
-          "intelligence_index": 9.2,
-          "coding_index": 20.5,
-          "agentic_index": 1.9
-        }
-      },
-      "knowledge_cutoff": "2025-06-30",
-      "rank": {
-        "arenaElo": 1078.375,
-        "arenaBestRank": 70,
-        "arenaBestCategory": "asciiart",
-        "arenaBestRankValue": 70,
-        "aaIntelligence": 9.2,
-        "aaCoding": 20.5,
-        "aaAgentic": 1.9,
-        "taskScores": {},
-        "scores": {
-          "top": 637.454,
-          "weekly": 51.343,
-          "leaderboard": 224.165,
-          "coding": 20.5,
-          "vision": 0,
-          "reasoning": 1.9,
-          "chat": 234.875,
-          "math": 0,
-          "instruction": 0,
-          "aider": 0
-        }
-      },
-      "raw": {
-        "id": "mistralai/mistral-medium-3.1:batch",
-        "canonical_slug": "mistralai/mistral-medium-3.1",
-        "hugging_face_id": "",
-        "name": "Mistral: Mistral Medium 3.1 (batch)",
-        "created": 1755095639,
-        "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances...",
-        "context_length": 131072,
-        "architecture": {
-          "modality": "text+image+file->text",
-          "input_modalities": [
-            "text",
-            "image",
-            "file"
-          ],
-          "output_modalities": [
-            "text"
-          ],
-          "tokenizer": "Mistral",
-          "instruct_type": null
-        },
-        "pricing": {
-          "prompt": "0.0000002",
-          "completion": "0.000001",
-          "input_cache_read": "0.00000002"
         },
         "top_provider": {
           "context_length": 131072,
@@ -76763,7 +75901,7 @@
         },
         "scores": {
           "top": 698.698,
-          "weekly": 57.993,
+          "weekly": 57.992,
           "leaderboard": 252.53,
           "coding": 37.8,
           "vision": 0,
@@ -77321,7 +76459,7 @@
         "taskScores": {},
         "scores": {
           "top": 666.353,
-          "weekly": 60.528,
+          "weekly": 60.527,
           "leaderboard": 235.57,
           "coding": 20.6,
           "vision": 0,
@@ -77600,7 +76738,7 @@
         "taskScores": {},
         "scores": {
           "top": 666.353,
-          "weekly": 62.033,
+          "weekly": 62.032,
           "leaderboard": 235.57,
           "coding": 20.6,
           "vision": 0,
@@ -77865,7 +77003,7 @@
         "taskScores": {},
         "scores": {
           "top": 634.144,
-          "weekly": 60.983,
+          "weekly": 60.982,
           "leaderboard": 219.367,
           "coding": 13,
           "vision": 0,
@@ -78116,7 +77254,7 @@
         "taskScores": {},
         "scores": {
           "top": 634.144,
-          "weekly": 62.488,
+          "weekly": 62.487,
           "leaderboard": 219.367,
           "coding": 13,
           "vision": 0,
@@ -78379,7 +77517,7 @@
         },
         "scores": {
           "top": 577.859,
-          "weekly": 59.31,
+          "weekly": 59.309,
           "leaderboard": 201.993,
           "coding": 30.4,
           "vision": 0,
@@ -79067,7 +78205,7 @@
         "taskScores": {},
         "scores": {
           "top": 543.463,
-          "weekly": 62.378,
+          "weekly": 62.377,
           "leaderboard": 185.5,
           "coding": 10,
           "vision": 0,
@@ -79942,231 +79080,6 @@
       }
     },
     {
-      "id": "mistralai/codestral-2508:batch",
-      "slug": "mistralai-codestral-2508-batch",
-      "canonical_slug": "mistralai/codestral-2508",
-      "hugging_face_id": "",
-      "name": "Mistral: Codestral 2508 (batch)",
-      "description": "Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.\n\n[Blog Post](https://mistral.ai/news/codestral-25-08)",
-      "created": 1754079630,
-      "context_length": 256000,
-      "modality": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.00000045",
-        "input_cache_read": "0.000000015"
-      },
-      "isFree": false,
-      "topProvider": {
-        "context_length": 256000,
-        "max_completion_tokens": 204800,
-        "is_moderated": false
-      },
-      "architecture": {
-        "modality": "text+file->text",
-        "input_modalities": [
-          "text",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Mistral",
-        "instruct_type": null
-      },
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "prediction",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "benchmarks": {
-        "design_arena": [
-          {
-            "arena": "models",
-            "category": "codecategories",
-            "elo": 1007,
-            "win_rate": 38.5,
-            "rank": 127
-          },
-          {
-            "arena": "models",
-            "category": "dataviz",
-            "elo": 1017,
-            "win_rate": 41.1,
-            "rank": 115
-          },
-          {
-            "arena": "models",
-            "category": "gamedev",
-            "elo": 968,
-            "win_rate": 36.3,
-            "rank": 129
-          },
-          {
-            "arena": "models",
-            "category": "uicomponent",
-            "elo": 1012,
-            "win_rate": 46.7,
-            "rank": 115
-          },
-          {
-            "arena": "models",
-            "category": "website",
-            "elo": 1011,
-            "win_rate": 37.8,
-            "rank": 131
-          },
-          {
-            "arena": "models",
-            "category": "3d",
-            "elo": 1017,
-            "win_rate": 45.4,
-            "rank": 111
-          }
-        ]
-      },
-      "knowledge_cutoff": "2025-03-31",
-      "rank": {
-        "arenaElo": 1005.3333333333334,
-        "arenaBestRank": 111,
-        "arenaBestCategory": "3d",
-        "arenaBestRankValue": 111,
-        "aaIntelligence": null,
-        "aaCoding": null,
-        "aaAgentic": null,
-        "taskScores": {},
-        "scores": {
-          "top": 595.975,
-          "weekly": 49.148,
-          "leaderboard": 201.067,
-          "coding": 0,
-          "vision": 0,
-          "reasoning": 0,
-          "chat": 211.067,
-          "math": 0,
-          "instruction": 0,
-          "aider": 0
-        }
-      },
-      "raw": {
-        "id": "mistralai/codestral-2508:batch",
-        "canonical_slug": "mistralai/codestral-2508",
-        "hugging_face_id": "",
-        "name": "Mistral: Codestral 2508 (batch)",
-        "created": 1754079630,
-        "description": "Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.\n\n[Blog Post](https://mistral.ai/news/codestral-25-08)",
-        "context_length": 256000,
-        "architecture": {
-          "modality": "text+file->text",
-          "input_modalities": [
-            "text",
-            "file"
-          ],
-          "output_modalities": [
-            "text"
-          ],
-          "tokenizer": "Mistral",
-          "instruct_type": null
-        },
-        "pricing": {
-          "prompt": "0.00000015",
-          "completion": "0.00000045",
-          "input_cache_read": "0.000000015"
-        },
-        "top_provider": {
-          "context_length": 256000,
-          "max_completion_tokens": 204800,
-          "is_moderated": false
-        },
-        "per_request_limits": null,
-        "supported_parameters": [
-          "frequency_penalty",
-          "max_tokens",
-          "prediction",
-          "presence_penalty",
-          "response_format",
-          "seed",
-          "stop",
-          "structured_outputs",
-          "temperature",
-          "tool_choice",
-          "tools",
-          "top_p"
-        ],
-        "default_parameters": {
-          "temperature": 0.3
-        },
-        "supported_voices": null,
-        "knowledge_cutoff": "2025-03-31",
-        "expiration_date": null,
-        "links": {
-          "details": "/api/v1/models/mistralai/codestral-2508/endpoints"
-        },
-        "benchmarks": {
-          "design_arena": [
-            {
-              "arena": "models",
-              "category": "codecategories",
-              "elo": 1007,
-              "win_rate": 38.5,
-              "rank": 127
-            },
-            {
-              "arena": "models",
-              "category": "dataviz",
-              "elo": 1017,
-              "win_rate": 41.1,
-              "rank": 115
-            },
-            {
-              "arena": "models",
-              "category": "gamedev",
-              "elo": 968,
-              "win_rate": 36.3,
-              "rank": 129
-            },
-            {
-              "arena": "models",
-              "category": "uicomponent",
-              "elo": 1012,
-              "win_rate": 46.7,
-              "rank": 115
-            },
-            {
-              "arena": "models",
-              "category": "website",
-              "elo": 1011,
-              "win_rate": 37.8,
-              "rank": 131
-            },
-            {
-              "arena": "models",
-              "category": "3d",
-              "elo": 1017,
-              "win_rate": 45.4,
-              "rank": 111
-            }
-          ]
-        }
-      }
-    },
-    {
       "id": "qwen/qwen3-coder-30b-a3b-instruct",
       "slug": "qwen-qwen3-coder-30b-a3b-instruct",
       "canonical_slug": "qwen/qwen3-coder-30b-a3b-instruct",
@@ -80258,7 +79171,7 @@
         "taskScores": {},
         "scores": {
           "top": 635.023,
-          "weekly": 54.157,
+          "weekly": 54.156,
           "leaderboard": 220.92,
           "coding": 9.6,
           "vision": 0,
@@ -80425,7 +79338,7 @@
         "taskScores": {},
         "scores": {
           "top": 45.343,
-          "weekly": 53.024,
+          "weekly": 53.023,
           "leaderboard": 5.25,
           "coding": 7.5,
           "vision": 0,
@@ -80620,7 +79533,7 @@
         "taskScores": {},
         "scores": {
           "top": 685.063,
-          "weekly": 56.912,
+          "weekly": 56.911,
           "leaderboard": 238.646,
           "coding": 12.8,
           "vision": 0,
@@ -80870,7 +79783,7 @@
         "taskScores": {},
         "scores": {
           "top": 663.118,
-          "weekly": 52.512,
+          "weekly": 52.511,
           "leaderboard": 232.57,
           "coding": 11.1,
           "vision": 0,
@@ -81348,7 +80261,7 @@
         "taskScores": {},
         "scores": {
           "top": 661.343,
-          "weekly": 52.214,
+          "weekly": 52.213,
           "leaderboard": 231.85,
           "coding": 11.9,
           "vision": 0,
@@ -81676,7 +80589,7 @@
         "taskScores": {},
         "scores": {
           "top": 57.223,
-          "weekly": 59.688,
+          "weekly": 59.687,
           "leaderboard": 7.28,
           "coding": 10.4,
           "vision": 0,
@@ -82281,7 +81194,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.536,
-          "weekly": 41.796,
+          "weekly": 41.795,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -82401,7 +81314,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.588,
-          "weekly": 48.745,
+          "weekly": 48.744,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -82523,7 +81436,7 @@
         "taskScores": {},
         "scores": {
           "top": 35.093,
-          "weekly": 39.764,
+          "weekly": 39.763,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -83209,7 +82122,7 @@
         "taskScores": {},
         "scores": {
           "top": 655.11,
-          "weekly": 57.934,
+          "weekly": 57.933,
           "leaderboard": 227.707,
           "coding": 15.5,
           "vision": 0,
@@ -83473,7 +82386,7 @@
         "taskScores": {},
         "scores": {
           "top": 687.766,
-          "weekly": 55.154,
+          "weekly": 55.153,
           "leaderboard": 243.267,
           "coding": 33.3,
           "vision": 0,
@@ -83689,7 +82602,7 @@
         },
         "scores": {
           "top": 57.075,
-          "weekly": 52.72,
+          "weekly": 52.719,
           "leaderboard": 15.33,
           "coding": 21.9,
           "vision": 0,
@@ -83837,7 +82750,7 @@
         "taskScores": {},
         "scores": {
           "top": 54.103,
-          "weekly": 48.697,
+          "weekly": 48.696,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -84864,7 +83777,7 @@
         "taskScores": {},
         "scores": {
           "top": 49.072,
-          "weekly": 58.801,
+          "weekly": 58.8,
           "leaderboard": 4.69,
           "coding": 6.7,
           "vision": 0,
@@ -85030,7 +83943,7 @@
         },
         "scores": {
           "top": 51.778,
-          "weekly": 59.041,
+          "weekly": 59.04,
           "leaderboard": 5.11,
           "coding": 7.3,
           "vision": 0,
@@ -85365,7 +84278,7 @@
         },
         "scores": {
           "top": 639.455,
-          "weekly": 56.967,
+          "weekly": 56.966,
           "leaderboard": 226.1,
           "coding": 20.2,
           "vision": 0,
@@ -86513,7 +85426,7 @@
         "taskScores": {},
         "scores": {
           "top": 607.703,
-          "weekly": 49.47,
+          "weekly": 49.469,
           "leaderboard": 211.723,
           "coding": 12.7,
           "vision": 0,
@@ -87213,7 +86126,7 @@
         },
         "scores": {
           "top": 564.066,
-          "weekly": 52.51,
+          "weekly": 52.509,
           "leaderboard": 194.07,
           "coding": 11.1,
           "vision": 0,
@@ -87443,7 +86356,7 @@
         "taskScores": {},
         "scores": {
           "top": 564.066,
-          "weekly": 54.015,
+          "weekly": 54.014,
           "leaderboard": 194.07,
           "coding": 11.1,
           "vision": 0,
@@ -88378,7 +87291,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.536,
-          "weekly": 42.066,
+          "weekly": 42.065,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -88526,7 +87439,7 @@
         "taskScores": {},
         "scores": {
           "top": 35.028,
-          "weekly": 48.996,
+          "weekly": 48.995,
           "leaderboard": 3.63,
           "coding": 2.7,
           "vision": 0,
@@ -88679,7 +87592,7 @@
         "taskScores": {},
         "scores": {
           "top": 42.728,
-          "weekly": 52.862,
+          "weekly": 52.861,
           "leaderboard": 3.24,
           "coding": 5.8,
           "vision": 0,
@@ -88966,7 +87879,7 @@
         "taskScores": {},
         "scores": {
           "top": 34.002,
-          "weekly": 47.02,
+          "weekly": 47.019,
           "leaderboard": 4.48,
           "coding": 6.4,
           "vision": 0,
@@ -89419,7 +88332,7 @@
         "taskScores": {},
         "scores": {
           "top": 37.076,
-          "weekly": 41.559,
+          "weekly": 41.558,
           "leaderboard": 8.26,
           "coding": 11.8,
           "vision": 0,
@@ -89561,7 +88474,7 @@
         "taskScores": {},
         "scores": {
           "top": 28.785,
-          "weekly": 32.603,
+          "weekly": 32.602,
           "leaderboard": 5.32,
           "coding": 7.6,
           "vision": 0,
@@ -89690,7 +88603,7 @@
         "taskScores": {},
         "scores": {
           "top": 33.536,
-          "weekly": 36.839,
+          "weekly": 36.838,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -90110,7 +89023,7 @@
         "taskScores": {},
         "scores": {
           "top": 22.577,
-          "weekly": 33.905,
+          "weekly": 33.904,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -90519,7 +89432,7 @@
         },
         "scores": {
           "top": 54.255,
-          "weekly": 55.1,
+          "weekly": 55.099,
           "leaderboard": 8.75,
           "coding": 12.5,
           "vision": 0,
@@ -90822,7 +89735,7 @@
         "taskScores": {},
         "scores": {
           "top": 32.587,
-          "weekly": 48.911,
+          "weekly": 48.91,
           "leaderboard": 4.69,
           "coding": 6.7,
           "vision": 0,
@@ -91092,7 +90005,7 @@
         "taskScores": {},
         "scores": {
           "top": 30,
-          "weekly": 35.215,
+          "weekly": 35.214,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -91421,7 +90334,7 @@
         },
         "scores": {
           "top": 632.379,
-          "weekly": 47.219,
+          "weekly": 47.218,
           "leaderboard": 214.657,
           "coding": 0,
           "vision": 0,
@@ -91898,7 +90811,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.898,
-          "weekly": 52.71,
+          "weekly": 52.709,
           "leaderboard": 6.58,
           "coding": 11.9,
           "vision": 0,
@@ -92042,7 +90955,7 @@
         "taskScores": {},
         "scores": {
           "top": 37.396,
-          "weekly": 47.04,
+          "weekly": 47.039,
           "leaderboard": 4.69,
           "coding": 6.7,
           "vision": 0,
@@ -92469,7 +91382,7 @@
         "taskScores": {},
         "scores": {
           "top": 44.056,
-          "weekly": 45.607,
+          "weekly": 45.606,
           "leaderboard": 5.88,
           "coding": 8.4,
           "vision": 0,
@@ -92775,7 +91688,7 @@
         },
         "scores": {
           "top": 32.587,
-          "weekly": 43.303,
+          "weekly": 43.302,
           "leaderboard": 4.69,
           "coding": 6.7,
           "vision": 0,
@@ -93043,7 +91956,7 @@
         "taskScores": {},
         "scores": {
           "top": 30.577,
-          "weekly": 37.33,
+          "weekly": 37.329,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -93764,7 +92677,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.536,
-          "weekly": 48.286,
+          "weekly": 48.285,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -93891,7 +92804,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.536,
-          "weekly": 42.177,
+          "weekly": 42.176,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -94429,7 +93342,7 @@
         "taskScores": {},
         "scores": {
           "top": 27.567,
-          "weekly": 46.877,
+          "weekly": 46.876,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -94730,7 +93643,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.568,
-          "weekly": 50.757,
+          "weekly": 50.756,
           "leaderboard": 4.62,
           "coding": 6.6,
           "vision": 0,
@@ -95028,7 +93941,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.588,
-          "weekly": 53.775,
+          "weekly": 53.774,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
@@ -96208,7 +95121,7 @@
         "taskScores": {},
         "scores": {
           "top": 518.019,
-          "weekly": 43.603,
+          "weekly": 43.602,
           "leaderboard": 173.267,
           "coding": 0,
           "vision": 0,
@@ -96398,7 +95311,7 @@
         "taskScores": {},
         "scores": {
           "top": 41.792,
-          "weekly": 45.33,
+          "weekly": 45.329,
           "leaderboard": 3.99,
           "coding": 5.7,
           "vision": 0,
@@ -96548,7 +95461,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.636,
-          "weekly": 42.35,
+          "weekly": 42.349,
           "leaderboard": 7.05,
           "coding": 21.5,
           "vision": 0,
@@ -96698,7 +95611,7 @@
         "taskScores": {},
         "scores": {
           "top": 43.636,
-          "weekly": 43.855,
+          "weekly": 43.854,
           "leaderboard": 7.05,
           "coding": 21.5,
           "vision": 0,
@@ -97135,7 +96048,7 @@
         "taskScores": {},
         "scores": {
           "top": 55.505,
-          "weekly": 46.967,
+          "weekly": 46.966,
           "leaderboard": 0,
           "coding": 0,
           "vision": 0,
